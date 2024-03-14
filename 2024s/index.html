@@ -41,14 +41,14 @@ $(document).ready(function(){
     $('#sidebar a').on('click', function(e){
         var target = $(this).attr('href');
 
-        // If it's the Home button or one of its submenus
-        if (target === '#homeSubmenu' || $(this).parents('#homeSubmenu').length) {
+        // If it's the Tracks button or one of its submenus
+        if (target === '#tracksSubmenu' || $(this).parents('#tracksSubmenu').length) {
             e.preventDefault(); // Prevent the default anchor behavior
 
-            // If it's the Home button itself, show the Home content
-            if (target === '#homeSubmenu') {
+            // If it's the Tracks button itself, show the Tracks content
+            if (target === '#tracksSubmenu') {
                 $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
-                $('#home').addClass('active in'); // Show Home content
+                $('#tracks').addClass('active in'); // Show Tracks content
             } else {
                 // Otherwise, handle submenu navigation here
                 // For example, navigate to a section or trigger showing another tab's content
@@ -101,11 +101,13 @@ $(document).ready(function(){
           <div class="well">
             <!-- Enable links to subpages by removing the "no-" prefix. -->
             <ul class="nav nav-stacked nav-pills" id="sidebar">
-		    
- <!-- Home menu with dropdown for submenus -->
+
+	      <li><a data-toggle="pill" href="#home">Home</a></li>
+
+ <!-- Tracks menu with dropdown for submenus -->
             <li class="dropdown">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
+                <a href="#tracksSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Tracks</a>
+                <ul class="collapse list-unstyled" id="tracksSubmenu">
                     <li><a href="#keynotes" data-toggle="pill">Keynotes</a></li>
                     <li><a href="#newfacultytalks" data-toggle="pill">New Faculty Talks</a></li>
                     <li><a href="#tutorial" data-toggle="pill">Tutorial</a></li>
@@ -113,6 +115,7 @@ $(document).ready(function(){
                     <li><a href="#studentPosters" data-toggle="pill">Student Posters</a></li>
                 </ul>
             </li>
+
 
               <!-- <li><a data-toggle="no-pill" href="#acceptedPapers">Accepted Papers</a></li> --> 
               <li><a data-toggle="pill" href="#orgcom">Organizing Committee</a></li>
