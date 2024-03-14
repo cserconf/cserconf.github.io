@@ -12,10 +12,12 @@
           crossorigin="anonymous">
     <link rel="stylesheet" href="css/site.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
-
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -31,6 +33,36 @@
 
       // gtag('config', 'UA-118032083-1');
     </script>
+
+
+<script>
+$(document).ready(function(){
+    // When a link in the sidebar is clicked
+    $('#sidebar a').on('click', function(e){
+        var target = $(this).attr('href');
+
+        // If it's the Home button or one of its submenus
+        if (target === '#homeSubmenu' || $(this).parents('#homeSubmenu').length) {
+            e.preventDefault(); // Prevent the default anchor behavior
+
+            // If it's the Home button itself, show the Home content
+            if (target === '#homeSubmenu') {
+                $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
+                $('#home').addClass('active in'); // Show Home content
+            } else {
+                // Otherwise, handle submenu navigation here
+                // For example, navigate to a section or trigger showing another tab's content
+            }
+
+            // Adjust the URL if needed, without affecting the page view
+            window.history.pushState({}, '', $(this).attr('href'));
+        }
+    });
+});
+</script>
+
+
+	  
 
 <!-- Add Bootstrap CSS for styling and collapse functionality -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -361,8 +393,7 @@
       });
     </script>
 <!-- Add jQuery and Bootstrap JavaScript at the end for functionality -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
   </body>
 </html>
