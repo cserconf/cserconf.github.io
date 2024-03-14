@@ -31,6 +31,10 @@
 
       // gtag('config', 'UA-118032083-1');
     </script>
+
+<!-- Add Bootstrap CSS for styling and collapse functionality -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   
   </head>
 
   <body>
@@ -65,7 +69,19 @@
           <div class="well">
             <!-- Enable links to subpages by removing the "no-" prefix. -->
             <ul class="nav nav-stacked nav-pills" id="sidebar">
-              <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
+		    
+ <!-- Home menu with dropdown for submenus -->
+            <li class="dropdown">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li><a href="#keynotes" data-toggle="pill">Keynotes</a></li>
+                    <li><a href="#newFacultyTalks" data-toggle="pill">New Faculty Talks</a></li>
+                    <li><a href="#tutorial" data-toggle="pill">Tutorial</a></li>
+                    <li><a href="#studentResearchTalks" data-toggle="pill">Student Research Talks</a></li>
+                    <li><a href="#studentPosters" data-toggle="pill">Student Posters</a></li>
+                </ul>
+            </li>
+
               <!-- <li><a data-toggle="no-pill" href="#acceptedPapers">Accepted Papers</a></li> --> 
               <li><a data-toggle="pill" href="#keynotes">Keynotes</a></li>
               <li><a data-toggle="pill" href="#newfacultytalks">New Faculty Talks</a></li>
@@ -344,6 +360,9 @@
         window.scrollTo(0, 0);
       });
     </script>
+<!-- Add jQuery and Bootstrap JavaScript at the end for functionality -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   </body>
 </html>
