@@ -109,7 +109,25 @@ $(document).ready(function(){
                 <a href="#tracksSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Tracks</a>
                 <ul class="collapse list-unstyled" id="tracksSubmenu">
                     <li><a href="#keynotes" data-toggle="pill">Keynotes</a></li>
-                    <li><a href="#newfacultytalks" data-toggle="pill">Invited New Faculty Talks</a></li>
+                    <!-- <li><a href="#newfacultytalks" data-toggle="pill">Invited New Faculty Talks</a> -->
+                      <li class="dropdown">
+                        <a href="#facultySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Invited New Faculty Talks</a>
+                        
+              
+
+                      <ul class="collapse list-unstyled" id="facultySubmenu">
+                        <li><a href="#ahmad-abdellatif">Ahmad Abdellatif</a></li>
+                        <li><a href="#anranchen" data-toggle="pill">An Ran Chen</a></li>
+                        <li><a href="#chengniansun" data-toggle="pill">Chengnian Sun</a></li>
+                        <li><a href="#diegoeliascosta" data-toggle="pill">Diego Elias Damasceno Costa</a></li>
+                        <li><a href="#dr-mariam-el-mezouar" data-toggle="pill">Dr. Mariam El Mezouar</a></li>
+                        <li><a href="#mariam-guizani" data-toggle="pill">Mariam Guizani</a></li>
+                        <li><a href="#pengyunie" data-toggle="pill">Pengyu Nie</a></li>
+                        <li><a href="#seankauffman" data-toggle="pill">Sean Kauffman</a></li>
+                        <li><a href="#shinhweitang" data-toggle="pill">Shin Hwei Tan</a></li>
+                        <li><a href="#liliwei" data-toggle="pill">Lili Wei</a></li>
+                      </ul>
+                    </li>
 		    <li><a href="#panel" data-toggle="pill">Panel</a></li>
                     <li><a href="#tutorial" data-toggle="pill">Tutorial</a></li>
                     <li><a href="#studentResearchTalks" data-toggle="pill">Research Talks</a></li>
@@ -230,6 +248,7 @@ $(document).ready(function(){
               <h3>Invited New Faculty Talks</h3>
 
 
+              <div id="ahmad-abdellatif">
 	  <h5>Towards More Effective Software Engineering Chatbots</h5>
              <h5><a href="https://profiles.ucalgary.ca/ahmad-abdellatif">Ahmad Abdellatif</a> from University of Calgary </h5>
 		     <p><em><strong>Abstract:</strong></em> Software chatbots are used in many aspects of the software development process. These chatbots work alongside developers, providing assistance in various software development tasks, from answering development questions to running tests and controlling services. While there are numerous chatbots, and their capability of supporting software practitioners is encouraging, little is known about the development challenges and usage benefits of software engineering chatbots. 
@@ -242,13 +261,19 @@ $(document).ready(function(){
 		    <p><em><strong>Bio:</strong></em>Ahmad Abdellatif is an Assistant Professor in the Department of Electrical and Software Engineering at the University of Calgary. Before, he worked as a postdoctoral researcher at DASLab in the Department of Computer Science and Software Engineering at Concordia University. His research interests and expertise are in Software Engineering, with a special interest in Software Chatbots, Mining Software Repositories and Engineering AI-based Systems. His work has been published in top-ranked Software Engineering venues, such as IEEE Transactions on Software Engineering (TSE), the Empirical Software Engineering Journal (EMSE), the International Conference on Software Engineering (ICSE), and the International Conference on Mining Software Repositories (MSR). You can find more about him at: (<a href="https://aabdllatif.github.io/">https://aabdllatif.github.io/</a>)</p>
 		    <br>
 		   
+          </div>
+
+          <div id="anranchen">
 	     <h5><a href="https://anrchen.github.io">An Ran Chen</a> from University of Alberta </h5>
 		   <p><em><strong>Abstract:</strong></em> Continuous integration is a DevOps practice in which software changes are frequently and automatically built, tested, and deployed. The primary objectives of continuous integration are to identify and address bugs quickly, and to improve software quality. However, the complexity of modern software systems and the lack of debugging information can make it challenging to locate and understand the root causes of bugs. In my upcoming talk, I will share my research insights into the challenges of automated debugging in DevOps and how they contribute to my broader goal of improving software quality and reliability. I will discuss how my past research, with a particular focus on developing new debugging innovations to minimize development and maintenance costs, has contributed to the field of automated debugging. Additionally, I will present my vision for the future of automated debugging in DevOps. 
               </p>
 		    <img src="./images/anranchen.jpg" height="150px" align="left" style="margin: 0px 10px 0px 0px;"></img>
 		    <p><em><strong>Bio:</strong></em>An Ran Chen is an Assistant Professor at the Electrical and Computer Engineering Department of University of Alberta. His research interests cover various software engineering topics, including automated debugging, software testing, mining software repositories, and DevOps practices. His work has been published in flagship journals and selected as the featured article for the TSE journal. He is also the co-chair of Testing and Tools track for IEEE International Conference on Software Testing, Verification and Validation (ICST) 2024. Prior to pursuing research, An Ran worked as a web and software developer at the Bank of Canada and McGill University. For more information, please visit his personal website at (<a href="https://anrchen.github.io/home/">https://anrchen.github.io/home/</a>).</p>
-		    <br>		   
+		    <br>
+        
+      </div>
 
+      <div id="chengniansun">
 	     <h5><a href="https://cs.uwaterloo.ca/~cnsun">Chengnian Sun</a> from University of Waterloo </h5>
 		   <p><em><strong>Abstract:</strong></em> Given a program P that exhibits a certain property ψ (e.g., a C program that crashes GCC when it is being compiled), the goal of program reduction is to minimize P to a smaller variant P ′ that still exhibits the same property, i.e., ψ (P ′). Program reduction is important and widely demanded for testing and debugging. For example, all compiler/interpreter development projects need effective program reduction to minimize failure-inducing test programs to ease debugging.
 			<br>
@@ -260,7 +285,9 @@ $(document).ready(function(){
 			    These works have generated over 3700+ citations. Before joining UWaterloo, he was a full-time software engineer at Google Headquarters, working on Java/Android compiler toolchains and machine learning libraries for Google Search. Prior to Google, he spent three wonderful years as a postdoctoral fellow at the University of California, Davis, working on compiler validation techniques, which have detected 1600+ bugs in GCC and LLVM. He holds a Ph.D. in Computer Science from the National University of Singapore.
 		</p>
 		    <br>   <br>
-		   
+      </div>
+
+      <div id="diegoeliascosta">
 	     <h5><a href="https://diegoeliascosta.github.io">Diego Elias Damasceno Costa</a> from Concordia University </h5>
 		   <p><em><strong>Abstract:</strong></em> Software ecosystems, such as npm, Maven, and PyPI, have completely changed how we develop software. By providing a platform of reusable libraries and packages, software ecosystems have enabled developers to write less code, increasing productivity and improving the quality of delivered software. However, this level of code reuse has created significant challenges in software maintenance: developers struggle to select well-maintained libraries among the myriad of options, dependency maintenance issues abound, and vulnerable dependencies are widespread, risking the integrity of delivered software.
 			   <br>
@@ -271,7 +298,8 @@ $(document).ready(function(){
 			    (<a href="https://diegoeliascosta.github.io/">https://diegoeliascosta.github.io/</a>).
 		    </p>
 		    <br>   <br>
-		    
+      </div>
+      <div id="dr-mariam-el-mezouar">
 	<h5>Beyond Code: Mining Insights from the Social Fabric of Software Development</h5>
              <h5><a href="https://www.rmc-cmr.ca/en/mathematics-and-computer-science/dr-mariam-el-mezouar">Mariam El Mezouar</a> from Royal Military College </h5>
 		   
@@ -286,8 +314,9 @@ $(document).ready(function(){
 		    </p>
 		   <br>   <br>
 
+      </div>
 
-
+      <div id="mariam-guizani">
 	 <h5>Building Inclusivity into Software Engineering</h5>
              <h5><a href="https://smithengineering.queensu.ca/directory/faculty/mariam-guizani#:~:text=Mariam%20Guizani%20is%20an%20Assistant,MSc%20degree%20in%20software%20engineering.">Mariam Guizani</a> from Queen's University </h5>
 		   
@@ -300,15 +329,16 @@ More specifically, her research focuses on improving the state of diversity and 
 Her research at Microso2 Research was recognized by GitHub for its contribu8on to the currently deployed GitHub Discussion Dashboard, GitHub Blocks, and their future roadmap. She has also collaborated with founda8ons and departments such as Wikimedia, and Oregon State University IT department to empower communi8es to dismantle cogni8ve barriers in so2ware. Her research has been published at both ACM and IEEE conferences. Dr. Mariam Guizani has been invited to present her work at academic and industry venues including ICSE, CSCW, Google, GitHub, and the Linux Founda8on Open-Source Summit.</p>
 		   <br>   <br>
 
+      </div>
 
-
-		   
+		   <div id="pengyunie">
 		   
              <h5><a href="https://pengyunie.github.io">Pengyu Nie</a> from University of Waterloo </h5>
              		<p><img src="./images/pengyu-nie.png"  height="150px""></img>
 		    	 <br>   <br>
 
-
+      </div>
+      <div id="seankauffman">
 	<h5>More Than Verdicts - Runtime Monitoring for Operators</h5>
 	     <h5><a href="https://smithengineering.queensu.ca/directory/faculty/sean-kauffman">Sean Kauffman</a> from Queen's University  </h5>
 		     <p><em><strong>Abstract:</strong></em> Runtime monitoring is often deployed in high-criticality systems to catch incorrect behaviour before it can cause failures.  Often, however, the operators of these systems are interested in more than a warning klaxon at the moment a fault presents itself.  Monitors that calculate operational information for system comprehension have more utility than simple error detectors.  This talk will explore some current thinking in the field of Runtime Verification around monitors that do more than report specification violations and some of the accompanying challenges.  These challenges include specification formalisms, computational complexity, and information transmission. 
@@ -318,7 +348,8 @@ Her research at Microso2 Research was recognized by GitHub for its contribu8on t
 		    	  <br>
 			    Sean's research focuses on safety-critical software and fits into the broad themes of Formal Methods, Runtime Verification, Anomaly Detection, and Explainable AI.  He has collaborated on research with partners such as NASA's Jet Propulsion Laboratory, the Embedded Systems Institute, QNX, and Pratt and Whitney Canada.  Sean's teaching philosophy focuses on fostering engagement, using techniques like active learning, productive failure, and peer instruction.</p>
 		    	  <br>   <br>
-		   
+		   </div>
+       <div id="shinhweitang">
 	<h5>Automated Program Generation for Testing and Repair</h5>
              <h5><a href="https://www.concordia.ca/faculty/shinhwei-tan.html">Shin Hwei Tan</a> from Concordia University </h5>
 		     <p><em><strong>Abstract:</strong></em> Given either a specification written in natural language or an input program, automated program generation techniques produce a program according to the given specification or by modifying the input program. Automated program generation is a powerful technique that can be used for finding bugs in software systems that take programs as input or fixing bugs in the input programs. In this talk, I will share our latest results on automated program generation for (1) fixing bugs in large language model (LLM) based automated program generation, (1) testing static program analyzers. For the first part of the talk, I will present our study that categorizes common mistakes in LLM like Codex, and our insights in applying automated program repair techniques in fixing mistakes by Codex. For the second part of the talk, I will introduce several automated testing techniques that find bugs in static analyzers using semantic-preserving transformations, and annotation synthesizers. 
@@ -326,7 +357,8 @@ Her research at Microso2 Research was recognized by GitHub for its contribu8on t
 		    <img src="./images/shinhwei-tan.jpeg" height="150px" align="left" style="margin: 0px 10px 0px 0px;"></img>
 		    <p><em><strong>Bio:</strong></em>Shin Hwei Tan is an Associate Professor (Gina Cody Research Chair) in Concordia University. Before moving to Concordia University, she was an Assistant Professor in Southern University of Science and Technology in Shenzhen, China. She obtained her PhD degree from National University of Singapore and her B.S (Hons) and MSc degree from UIUC, USA. Her main research interests are in automated program repair, software testing and open-source development. She is an Associate Editor for TOSEM and the Guest Editors in Chief for the New Frontier in Software Engineering track in TOSEM. She has also served as PCs for top-tier software engineering conferences, where she won 3 best reviewers award (FSE 2020, ASE 2020, ICSE 2022 NIER-track).</p>
 		    <br>
-
+              </div>
+              <div id="liliwei">
 
 	 <h5>Taming Android Compatibility Issues: The way back and the way forward</h5>
              <h5><a href="https://www.mcgill.ca/ece/lili-wei">Lili Wei</a> from  McGill University </h5>
@@ -337,7 +369,7 @@ Her research at Microso2 Research was recognized by GitHub for its contribu8on t
 		    <p><em><strong>Bio:</strong></em>Lili Wei is an assistant professor in the department of Electrical and Computer Engineering at McGill University. Prior to joining McGill University, she received her Ph.D. degree and worked as a post-doctoral fellow at the Hong Kong University of Science and Technology. Her research interests lie in program analysis and testing with a focus on mobile apps, smart contracts and IoT software. Her research outcomes were recognized by several awards, including an ACM SIGSOFT Distinguished Paper Award, an ACM SIGSOFT Distinguished Artifact award, a Google PhD Fellowship and a Microsoft Research Asia PhD Fellowship. She is also actively serving the software engineering research community. She received a Distinguished Reviewer Award from ASE 2022. More information can be found on her personal website:<a href="https://liliweise.github.io">https://liliweise.github.io </a></p>
 		    <br>
 		    
-         
+         </div>
             </div>
             <!-- End New Faculty Talks -->
 
@@ -351,7 +383,7 @@ Her research at Microso2 Research was recognized by GitHub for its contribu8on t
 		</p>
 
 	     <h5>chaired by <a href="https://sophiaytian.com">Yuan Tian</a> , Queen's University </h5>
-		         <p><img src="./images/yuan_tian.jpeg"  height="150px""></img>
+		         <p><img src="./images/yuan_tian.jpeg"  height="150px"/>
 		    <br>   <br>
             </div>
             <!-- End Panel -->
@@ -384,15 +416,15 @@ Her research at Microso2 Research was recognized by GitHub for its contribu8on t
 		</p>  
 		    
 	     <h5><a href="https://lindayi.me/">Dayi Lin</a> from Centre for Software Excellence, Huawei Canada </h5>
-		    	 <p> <img src="./images/dayi-lin.jpeg"  height="150px""></img> </p>
+		    	 <p> <img src="./images/dayi-lin.jpeg"  height="150px"/> </p>
 		    <br>  
 		  
 	     <h5><a href="https://www.filipecogo.pro/">Filipe Cogo</a> from Centre for Software Excellence, Huawei Canada </h5>
-		    	 <p> <img src="./images/filipe-rcogo.jpeg"  height="150px""></img> </p>
+		    	 <p> <img src="./images/filipe-rcogo.jpeg"  height="150px"/> </p>
 		    <br> 
 
 	     <h5><a href="https://conf.researchr.org/profile/icse-2024/gopikrishnanrajbahadur1">Gopi Krishnan Rajbahadur</a> from Centre for Software Excellence, Huawei Canada </h5>
-		    	 <p> <img src="./images/gopi-krishnan-rajbahadur.jpeg"  height="150px""></img> </p>
+		    	 <p> <img src="./images/gopi-krishnan-rajbahadur.jpeg"  height="150px"/> </p>
 		    <br> 
 
 	</div>
@@ -620,9 +652,46 @@ Her research at Microso2 Research was recognized by GitHub for its contribu8on t
         hash && $('ul.nav a[href="' + hash + '"]').tab('show');
         window.scrollTo(0, 0);
       });
+
+      $(document).ready(function(){
+        // Toggle the submenu and show the content for "Invited New Faculty Talks"
+        $('a[href="#facultySubmenu"]').click(function(e){
+            e.preventDefault(); // Prevent default anchor behavior
+            var submenu = $('#facultySubmenu');
+    
+            // Collapse or show the submenu
+            if (submenu.hasClass('in')) {
+                submenu.collapse('hide');
+            } else {
+                // Hide any other open submenus in the tracks menu
+                $('#tracksSubmenu .collapse.in').not(submenu).collapse('hide');
+                submenu.collapse('show'); // Show the submenu
+            }
+    
+            // Show the content for "Invited New Faculty Talks"
+            $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
+            $('#newfacultytalks').addClass('active in'); // Show the "Invited New Faculty Talks" content
+    
+            // Scroll to the "Invited New Faculty Talks" content if you want smooth scrolling
+            /* $('html, body').animate({
+                scrollTop: $('#newfacultytalks').offset().top
+            }, 1000); */
+        });
+
+        $('#facultySubmenu a').click(function(e){
+          e.preventDefault(); // Prevent default anchor behavior
+          var target = $(this).attr('href');
+
+          // Scroll to the specific faculty section
+          $('html, body').animate({
+              scrollTop: $(target).offset().top
+          }, 1000);
+      });
+        
+    });
+    
     </script>
 <!-- Add jQuery and Bootstrap JavaScript at the end for functionality -->
-
 
   </body>
 </html>
