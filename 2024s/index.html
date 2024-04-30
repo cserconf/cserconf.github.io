@@ -35,14 +35,14 @@
     </script>
 
 
-<script>
+<!-- <script>
 $(document).ready(function(){
     // When a link in the sidebar is clicked
     $('#sidebar a').on('click', function(e){
         var target = $(this).attr('href');
 
         // If it's the Tracks button or one of its submenus
-        if (target === '#tracksSubmenu' || $(this).parents('#tracksSubmenu').length) {
+        if (target === '#tracksSubmenu' ) {
             e.preventDefault(); // Prevent the default anchor behavior
 
             // If it's the Tracks button itself, show the Tracks content
@@ -59,7 +59,7 @@ $(document).ready(function(){
         }
     });
 });
-</script>
+</script> -->
 
 
 	  
@@ -111,7 +111,7 @@ $(document).ready(function(){
                     <li><a href="#keynotes" data-toggle="pill">Keynotes</a></li>
                     <!-- <li><a href="#newfacultytalks" data-toggle="pill">Invited New Faculty Talks</a> -->
                       <li class="dropdown">
-                        <a href="#facultySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Invited New Faculty Talks</a>
+                        <a href="#newfacultytalks" id="invitefaculty" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Invited New Faculty Talks</a>
                         
               
 
@@ -330,21 +330,14 @@ Her research at Microso2 Research was recognized by GitHub for its contribu8on t
 		   <br>   <br>
 
       </div>
-		   
-		   <div id="pengyunie">
-	<h5>Software Development, Evolution, and Testing in the Era of Large Language Models</h5>		   
-             <h5><a href="https://pengyunie.github.io">Pengyu Nie</a> from University of Waterloo </h5>
-             		 <p><em><strong>Abstract:</strong></em> Large language models (LLMs) have been increasingly adopted for Software Engineering (SE) tasks and showing better and better performance on benchmarks such as code generation and bug fixing. One common trend in the application of LLMs on SE tasks is to integrate pre-trained / fine-tuned models with program analysis techniques.
-Moreover, the adoption and evaluation of LLMs for SE tasks still face many challenges, e.g., the complex software development, evolution, and testing workflow in practice. In this talk, I will demonstrate how traditional program analysis techniques are used in the era of LLMs,with examples of my own work on LLM-based test completion (TeCo) and code comment co-evolution (CoditT5). Based on that, I will discuss the path forward for building more accurate, robust, and interpretable LLM-based solutions for SE. 
-              </p>
-			   <img src="./images/pengyu-nie.png" height="150px" align="left" style="margin: 0px 10px 0px 0px;"></img>
 
-  <p><em><strong>Bio:</strong></em>Pengyu Nie is an Assistant Professor in the Cheriton School of Computer Science at the University of Waterloo. His research interest is improving developers' productivity during software development,testing and maintenance. Specific topics include execution-guided models for test completion and lemma naming, learning to evolve code and comments, and frameworks for maintaining executable comments and specifications.
-<br>
-			    Pengyu obtained his Ph.D. in 2023 and M.Sc. in 2020 from The University of Texas at Austin, advised by Milos Gligoric. He received his B.Sc. from University of Science and Technology of China (School of the Gifted Young) in 2017.</p>
-		    	  <br>   <br>
-		   </div>
+		   <div id="pengyunie">
 		   
+             <h5><a href="https://pengyunie.github.io">Pengyu Nie</a> from University of Waterloo </h5>
+             		<p><img src="./images/pengyu-nie.png"  height="150px""></img>
+		    	 <br>   <br>
+
+      </div>
       <div id="seankauffman">
 	<h5>More Than Verdicts - Runtime Monitoring for Operators</h5>
 	     <h5><a href="https://smithengineering.queensu.ca/directory/faculty/sean-kauffman">Sean Kauffman</a> from Queen's University  </h5>
@@ -356,7 +349,6 @@ Moreover, the adoption and evaluation of LLMs for SE tasks still face many chall
 			    Sean's research focuses on safety-critical software and fits into the broad themes of Formal Methods, Runtime Verification, Anomaly Detection, and Explainable AI.  He has collaborated on research with partners such as NASA's Jet Propulsion Laboratory, the Embedded Systems Institute, QNX, and Pratt and Whitney Canada.  Sean's teaching philosophy focuses on fostering engagement, using techniques like active learning, productive failure, and peer instruction.</p>
 		    	  <br>   <br>
 		   </div>
-		   
        <div id="shinhweitang">
 	<h5>Automated Program Generation for Testing and Repair</h5>
              <h5><a href="https://www.concordia.ca/faculty/shinhwei-tan.html">Shin Hwei Tan</a> from Concordia University </h5>
@@ -558,22 +550,15 @@ Moreover, the adoption and evaluation of LLMs for SE tasks still face many chall
             </div>
             <!-- End Steering Committee -->
 
-
             <!-- Begin Venue -->
             <div id="venue" class="tab-pane fade">
 
                 <div class="col-lg-5 col-md-6"></div>
                 <h4>Queen's University, Kingston, June 10-11, 2024</h4>
-                <h5>Address: 
-		  <br>
-                  June 10: BioSciences Complex Room 1102 (116 Barrie St, Kingston, ON K7L 3N6)
-                  <br>
-                  June 11: Kinesiology Room 100 (28 Division St, Kingston, ON K7L 3N6)
-                </h5>
+                <h5>Address: TBD</h5>
 			      </div>
             <!-- End Venue -->
 
-		  
 
             <!-- Begin Registration -->
             <div id="registration" class="tab-pane fade">
@@ -670,13 +655,13 @@ Moreover, the adoption and evaluation of LLMs for SE tasks still face many chall
 
       $(document).ready(function(){
         // Toggle the submenu and show the content for "Invited New Faculty Talks"
-        $('a[href="#facultySubmenu"]').click(function(e){
+        $('#invitefaculty').click(function(e){
             e.preventDefault(); // Prevent default anchor behavior
             var submenu = $('#facultySubmenu');
     
             // Collapse or show the submenu
             if (submenu.hasClass('in')) {
-                submenu.collapse('hide');
+              //  submenu.collapse('hide');
             } else {
                 // Hide any other open submenus in the tracks menu
                 $('#tracksSubmenu .collapse.in').not(submenu).collapse('hide');
@@ -686,7 +671,7 @@ Moreover, the adoption and evaluation of LLMs for SE tasks still face many chall
             // Show the content for "Invited New Faculty Talks"
             $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
             $('#newfacultytalks').addClass('active in'); // Show the "Invited New Faculty Talks" content
-    
+            window.history.pushState({}, '', $(this).attr('href'));
             // Scroll to the "Invited New Faculty Talks" content if you want smooth scrolling
             /* $('html, body').animate({
                 scrollTop: $('#newfacultytalks').offset().top
