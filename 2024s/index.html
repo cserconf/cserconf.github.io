@@ -17,7 +17,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -35,36 +35,36 @@
     </script>
 
 
-<!-- <script>
-$(document).ready(function(){
-    // When a link in the sidebar is clicked
-    $('#sidebar a').on('click', function(e){
-        var target = $(this).attr('href');
+    <script>
+      $(document).ready(function(){
+          // When a link in the sidebar is clicked
+          $('#sidebar a').on('click', function(e){
+              var target = $(this).attr('href');
 
-        // If it's the Tracks button or one of its submenus
-        if (target === '#tracksSubmenu' ) {
-            e.preventDefault(); // Prevent the default anchor behavior
+              // If it's the Tracks button or one of its submenus
+              if (target === '#tracksSubmenu' ) {
+                  e.preventDefault(); // Prevent the default anchor behavior
 
-            // If it's the Tracks button itself, show the Tracks content
-            if (target === '#tracksSubmenu') {
-                $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
-                $('#tracks').addClass('active in'); // Show Tracks content
-            } else {
-                // Otherwise, handle submenu navigation here
-                // For example, navigate to a section or trigger showing another tab's content
-            }
+                  // If it's the Tracks button itself, show the Tracks content
+                  if (target === '#tracksSubmenu') {
+                      $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
+                      $('#tracks').addClass('active in'); // Show Tracks content
+                  } else {
+                      // Otherwise, handle submenu navigation here
+                      // For example, navigate to a section or trigger showing another tab's content
+                  }
 
-            // Adjust the URL if needed, without affecting the page view
-            window.history.pushState({}, '', $(this).attr('href'));
-        }
-    });
-});
-</script> -->
+                  // Adjust the URL if needed, without affecting the page view
+                  window.history.pushState({}, '', $(this).attr('href'));
+              }
+          });
+      });
+    </script>
 
 
 	  
 
-<!-- Add Bootstrap CSS for styling and collapse functionality -->
+    <!-- Add Bootstrap CSS for styling and collapse functionality -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
    
   </head>
@@ -102,41 +102,38 @@ $(document).ready(function(){
             <!-- Enable links to subpages by removing the "no-" prefix. -->
             <ul class="nav nav-stacked nav-pills" id="sidebar">
 
-	      <li><a data-toggle="pill" href="#home">Home</a></li>
+              <li><a data-toggle="pill" href="#home">Home</a></li>
 
- <!-- Tracks menu with dropdown for submenus -->
-            <li class="dropdown">
+              <!-- Tracks menu with dropdown for submenus -->
+              <li class="dropdown">
                 <a href="#tracksSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Tracks</a>
                 <ul class="collapse list-unstyled" id="tracksSubmenu">
                     <li><a href="#keynotes" data-toggle="pill">Keynotes</a></li>
                     <!-- <li><a href="#newfacultytalks" data-toggle="pill">Invited New Faculty Talks</a> -->
                       <li class="dropdown">
-                        <a href="#newfacultytalks" id="invitefaculty" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Invited New Faculty Talks</a>
-                        
-              
-
-                      <ul class="collapse list-unstyled" id="facultySubmenu">
-                        <li><a href="#ahmad-abdellatif">Ahmad Abdellatif</a></li>
-                        <li><a href="#anranchen" data-toggle="pill">An Ran Chen</a></li>
-                        <li><a href="#chengniansun" data-toggle="pill">Chengnian Sun</a></li>
-                        <li><a href="#diegoeliascosta" data-toggle="pill">Diego Elias Damasceno Costa</a></li>
-                        <li><a href="#dr-mariam-el-mezouar" data-toggle="pill">Dr. Mariam El Mezouar</a></li>
-                        <li><a href="#mariam-guizani" data-toggle="pill">Mariam Guizani</a></li>
-                        <li><a href="#pengyunie" data-toggle="pill">Pengyu Nie</a></li>
-                        <li><a href="#seankauffman" data-toggle="pill">Sean Kauffman</a></li>
-                        <li><a href="#shinhweitang" data-toggle="pill">Shin Hwei Tan</a></li>
-                        <li><a href="#liliwei" data-toggle="pill">Lili Wei</a></li>
-                      </ul>
+                        <a href="#facultySubmenu" id="invitefaculty" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Invited New Faculty Talks</a>
+                        <ul class="collapse list-unstyled" id="facultySubmenu">
+                          <li><a href="#ahmad-abdellatif">Ahmad Abdellatif</a></li>
+                          <li><a href="#anranchen" data-toggle="pill">An Ran Chen</a></li>
+                          <li><a href="#chengniansun" data-toggle="pill">Chengnian Sun</a></li>
+                          <li><a href="#diegoeliascosta" data-toggle="pill">Diego Elias Damasceno Costa</a></li>
+                          <li><a href="#dr-mariam-el-mezouar" data-toggle="pill">Dr. Mariam El Mezouar</a></li>
+                          <li><a href="#mariam-guizani" data-toggle="pill">Mariam Guizani</a></li>
+                          <li><a href="#pengyunie" data-toggle="pill">Pengyu Nie</a></li>
+                          <li><a href="#seankauffman" data-toggle="pill">Sean Kauffman</a></li>
+                          <li><a href="#shinhweitang" data-toggle="pill">Shin Hwei Tan</a></li>
+                          <li><a href="#liliwei" data-toggle="pill">Lili Wei</a></li>
+                        </ul>
                     </li>
-		    <li><a href="#panel" data-toggle="pill">Panel</a></li>
+		                <li><a href="#panel" data-toggle="pill">Panel</a></li>
                     <li><a href="#tutorial" data-toggle="pill">Tutorial</a></li>
                     <li><a href="#studentResearchTalks" data-toggle="pill">Research Talks</a></li>
                     <li><a href="#Posters" data-toggle="pill"> Posters/Demos</a></li>
                 </ul>
-            </li>
+              </li>
 
               <!-- <li><a data-toggle="no-pill" href="#acceptedPapers">Accepted Papers</a></li> --> 
-	      <li><a data-toggle="pill" href="#call">Submissions</a></li>
+	            <li><a data-toggle="pill" href="#call">Submissions</a></li>
               <li><a data-toggle="pill" href="#orgcom">Organizing Committee</a></li>
               <li><a data-toggle="pill" href="#steercom">Steering Committee</a></li>
               <li><a data-toggle="pill" href="#venue">Venue</a></li>
@@ -191,11 +188,11 @@ $(document).ready(function(){
                 <tbody>
                   <tr>
                     <td>proposal submission</td>
-					<td>Friday, May 10, 2024, 11.59pm (EDT) </td>
+					<td>Monday, May 6, 2024, 11.59pm (EDT) </td>
                   </tr>
                   <tr>
                     <td>Acceptance announcement</td>
-					<td>Wednesday, May 15, 2024</td>
+					<td>Monday, May 13, 2024</td>
                   </tr>
                   <tr>
                     <td>Early Registration</td>
@@ -216,20 +213,20 @@ $(document).ready(function(){
               		    
               <h4>Keynotes</h4>
 
-              <h5>Challenges and Opportunities Associated with FM-powered Agent-oriented Software Engineering</h5
-             <h5>Keynote by <a href="https://www.cse.yorku.ca/~zmjiang/">Zhen Ming (Jack) Jiang</a> (York University) </h5>
+              <h5>Challenges and Opportunities Associated with FM-powered Agent-oriented Software Engineering</h5>
+              <h5>Keynote by <a href="https://www.cse.yorku.ca/~zmjiang/">Zhen Ming (Jack) Jiang</a> (York University) </h5>
               <p><em><strong>Abstract:</strong></em>  Foundation Models (FM) and their powered systems (e.g.,ChatGPT and GitHub Copilot) have democratized access to a wide range of advanced technologies, so that average person can now complete various intricate tasks from poem writing to software development which only domain experts or field specialists could perform previously. However, due to the limitations of existing FM technologies, these systems suffer from a few serious drawbacks which limit their potential impact on border applicability. Instead of simply waiting for mature FM technologies, AI engineering researchers and practitioners must develop innovative engineering solutions to mitigate or resolve these issues. One promising direction is through agents, which are artificial entities capable of perceiving their surroundings using sensors, making decisions, and then taking actions in response using actuators. In this talk, I will present the various advances in the area of FM-powered agent-oriented software engineering and its associated challenges. 
               </p>
-		<img src="./images/ZhenMingJiang.jpg" height=150px align="left" style="margin: 0px 10px 0px 0px;"></img>
+		          <img src="./images/ZhenMingJiang.jpg" height=150px align="left" style="margin: 0px 10px 0px 0px;"/>
               <p><em><strong>Bio:</strong></em> Zhen Ming (Jack) Jiang is an associate professor at the Department of Electrical Engineering and Computer Science, York University. Before his academic career, he previously worked with the Performance Engineering team at BlackBerry (RIM) where tools resulting from his research are currently used daily to monitor and debug the health of several ultra-large commercial software systems within BlackBerry. His current research interests lie in the intersection of AI and SE. He is one of the co-organizers for the Shonan meeting on “Foundation Models and Software Engineering: Challenges and Opportunities” as well as 2024 FM+SE Summit.
               </p>		    
 		    <br> <br>
 
               <h5>Source Code Diff Revolution</h5>
-		<h5>Keynote by <a href="https://www.concordia.ca/faculty/nikolaos-tsantalis.html">Nikolaos Tsantalis</a> (Concordia University)</h5>
+		          <h5>Keynote by <a href="https://www.concordia.ca/faculty/nikolaos-tsantalis.html">Nikolaos Tsantalis</a> (Concordia University)</h5>
               <p><em><strong>Abstract:</strong></em>  Software developers spend a significant portion of the workday trying to understand and review the code changes of their teammates. Currently, most code reviewing and change comprehension is done using textual diff tools, such as the commit diff in GitHub or Gerrit. Such diff tools are insufficient, especially for complex changes, which move code within the same file or between different files. Abstract Syntax Tree (AST) diff tools brought several improvements in making easier the understanding of source code changes. However, they still have some constraints and limitations that affect negatively their accuracy. In this keynote, I will demonstrate these limitations using real case studies from open-source projects. At the same time, I will show how the AST diff generated by our tool addresses these limitations. Finally, I will introduce the Benchmark we created based on commits from the Defects4J and Refactoring Oracle datasets, and present the precision and recall of state-of-the-art AST diff tools on our benchmark. Vive la révolution! 
               </p>
-		<img src="./images/NikolaosTsantalis.jpeg" height="150px" align="left" style="margin: 0px 10px 0px 0px;"></img>
+		          <img src="./images/NikolaosTsantalis.jpeg" height="150px" align="left" style="margin: 0px 10px 0px 0px;"/>
               <p><em><strong>Bio:</strong></em> Nikolaos Tsantalis is an Associate Professor in the Department of Computer Science and Software Engineering at Concordia University, Montreal, Canada. His research interests include software maintenance, software evolution, software design, empirical software engineering, refactoring recommendation systems, and refactoring mining. He has developed tools, such as the Design Pattern Detection tool, JDeodorant and RefactoringMiner, which are used by many practitioners, researchers, and educators. He has been awarded three Most Influential Paper awards at SANER 2018, SANER 2019 and CASCON 2023, two ACM SIGSOFT Distinguished Paper awards at FSE 2016 and ICSE 2017, two ACM Distinguished Artifact awards at FSE 2016 and OOPSLA 2017, and four Distinguished Reviewer Awards at MSR 2020, ICPC 2022, ASE 2022 and ICSME 2023. He served as the Program co-chair for ICSME 2021 and SCAM 2020. He currently serves on the Editorial Board of the IEEE Transactions on Software Engineering as Associate Editor. Finally, he is a Senior member of the IEEE and the ACM, and holds a license from the Association of Professional Engineers of Ontario (PEO).
               </p>
 
@@ -249,380 +246,331 @@ $(document).ready(function(){
 
 
               <div id="ahmad-abdellatif">
-	  <h5>Towards More Effective Software Engineering Chatbots</h5>
-             <h5><a href="https://profiles.ucalgary.ca/ahmad-abdellatif">Ahmad Abdellatif</a> from University of Calgary </h5>
-		     <p><em><strong>Abstract:</strong></em> Software chatbots are used in many aspects of the software development process. These chatbots work alongside developers, providing assistance in various software development tasks, from answering development questions to running tests and controlling services. While there are numerous chatbots, and their capability of supporting software practitioners is encouraging, little is known about the development challenges and usage benefits of software engineering chatbots. 
+	            <h5>Towards More Effective Software Engineering Chatbots</h5>
+              <h5><a href="https://profiles.ucalgary.ca/ahmad-abdellatif">Ahmad Abdellatif</a> from University of Calgary </h5>
+		          <p><em><strong>Abstract:</strong></em> Software chatbots are used in many aspects of the software development process. These chatbots work alongside developers, providing assistance in various software development tasks, from answering development questions to running tests and controlling services. While there are numerous chatbots, and their capability of supporting software practitioners is encouraging, little is known about the development challenges and usage benefits of software engineering chatbots. 
               </p>
-		   <p>In this talk, I will present our in-depth study to understand the most pressing and difficult challenges faced by chatbot practitioners in developing chatbots. I will present our chatbot, MSRBot, that answers software development and maintenance questions.
-			   </p>
-		   <p> Based on our studies, we have identified two critical challenges in chatbot development: selecting a Natural Language Understanding (NLU) platform for chatbot implementation and curating a high-quality dataset to train the NLU. To help developers create more efficient chatbots, we assess the performance of multiple widely used NLUs using representative software engineering tasks to guide chatbot developers in designing more efficient chatbots. Additionally, we propose approaches for augmenting software engineering chatbot datasets. Our work helps advance the state-of-the-art in the use of chatbots in software engineering.
-		   </p>
-		    <img src="./images/ahmad-abdellatif.jpeg" height="150px" align="left" style="margin: 0px 10px 0px 0px;"></img>
-		    <p><em><strong>Bio:</strong></em>Ahmad Abdellatif is an Assistant Professor in the Department of Electrical and Software Engineering at the University of Calgary. Before, he worked as a postdoctoral researcher at DASLab in the Department of Computer Science and Software Engineering at Concordia University. His research interests and expertise are in Software Engineering, with a special interest in Software Chatbots, Mining Software Repositories and Engineering AI-based Systems. His work has been published in top-ranked Software Engineering venues, such as IEEE Transactions on Software Engineering (TSE), the Empirical Software Engineering Journal (EMSE), the International Conference on Software Engineering (ICSE), and the International Conference on Mining Software Repositories (MSR). You can find more about him at: (<a href="https://aabdllatif.github.io/">https://aabdllatif.github.io/</a>)</p>
-		    <br>
-		   
+              <p>In this talk, I will present our in-depth study to understand the most pressing and difficult challenges faced by chatbot practitioners in developing chatbots. I will present our chatbot, MSRBot, that answers software development and maintenance questions.
+                </p>
+              <p> Based on our studies, we have identified two critical challenges in chatbot development: selecting a Natural Language Understanding (NLU) platform for chatbot implementation and curating a high-quality dataset to train the NLU. To help developers create more efficient chatbots, we assess the performance of multiple widely used NLUs using representative software engineering tasks to guide chatbot developers in designing more efficient chatbots. Additionally, we propose approaches for augmenting software engineering chatbot datasets. Our work helps advance the state-of-the-art in the use of chatbots in software engineering.
+              </p>
+              <img src="./images/ahmad-abdellatif.jpeg" height="150px" align="left" style="margin: 0px 10px 0px 0px;"/>
+              <p><em><strong>Bio:</strong></em>Ahmad Abdellatif is an Assistant Professor in the Department of Electrical and Software Engineering at the University of Calgary. Before, he worked as a postdoctoral researcher at DASLab in the Department of Computer Science and Software Engineering at Concordia University. His research interests and expertise are in Software Engineering, with a special interest in Software Chatbots, Mining Software Repositories and Engineering AI-based Systems. His work has been published in top-ranked Software Engineering venues, such as IEEE Transactions on Software Engineering (TSE), the Empirical Software Engineering Journal (EMSE), the International Conference on Software Engineering (ICSE), and the International Conference on Mining Software Repositories (MSR). You can find more about him at: (<a href="https://aabdllatif.github.io/">https://aabdllatif.github.io/</a>)</p>
+              <br>
           </div>
 
           <div id="anranchen">
-	     <h5><a href="https://anrchen.github.io">An Ran Chen</a> from University of Alberta </h5>
-		   <p><em><strong>Abstract:</strong></em> Continuous integration is a DevOps practice in which software changes are frequently and automatically built, tested, and deployed. The primary objectives of continuous integration are to identify and address bugs quickly, and to improve software quality. However, the complexity of modern software systems and the lack of debugging information can make it challenging to locate and understand the root causes of bugs. In my upcoming talk, I will share my research insights into the challenges of automated debugging in DevOps and how they contribute to my broader goal of improving software quality and reliability. I will discuss how my past research, with a particular focus on developing new debugging innovations to minimize development and maintenance costs, has contributed to the field of automated debugging. Additionally, I will present my vision for the future of automated debugging in DevOps. 
-              </p>
-		    <img src="./images/anranchen.jpg" height="150px" align="left" style="margin: 0px 10px 0px 0px;"></img>
-		    <p><em><strong>Bio:</strong></em>An Ran Chen is an Assistant Professor at the Electrical and Computer Engineering Department of University of Alberta. His research interests cover various software engineering topics, including automated debugging, software testing, mining software repositories, and DevOps practices. His work has been published in flagship journals and selected as the featured article for the TSE journal. He is also the co-chair of Testing and Tools track for IEEE International Conference on Software Testing, Verification and Validation (ICST) 2024. Prior to pursuing research, An Ran worked as a web and software developer at the Bank of Canada and McGill University. For more information, please visit his personal website at (<a href="https://anrchen.github.io/home/">https://anrchen.github.io/home/</a>).</p>
-		    <br>
-        
-      </div>
+	          <h5><a href="https://anrchen.github.io">An Ran Chen</a> from University of Alberta </h5>
+		        <p><em><strong>Abstract:</strong></em> Continuous integration is a DevOps practice in which software changes are frequently and automatically built, tested, and deployed. The primary objectives of continuous integration are to identify and address bugs quickly, and to improve software quality. However, the complexity of modern software systems and the lack of debugging information can make it challenging to locate and understand the root causes of bugs. In my upcoming talk, I will share my research insights into the challenges of automated debugging in DevOps and how they contribute to my broader goal of improving software quality and reliability. I will discuss how my past research, with a particular focus on developing new debugging innovations to minimize development and maintenance costs, has contributed to the field of automated debugging. Additionally, I will present my vision for the future of automated debugging in DevOps. 
+            </p>
+            <img src="./images/anranchen.jpg" height="150px" align="left" style="margin: 0px 10px 0px 0px;"/>
+            <p><em><strong>Bio:</strong></em>An Ran Chen is an Assistant Professor at the Electrical and Computer Engineering Department of University of Alberta. His research interests cover various software engineering topics, including automated debugging, software testing, mining software repositories, and DevOps practices. His work has been published in flagship journals and selected as the featured article for the TSE journal. He is also the co-chair of Testing and Tools track for IEEE International Conference on Software Testing, Verification and Validation (ICST) 2024. Prior to pursuing research, An Ran worked as a web and software developer at the Bank of Canada and McGill University. For more information, please visit his personal website at (<a href="https://anrchen.github.io/home/">https://anrchen.github.io/home/</a>).</p>
+            <br>
+          </div>
 
       <div id="chengniansun">
-	     <h5><a href="https://cs.uwaterloo.ca/~cnsun">Chengnian Sun</a> from University of Waterloo </h5>
-		   <p><em><strong>Abstract:</strong></em> Given a program P that exhibits a certain property ψ (e.g., a C program that crashes GCC when it is being compiled), the goal of program reduction is to minimize P to a smaller variant P ′ that still exhibits the same property, i.e., ψ (P ′). Program reduction is important and widely demanded for testing and debugging. For example, all compiler/interpreter development projects need effective program reduction to minimize failure-inducing test programs to ease debugging.
-			<br>
+	      <h5><a href="https://cs.uwaterloo.ca/~cnsun">Chengnian Sun</a> from University of Waterloo </h5>
+		    <p><em><strong>Abstract:</strong></em> Given a program P that exhibits a certain property ψ (e.g., a C program that crashes GCC when it is being compiled), the goal of program reduction is to minimize P to a smaller variant P ′ that still exhibits the same property, i.e., ψ (P ′). Program reduction is important and widely demanded for testing and debugging. For example, all compiler/interpreter development projects need effective program reduction to minimize failure-inducing test programs to ease debugging.
+			  <br>
 			   In this talk, I will present Perses, a novel framework for effective, efficient, and general program reduction. The key insight is to exploit, in a general manner, the formal syntax of the programs under reduction and ensure that each reduction step considers only promising, syntactically valid variants to avoid futile efforts on syntactically invalid variants.
-		   </p>
-		    <img src="./images/Chengnian_Sun.png" height="150px" align="left" style="margin: 0px 10px 0px 0px;"></img>
+		    </p>
+		    <img src="./images/Chengnian_Sun.png" height="150px" align="left" style="margin: 0px 10px 0px 0px;"/>
 		    <p><em><strong>Bio:</strong></em>Dr. Chengnian Sun is an Assistant Professor in the Cheriton School of Computer Science at the University of Waterloo. His primary research interests encompass the domains of software engineering and programming languages. His focused efforts involve the conceptualization and implementation of techniques, tools, and methodologies that contribute to the enhancement of software reliability and developers’ productivity. He has published more than 50 peer-reviewed papers at top-tier conferences and journals, such as ICSE, ASPLOS, PLDI, FSE and TOSEM.
-			<br>
+			  <br>
 			    These works have generated over 3700+ citations. Before joining UWaterloo, he was a full-time software engineer at Google Headquarters, working on Java/Android compiler toolchains and machine learning libraries for Google Search. Prior to Google, he spent three wonderful years as a postdoctoral fellow at the University of California, Davis, working on compiler validation techniques, which have detected 1600+ bugs in GCC and LLVM. He holds a Ph.D. in Computer Science from the National University of Singapore.
-		</p>
+		    </p>
 		    <br>   <br>
       </div>
 
       <div id="diegoeliascosta">
-	     <h5><a href="https://diegoeliascosta.github.io">Diego Elias Damasceno Costa</a> from Concordia University </h5>
-		   <p><em><strong>Abstract:</strong></em> Software ecosystems, such as npm, Maven, and PyPI, have completely changed how we develop software. By providing a platform of reusable libraries and packages, software ecosystems have enabled developers to write less code, increasing productivity and improving the quality of delivered software. However, this level of code reuse has created significant challenges in software maintenance: developers struggle to select well-maintained libraries among the myriad of options, dependency maintenance issues abound, and vulnerable dependencies are widespread, risking the integrity of delivered software.
-			   <br>
-			   In this talk, I will present the challenges of dependency management in the era of software ecosystems, how my past research has contributed to the field and my vision for a more transparent and proactive approach to dependency management.
-              </p>
-		    <img src="./images/diegoeliascosta.jpg" height="150px" align="left" style="margin: 0px 10px 0px 0px;"></img>
-		    <p><em><strong>Bio:</strong></em>Diego Elias Costa is an Assistant Professor in the CSSE department of Concordia University. Before that, he was an Assistant Professor in the Computer Science department at UQAM, Canada. He received his Ph.D. in Computer Science from Heidelberg University, Germany. His research interests cover a wide range of software engineering topics, including SE4AI, dependency management, performance testing, and software engineering bots. His work has been published in journals, such as IEEE TSE, EMSE, and TOSEM and at premier venues, such as ICSE, FSE, and ASE. You can find more about him at 
-			    (<a href="https://diegoeliascosta.github.io/">https://diegoeliascosta.github.io/</a>).
-		    </p>
+	      <h5><a href="https://diegoeliascosta.github.io">Diego Elias Damasceno Costa</a> from Concordia University </h5>
+		    <p><em><strong>Abstract:</strong></em> Software ecosystems, such as npm, Maven, and PyPI, have completely changed how we develop software. By providing a platform of reusable libraries and packages, software ecosystems have enabled developers to write less code, increasing productivity and improving the quality of delivered software. However, this level of code reuse has created significant challenges in software maintenance: developers struggle to select well-maintained libraries among the myriad of options, dependency maintenance issues abound, and vulnerable dependencies are widespread, risking the integrity of delivered software.
+        <br>
+        In this talk, I will present the challenges of dependency management in the era of software ecosystems, how my past research has contributed to the field and my vision for a more transparent and proactive approach to dependency management.
+        </p>
+        <img src="./images/diegoeliascosta.jpg" height="150px" align="left" style="margin: 0px 10px 0px 0px;"/>
+        <p><em><strong>Bio:</strong></em>Diego Elias Costa is an Assistant Professor in the CSSE department of Concordia University. Before that, he was an Assistant Professor in the Computer Science department at UQAM, Canada. He received his Ph.D. in Computer Science from Heidelberg University, Germany. His research interests cover a wide range of software engineering topics, including SE4AI, dependency management, performance testing, and software engineering bots. His work has been published in journals, such as IEEE TSE, EMSE, and TOSEM and at premier venues, such as ICSE, FSE, and ASE. You can find more about him at 
+          (<a href="https://diegoeliascosta.github.io/">https://diegoeliascosta.github.io/</a>).
+        </p>
 		    <br>   <br>
       </div>
       <div id="dr-mariam-el-mezouar">
-	<h5>Beyond Code: Mining Insights from the Social Fabric of Software Development</h5>
-             <h5><a href="https://www.rmc-cmr.ca/en/mathematics-and-computer-science/dr-mariam-el-mezouar">Mariam El Mezouar</a> from Royal Military College </h5>
+	      <h5>Beyond Code: Mining Insights from the Social Fabric of Software Development</h5>
+        <h5><a href="https://www.rmc-cmr.ca/en/mathematics-and-computer-science/dr-mariam-el-mezouar">Mariam El Mezouar</a> from Royal Military College </h5>
 		   
-		   <p><em><strong>Abstract:</strong></em> Mining insights from the social and textual data in software engineering involves analyzing non-code elements like chat logs and GitHub collaboration patterns. These elements provide a window into team communication and collaboration dynamics, which could be crucial for the success of software projects.
-			   <br>
+        <p><em><strong>Abstract:</strong></em> Mining insights from the social and textual data in software engineering involves analyzing non-code elements like chat logs and GitHub collaboration patterns. These elements provide a window into team communication and collaboration dynamics, which could be crucial for the success of software projects.
+        <br>
 			   The challenge lies in effectively analyzing and interpreting vast amounts of unstructured social and textual data to extract meaningful insights. In this talk, I will share insights from research into analyzing social and textual interactions in software engineering. The talk will explore how these interactions, when effectively analyzed, can uncover interesting insights in how software is developed and maintained. The presentation will also highlight ongoing and future research initiatives that aim to derive more knowledge from within this type of data, by leveraging the power of Large Language Models.
-              </p>
-		   <img src="./images/dr-mariam-el-mezouar.jpeg" height="150px" align="left" style="margin: 0px 10px 0px 0px;"></img>
+        </p>
+		    <img src="./images/dr-mariam-el-mezouar.jpeg" height="150px" align="left" style="margin: 0px 10px 0px 0px;"/>
 		    <p><em><strong>Bio:</strong></em>Dr. El Mezouar obtained a PhD in Computing from Queen's University in 2019, where she was a member of the Software Evolution and Analytics Lab. Prior to that, she completed her M.Sc. in Software Engineering at Al Akhawayn University in Morocco. 
 		    She joined the Department of Mathematics and Computer Science at The Royal Military College as an assistant professor in 2022. 
 		    The main research field of Dr. El Mezouar is Empirical Software Engineering. She uses methodologies such as machine learning, statistics and qualitative techniques to better understand the software development phenomena. She analyzes historical data (particularly textual data) using NLP techniques to provide approaches and techniques that can support software practitioners in the workplace.
 		    </p>
-		   <br>   <br>
+		    <br>   <br>
 
       </div>
 
       <div id="mariam-guizani">
-	 <h5>Building Inclusivity into Software Engineering</h5>
-             <h5><a href="https://smithengineering.queensu.ca/directory/faculty/mariam-guizani#:~:text=Mariam%20Guizani%20is%20an%20Assistant,MSc%20degree%20in%20software%20engineering.">Mariam Guizani</a> from Queen's University </h5>
+	      <h5>Building Inclusivity into Software Engineering</h5>
+        <h5><a href="https://smithengineering.queensu.ca/directory/faculty/mariam-guizani#:~:text=Mariam%20Guizani%20is%20an%20Assistant,MSc%20degree%20in%20software%20engineering.">Mariam Guizani</a> from Queen's University </h5>
 		   
-		   <p><em><strong>Abstract:</strong></em> Individuals o2en develop so2ware based on their own cogni8ve preferences and perspec8ves. However, given the diverse ways in which people process informa8on, it becomes crucial to examine how we can effec8vely test and implement so2ware with inclusivity in mind. This presenta8on will delve into the rela8onship between inclusivity and technology, addressing two main ques8ons: What are inclusivity bugs? And how can we find and fix them in so2ware products? I will introduce a Why/Where/Fix systema8c inclusivity debugging process to help find inclusivity bugs (using the GenderMag cogni8ve walkthrough method), localize the Informa8on Architecture (IA) faults behind them, and then fix the IA to remove the inclusivity bugs found. Addi8onally, I will share insights from various teams using GenderMag to enhance inclusivity in their products and processes. 
-              </p>
-		   <img src="./images/mariam-guizani.png" height="150px" align="left" style="margin: 0px 10px 0px 0px;"></img>
+		    <p><em><strong>Abstract:</strong></em> Individuals o2en develop so2ware based on their own cogni8ve preferences and perspec8ves. However, given the diverse ways in which people process informa8on, it becomes crucial to examine how we can effec8vely test and implement so2ware with inclusivity in mind. This presenta8on will delve into the rela8onship between inclusivity and technology, addressing two main ques8ons: What are inclusivity bugs? And how can we find and fix them in so2ware products? I will introduce a Why/Where/Fix systema8c inclusivity debugging process to help find inclusivity bugs (using the GenderMag cogni8ve walkthrough method), localize the Informa8on Architecture (IA) faults behind them, and then fix the IA to remove the inclusivity bugs found. Addi8onally, I will share insights from various teams using GenderMag to enhance inclusivity in their products and processes. 
+        </p>
+		    <img src="./images/mariam-guizani.png" height="150px" align="left" style="margin: 0px 10px 0px 0px;"/>
 		    <p><em><strong>Bio:</strong></em>Dr. Mariam Guizani is an Assistant Professor in the Department of Electrical and Computer Engineering at Queen’s University. She holds a PhD and second MSc in Computer Science from Oregon State University and was a Fulbright fellowship recipient. She also holds a BSc and a MSc degree in So2ware Engineering.
 At the intersec8on of So2ware Engineering and Human-Computer Interac8on, her research centers around designing diversity and inclusion processes and tools for sustainable socio-technical ecosystems.
 More specifically, her research focuses on improving the state of diversity and inclusion in open-source so2ware (OSS). The broader impact of her work applies to academia, industry, and large OSS organiza8ons. Dr. Mariam Guizani has worked together with Google and the Apache So2ware Founda8on (ASF) for several years to inves8gate OSS projects’ experiences and implement ac8onable interven8ons.
 Her research at Microso2 Research was recognized by GitHub for its contribu8on to the currently deployed GitHub Discussion Dashboard, GitHub Blocks, and their future roadmap. She has also collaborated with founda8ons and departments such as Wikimedia, and Oregon State University IT department to empower communi8es to dismantle cogni8ve barriers in so2ware. Her research has been published at both ACM and IEEE conferences. Dr. Mariam Guizani has been invited to present her work at academic and industry venues including ICSE, CSCW, Google, GitHub, and the Linux Founda8on Open-Source Summit.</p>
-		   <br>   <br>
+		    <br>   <br>
 
       </div>
 
-		   <div id="pengyunie">
-		   
-             <h5><a href="https://pengyunie.github.io">Pengyu Nie</a> from University of Waterloo </h5>
-             		<p><img src="./images/pengyu-nie.png"  height="150px""></img>
-		    	 <br>   <br>
-
+		  <div id="pengyunie">
+        <h5><a href="https://pengyunie.github.io">Pengyu Nie</a> from University of Waterloo </h5>
+        <p><img src="./images/pengyu-nie.png"  height="150px""/>
+        <br>   <br>
+        </p>
       </div>
       <div id="seankauffman">
-	<h5>More Than Verdicts - Runtime Monitoring for Operators</h5>
-	     <h5><a href="https://smithengineering.queensu.ca/directory/faculty/sean-kauffman">Sean Kauffman</a> from Queen's University  </h5>
-		     <p><em><strong>Abstract:</strong></em> Runtime monitoring is often deployed in high-criticality systems to catch incorrect behaviour before it can cause failures.  Often, however, the operators of these systems are interested in more than a warning klaxon at the moment a fault presents itself.  Monitors that calculate operational information for system comprehension have more utility than simple error detectors.  This talk will explore some current thinking in the field of Runtime Verification around monitors that do more than report specification violations and some of the accompanying challenges.  These challenges include specification formalisms, computational complexity, and information transmission. 
-              </p>
-		    <img src="./images/sean-kauffman.jpeg" height="150px" align="left" style="margin: 0px 10px 0px 0px;"></img>
+	      <h5>More Than Verdicts - Runtime Monitoring for Operators</h5>
+	      <h5><a href="https://smithengineering.queensu.ca/directory/faculty/sean-kauffman">Sean Kauffman</a> from Queen's University  </h5>
+        <p><em><strong>Abstract:</strong></em> Runtime monitoring is often deployed in high-criticality systems to catch incorrect behaviour before it can cause failures.  Often, however, the operators of these systems are interested in more than a warning klaxon at the moment a fault presents itself.  Monitors that calculate operational information for system comprehension have more utility than simple error detectors.  This talk will explore some current thinking in the field of Runtime Verification around monitors that do more than report specification violations and some of the accompanying challenges.  These challenges include specification formalisms, computational complexity, and information transmission. 
+        </p>
+		    <img src="./images/sean-kauffman.jpeg" height="150px" align="left" style="margin: 0px 10px 0px 0px;"/>
 		    <p><em><strong>Bio:</strong></em>Sean Kauffman is an Assistant Professor in the Department of Electrical and Computer Engineering  at Queen's University.  Before coming to Queen's, Sean obtained his Ph.D. in Electrical and Computer Engineering at the University of Waterloo and spent two years as a Postdoctoral Researcher at Aalborg University in Denmark. Sean came back to academia after spending more than ten years working in industry as a software engineer, where his last position was a principal software engineer for Oracle.
-		    	  <br>
+          <br>
 			    Sean's research focuses on safety-critical software and fits into the broad themes of Formal Methods, Runtime Verification, Anomaly Detection, and Explainable AI.  He has collaborated on research with partners such as NASA's Jet Propulsion Laboratory, the Embedded Systems Institute, QNX, and Pratt and Whitney Canada.  Sean's teaching philosophy focuses on fostering engagement, using techniques like active learning, productive failure, and peer instruction.</p>
-		    	  <br>   <br>
-		   </div>
-       <div id="shinhweitang">
-	<h5>Automated Program Generation for Testing and Repair</h5>
-             <h5><a href="https://www.concordia.ca/faculty/shinhwei-tan.html">Shin Hwei Tan</a> from Concordia University </h5>
-		     <p><em><strong>Abstract:</strong></em> Given either a specification written in natural language or an input program, automated program generation techniques produce a program according to the given specification or by modifying the input program. Automated program generation is a powerful technique that can be used for finding bugs in software systems that take programs as input or fixing bugs in the input programs. In this talk, I will share our latest results on automated program generation for (1) fixing bugs in large language model (LLM) based automated program generation, (1) testing static program analyzers. For the first part of the talk, I will present our study that categorizes common mistakes in LLM like Codex, and our insights in applying automated program repair techniques in fixing mistakes by Codex. For the second part of the talk, I will introduce several automated testing techniques that find bugs in static analyzers using semantic-preserving transformations, and annotation synthesizers. 
-              </p>
-		    <img src="./images/shinhwei-tan.jpeg" height="150px" align="left" style="margin: 0px 10px 0px 0px;"></img>
+          <br>   <br>
+      </div>
+      <div id="shinhweitang">
+	      <h5>Automated Program Generation for Testing and Repair</h5>
+        <h5><a href="https://www.concordia.ca/faculty/shinhwei-tan.html">Shin Hwei Tan</a> from Concordia University </h5>
+        <p><em><strong>Abstract:</strong></em> Given either a specification written in natural language or an input program, automated program generation techniques produce a program according to the given specification or by modifying the input program. Automated program generation is a powerful technique that can be used for finding bugs in software systems that take programs as input or fixing bugs in the input programs. In this talk, I will share our latest results on automated program generation for (1) fixing bugs in large language model (LLM) based automated program generation, (1) testing static program analyzers. For the first part of the talk, I will present our study that categorizes common mistakes in LLM like Codex, and our insights in applying automated program repair techniques in fixing mistakes by Codex. For the second part of the talk, I will introduce several automated testing techniques that find bugs in static analyzers using semantic-preserving transformations, and annotation synthesizers. 
+        </p>
+		    <img src="./images/shinhwei-tan.jpeg" height="150px" align="left" style="margin: 0px 10px 0px 0px;"/>
 		    <p><em><strong>Bio:</strong></em>Shin Hwei Tan is an Associate Professor (Gina Cody Research Chair) in Concordia University. Before moving to Concordia University, she was an Assistant Professor in Southern University of Science and Technology in Shenzhen, China. She obtained her PhD degree from National University of Singapore and her B.S (Hons) and MSc degree from UIUC, USA. Her main research interests are in automated program repair, software testing and open-source development. She is an Associate Editor for TOSEM and the Guest Editors in Chief for the New Frontier in Software Engineering track in TOSEM. She has also served as PCs for top-tier software engineering conferences, where she won 3 best reviewers award (FSE 2020, ASE 2020, ICSE 2022 NIER-track).</p>
 		    <br>
-              </div>
-              <div id="liliwei">
-
-	 <h5>Taming Android Compatibility Issues: The way back and the way forward</h5>
-             <h5><a href="https://www.mcgill.ca/ece/lili-wei">Lili Wei</a> from  McGill University </h5>
-		     <p><em><strong>Abstract:</strong></em> The world is going mobile. Android has surpassed its counterparts and become the most popular operating system all over the world. The openness and fast evolution of Android are the key factors that lead to its rapid growth. However, these characteristics have also created the notorious problem: Android fragmentation. There are numerous different Android device models and operating system versions in use, making it difficult for app developers to exhaustively test their apps on these devices. An Android app can behave differently on the different device models, inducing various compatibility issues that reduce software reliability.
+      </div>
+      <div id="liliwei">
+	      <h5>Taming Android Compatibility Issues: The way back and the way forward</h5>
+        <h5><a href="https://www.mcgill.ca/ece/lili-wei">Lili Wei</a> from  McGill University </h5>
+        <p><em><strong>Abstract:</strong></em> The world is going mobile. Android has surpassed its counterparts and become the most popular operating system all over the world. The openness and fast evolution of Android are the key factors that lead to its rapid growth. However, these characteristics have also created the notorious problem: Android fragmentation. There are numerous different Android device models and operating system versions in use, making it difficult for app developers to exhaustively test their apps on these devices. An Android app can behave differently on the different device models, inducing various compatibility issues that reduce software reliability.
 			     Such fragmentation-induced compatibility issues (compatibility issues for short) have been well-recognized as a prominent problem in Android app development. In this talk, I will introduce the problem of Android compatibility issues, review the past efforts to address Android compatibility issues and discuss potential research opportunities surrounding Android compatibility issues. 
-              </p>
-		    <img src="./images/lili-wei.jpeg" height="150px" align="left" style="margin: 0px 10px 0px 0px;"></img>
+        </p>
+		    <img src="./images/lili-wei.jpeg" height="150px" align="left" style="margin: 0px 10px 0px 0px;"/>
 		    <p><em><strong>Bio:</strong></em>Lili Wei is an assistant professor in the department of Electrical and Computer Engineering at McGill University. Prior to joining McGill University, she received her Ph.D. degree and worked as a post-doctoral fellow at the Hong Kong University of Science and Technology. Her research interests lie in program analysis and testing with a focus on mobile apps, smart contracts and IoT software. Her research outcomes were recognized by several awards, including an ACM SIGSOFT Distinguished Paper Award, an ACM SIGSOFT Distinguished Artifact award, a Google PhD Fellowship and a Microsoft Research Asia PhD Fellowship. She is also actively serving the software engineering research community. She received a Distinguished Reviewer Award from ASE 2022. More information can be found on her personal website:<a href="https://liliweise.github.io">https://liliweise.github.io </a></p>
 		    <br>
 		    
-         </div>
-            </div>
-            <!-- End New Faculty Talks -->
-
-
-            <!-- Begin Panel -->
-            <div id="panel" class="tab-pane fade">
-
-              <h3>Panel</h3>
-		<p>
-			<em><strong>Topics on  Foundation Models for Software Engineering</strong></em> 
-		</p>
-
-	     <h5>chaired by <a href="https://sophiaytian.com">Yuan Tian</a> , Queen's University </h5>
-		         <p><img src="./images/yuan_tian.jpeg"  height="150px"/>
-		    <br>   <br>
-            </div>
-            <!-- End Panel -->
-
-
-
-
-		    
-		  
-            <!-- Begin Tutorial -->
-            <div id="tutorial" class="tab-pane fade">
-
-              <h3>Tutorial</h3>
-		    <h4>Software Engineering for Foundational Model-Powered Software (FMWare)</h4>
-
-                Abstract: 
-                Foundation Models (FM) like GPT-4 have given rise to FMware, FM-powered applications, which represent a new generation of software that is developed with new roles, assets, and paradigms. FMware has been widely adopted in both software engineering (SE) research (e.g., test generation) and industrial products (e.g., GitHub copilot), despite the numerous challenges introduced by the stochastic nature of FMs. Such challenges jeopardize the quality and trustworthiness of FMware. In our technical brief, we will present the latest research and industrial practices in engineering FMware, and discuss the SE challenges and opportunities facing both researchers and practitioners in the FMware era.
-	<br>	<br>
-                The tutorial is unique in that it is presented from an SE point of view, not an AI point-of-view ensuring that attendees are not bogged into complex mathematical and AI details unless they are essential for contextualizing the SE challenges and opportunities.
-
-	<br>	<br>
-
-		<p>
-			list of the presenters:
-		<ul>
-                    <li>Dayi Lin, Centre for Software Excellence, Huawei Canada</li>
-                    <li>Filipe Roseiro Côgo, Centre for Software Excellence, Huawei Canada</li>
-                    <li>Gopi Krishnan Rajbahadur, Centre for Software Excellence, Huawei Canada</li>
-                  </ul>
-		</p>  
-		    
-	     <h5><a href="https://lindayi.me/">Dayi Lin</a> from Centre for Software Excellence, Huawei Canada </h5>
-		    	 <p> <img src="./images/dayi-lin.jpeg"  height="150px"/> </p>
-		    <br>  
-		  
-	     <h5><a href="https://www.filipecogo.pro/">Filipe Cogo</a> from Centre for Software Excellence, Huawei Canada </h5>
-		    	 <p> <img src="./images/filipe-rcogo.jpeg"  height="150px"/> </p>
-		    <br> 
-
-	     <h5><a href="https://conf.researchr.org/profile/icse-2024/gopikrishnanrajbahadur1">Gopi Krishnan Rajbahadur</a> from Centre for Software Excellence, Huawei Canada </h5>
-		    	 <p> <img src="./images/gopi-krishnan-rajbahadur.jpeg"  height="150px"/> </p>
-		    <br> 
-
-	</div>
-
-            <!-- End Tutorial -->
-
-
-
-
-
-            <!-- Begin Research Talks -->
-            <div id="studentResearchTalks" class="tab-pane fade">
-
-              <h3>Research Talks</h3>
-            </div>
-            <!-- End Research Talks -->
-
-
-
-            <!-- Begin Posters -->
-            <div id="Posters" class="tab-pane fade">
-
-              <h3>Posters/Demos</h3>
-            </div>
-            <!-- End Posters -->
-
-
-		    
-
-            <!-- Begin Accepted Papers -->
-            <div id="theprogram" class="tab-pane fade">
-
-              <h3>CSER Spring 2024 Program</h3>
-
-            </div>
-            <!-- End Accepted Papers -->
-		
-		  
-            <!-- Begin Call -->
-            <div id="call" class="tab-pane fade">
-
-              <h3>Call for Submissions</h3>
-
-                <p>
-			<strong>Talk, poster and demo submissions are welcome</strong> from across the field of software engineering. Continuing the scope of prior editions, CSER encourages submissions focusing on software engineering challenges related to developing, maintaining, and operating complex software systems (e.g., Micro-services, FM/AI-based systems, ultra-large-scale systems, intelligent cyber-physical systems), as well as to the novel and emerging engineering methods, techniques and processes underneath such systems (e.g., FM/LLMs, AI, Blockchain, Quantum Computing, Data Extended Reality). 
-		</p> 
-		<p>
-			 We invite you to contribute by sending your proposals for:   
-		 <ul>
-                    <li>Regular research talks</li>
-                    <li>Poster and demo presentations</li>
-                  </ul>
-                  The deadline to submit your proposals is:
-		    <br>
-		    <strong>Monday, May 6, 2024, 11.59pm (EDT).</strong>  
-
-		    </p>
-		<p>
-			Acceptance announcement:
-			<br>
-			Monday, May 13, 2024.
-		</p>
-		<pr>
-			Please visit the following form ( <a href="https://forms.gle/cTjoWRvYd3fdumTY7">https://forms.gle/cTjoWRvYd3fdumTY7</a>) to submit your proposal, providing the following information:
-                  <ul>
-                    <li>Presentation title</li>
-                    <li>Author name(s) (with the presenter(s) highlighted) and affiliation</li>
-                    <li>Presentation abstract (up to 150 words)</li>
-                    <li>Type of talk (e.g., regular, or poster/demo)</li>
-                    <li>Links to the published/accepted paper(s) related to the presentation if any</li>
-                    <li>Supervisor name, if applicable </li>
-                  </ul>
-
-		</pr>
-
-            </div>
-            <!-- End Call -->
-		  
-
-            <!-- Begin Organizing Committee -->
-            <div id="orgcom" class="tab-pane fade">
-
-              <h5>Program Co-Chairs</h5>
-              <ul>
-                <li><a href="https://www.cs.queensu.ca/people/Bram/Adams">Bram Adams , Queen's University</a></li>
-                <li><a href="https://smithengineering.queensu.ca/directory/faculty/ying-zou">Ying Zou, Queen's University</a></li>
-              </ul>
-
-              <h5>Poster session chair</h5>
-              <ul>
-                <li><a href="https://www.rmc-cmr.ca/en/mathematics-and-computer-science/dr-mariam-el-mezouar">Mariam El Mezouar , Royal Military College of Canada</a></li>
-              </ul>
-
-              <h5>Web chair</h5>
-              <ul>
-                <li><a href="https://seal-queensu.github.io/member-current.html">Pouya Fathollahzadeh , Queen's University</a></li>
-              </ul>
-
-              <h5>Local arrangement chair</h5>
-              <ul>
-                <li> Emad Fallahzadeh , Queen's University</a></li>
-              </ul>
-
-              <h5>Publicity chair</h5>
-              <ul>
-                <li><a href="https://sail.cs.queensu.ca/members.html">Amir Mohhamad Ebrahimi , Queen's University</a></li>
-              </ul>
-
-
-
-            </div>
-            <!-- End Organizing Committees -->
-
-             <!-- Begin Steering Committee -->
-            <div id="steercom" class="tab-pane fade">
-
-              <h4>CSER Steering Committee</h4>
-              <ul>
-                <li><a href="http://marinlitoiu.info.yorku.ca">Marin Litoiu</a>, York</li>
-                <li><a href="http://individual.utoronto.ca/klyons/">Kelly Lyons</a>, Toronto</li>
-                <li><a href="http://webhome.cs.uvic.ca/~hausi/">Hausi Müller</a>, Victoria</li>
-              </ul>
-            </div>
-            <!-- End Steering Committee -->
-
-            <!-- Begin Venue -->
-            <div id="venue" class="tab-pane fade">
-
-                <div class="col-lg-5 col-md-6"></div>
-                <h4>Queen's University, Kingston, June 10-11, 2024</h4>
-                <h5>Address: TBD</h5>
-			      </div>
-            <!-- End Venue -->
-
-
-            <!-- Begin Registration -->
-            <div id="registration" class="tab-pane fade">
-
-              <h3>Registration</h3>
-
-                 <p>
-                  You can follow the link below to register your ticket. 
-		 </p>
-
-                  <p><a href="https://store.engineering.queensu.ca/index.php?main_page=product_info&cPath=22&products_id=241">Registration link</a>
-			  
-		    <p>
-		
-		</p> 
-
-		    
- <table class="table table-hover table-condensed w-75">
-                <thead>
-                  <tr>
-                    <th scope="col">&nbsp;</th>
-                    <th scope="col">Early Birds (By May 19th)</th>
-                    <th scope="col">Regular ( After May 19th)</th>
-
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Students</td>
-					<td>$220 (plus taxes) </td>
-					<td>$270 (plus taxes) </td>
-
-                  </tr>
-                  <tr>
-                    <td>Non students</td>
-					<td> $320 (plus taxes) </td>
-					<td>$370 (plus taxes) </td>
-
-                  </tr>
-                </tbody>
-              </table>
-
-		<p>
-			If a CSER participant would like to attend SEMLA 2024 (Montreal, June 12-13, <a href="https://semla.polymtl.ca/">https://semla.polymtl.ca/</a>), a promo code for attending SEMLA is:
-			<br>
-				CSER-2024S
-			<br> <br>
-				(30% off for all ticket types)		
-			<br>
-		</p>
-
-
-		    
-            </div>
-            <!-- End Registration -->
-
-
-
-          </div>
-        </div>
-        <!-- End Main panel -->
-
       </div>
     </div>
+    <!-- End New Faculty Talks -->
+
+
+    <!-- Begin Panel -->
+    <div id="panel" class="tab-pane fade">
+      <h3>Panel</h3>
+      <p>
+        <em><strong>Topics on  Foundation Models for Software Engineering</strong></em> 
+      </p>
+      <h5>chaired by <a href="https://sophiaytian.com">Yuan Tian</a> , Queen's University </h5>
+      <p><img src="./images/yuan_tian.jpeg"  height="150px"/>
+      <br>   <br>
+      </p>
+    </div>
+    <!-- End Panel -->
+		  
+    <!-- Begin Tutorial -->
+    <div id="tutorial" class="tab-pane fade">
+      <h3>Tutorial</h3>
+      <h4>Software Engineering for Foundational Model-Powered Software (FMWare)</h4>
+        Abstract: 
+        Foundation Models (FM) like GPT-4 have given rise to FMware, FM-powered applications, which represent a new generation of software that is developed with new roles, assets, and paradigms. FMware has been widely adopted in both software engineering (SE) research (e.g., test generation) and industrial products (e.g., GitHub copilot), despite the numerous challenges introduced by the stochastic nature of FMs. Such challenges jeopardize the quality and trustworthiness of FMware. In our technical brief, we will present the latest research and industrial practices in engineering FMware, and discuss the SE challenges and opportunities facing both researchers and practitioners in the FMware era.
+	      <br>	<br>
+        The tutorial is unique in that it is presented from an SE point of view, not an AI point-of-view ensuring that attendees are not bogged into complex mathematical and AI details unless they are essential for contextualizing the SE challenges and opportunities.
+	      <br>	<br>
+      <p>
+        list of the presenters:
+        <ul>
+          <li>Dayi Lin, Centre for Software Excellence, Huawei Canada</li>
+          <li>Filipe Roseiro Côgo, Centre for Software Excellence, Huawei Canada</li>
+          <li>Gopi Krishnan Rajbahadur, Centre for Software Excellence, Huawei Canada</li>
+        </ul>
+		  </p>  
+		    
+      <h5><a href="https://lindayi.me/">Dayi Lin</a> from Centre for Software Excellence, Huawei Canada </h5>
+      <p> <img src="./images/dayi-lin.jpeg"  height="150px"/> </p>
+      <br>  
+		  
+      <h5><a href="https://www.filipecogo.pro/">Filipe Cogo</a> from Centre for Software Excellence, Huawei Canada </h5>
+      <p> <img src="./images/filipe-rcogo.jpeg"  height="150px"/> </p>
+      <br> 
+
+      <h5><a href="https://conf.researchr.org/profile/icse-2024/gopikrishnanrajbahadur1">Gopi Krishnan Rajbahadur</a> from Centre for Software Excellence, Huawei Canada </h5>
+      <p> <img src="./images/gopi-krishnan-rajbahadur.jpeg"  height="150px"/> </p>
+      <br> 
+	  </div>
+    <!-- End Tutorial -->
+
+    <!-- Begin Research Talks -->
+    <div id="studentResearchTalks" class="tab-pane fade">
+      <h3>Research Talks</h3>
+    </div>
+    <!-- End Research Talks -->
+
+    <!-- Begin Posters -->
+    <div id="Posters" class="tab-pane fade">
+
+      <h3>Posters/Demos</h3>
+    </div>
+    <!-- End Posters --> 
+
+    <!-- Begin Accepted Papers -->
+    <div id="theprogram" class="tab-pane fade">
+
+      <h3>CSER Spring 2024 Program</h3>
+
+    </div>
+    <!-- End Accepted Papers -->
+		  
+    <!-- Begin Call -->
+    <div id="call" class="tab-pane fade">
+      <h3>Call for Submissions</h3>
+      <p>
+			<strong>Talk, poster and demo submissions are welcome</strong> from across the field of software engineering. Continuing the scope of prior editions, CSER encourages submissions focusing on software engineering challenges related to developing, maintaining, and operating complex software systems (e.g., Micro-services, FM/AI-based systems, ultra-large-scale systems, intelligent cyber-physical systems), as well as to the novel and emerging engineering methods, techniques and processes underneath such systems (e.g., FM/LLMs, AI, Blockchain, Quantum Computing, Data Extended Reality). 
+		  </p> 
+		  <p>
+        We invite you to contribute by sending your proposals for:   
+        <ul>
+          <li>Regular research talks</li>
+          <li>Poster and demo presentations</li>
+        </ul>
+        The deadline to submit your proposals is:
+        <br>
+        <strong>Monday, May 6, 2024, 11.59pm (EDT).</strong>  
+      </p>
+		  <p>
+        Acceptance announcement:
+        <br>
+        Monday, May 13, 2024.
+      </p>
+      <pr>
+        Please visit the following form ( <a href="https://forms.gle/cTjoWRvYd3fdumTY7">https://forms.gle/cTjoWRvYd3fdumTY7</a>) to submit your proposal, providing the following information:
+        <ul>
+          <li>Presentation title</li>
+          <li>Author name(s) (with the presenter(s) highlighted) and affiliation</li>
+          <li>Presentation abstract (up to 150 words)</li>
+          <li>Type of talk (e.g., regular, or poster/demo)</li>
+          <li>Links to the published/accepted paper(s) related to the presentation if any</li>
+          <li>Supervisor name, if applicable </li>
+        </ul>
+		  </pr>
+    </div>
+    <!-- End Call -->
+
+    <!-- Begin Organizing Committee -->
+    <div id="orgcom" class="tab-pane fade">
+      <h5>Program Co-Chairs</h5>
+      <ul>
+        <li><a href="https://www.cs.queensu.ca/people/Bram/Adams">Bram Adams , Queen's University</a></li>
+        <li><a href="https://smithengineering.queensu.ca/directory/faculty/ying-zou">Ying Zou, Queen's University</a></li>
+      </ul>
+
+      <h5>Poster session chair</h5>
+      <ul>
+        <li><a href="https://www.rmc-cmr.ca/en/mathematics-and-computer-science/dr-mariam-el-mezouar">Mariam El Mezouar , Royal Military College of Canada</a></li>
+      </ul>
+
+      <h5>Web chair</h5>
+      <ul>
+        <li><a href="https://seal-queensu.github.io/member-current.html">Pouya Fathollahzadeh , Queen's University</a></li>
+      </ul>
+
+      <h5>Local arrangement chair</h5>
+      <ul>
+        <li> Emad Fallahzadeh , Queen's University</a></li>
+      </ul>
+
+      <h5>Publicity chair</h5>
+      <ul>
+        <li><a href="https://sail.cs.queensu.ca/members.html">Amir Mohhamad Ebrahimi , Queen's University</a></li>
+      </ul>
+    </div>
+    <!-- End Organizing Committees -->
+
+    <!-- Begin Steering Committee -->
+    <div id="steercom" class="tab-pane fade">
+      <h4>CSER Steering Committee</h4>
+      <ul>
+        <li><a href="http://marinlitoiu.info.yorku.ca">Marin Litoiu</a>, York</li>
+        <li><a href="http://individual.utoronto.ca/klyons/">Kelly Lyons</a>, Toronto</li>
+        <li><a href="http://webhome.cs.uvic.ca/~hausi/">Hausi Müller</a>, Victoria</li>
+      </ul>
+    </div>
+    <!-- End Steering Committee -->
+
+    <!-- Begin Venue -->
+    <div id="venue" class="tab-pane fade">
+      <div class="col-lg-5 col-md-6"></div>
+      <h4>Queen's University, Kingston, June 10-11, 2024</h4>
+      <h5>Address: TBD</h5>
+    </div>
+    <!-- End Venue -->
+
+    <!-- Begin Registration -->
+    <div id="registration" class="tab-pane fade">
+      <h3>Registration</h3>
+      <p>
+      You can follow the link below to register your ticket. 
+		  </p>
+
+      <p><a href="https://store.engineering.queensu.ca/index.php?main_page=product_info&cPath=22&products_id=241">Registration link</a>
+			  
+		  </p> 
+
+		    
+      <table class="table table-hover table-condensed w-75">
+        <thead>
+          <tr>
+            <th scope="col">&nbsp;</th>
+            <th scope="col">Early Birds (By May 19th)</th>
+            <th scope="col">Regular ( After May 19th)</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Students</td>
+            <td>$220 (plus taxes) </td>
+            <td>$270 (plus taxes) </td>
+          </tr>
+          <tr>
+            <td>Non students</td>
+            <td> $320 (plus taxes) </td>
+            <td>$370 (plus taxes) </td>
+          </tr>
+        </tbody>
+      </table>
+		  <p>
+        If a CSER participant would like to attend SEMLA 2024 (Montreal, June 12-13, <a href="https://semla.polymtl.ca/">https://semla.polymtl.ca/</a>), a promo code for attending SEMLA is:
+        <br>
+          CSER-2024S
+        <br> <br>
+          (30% off for all ticket types)		
+        <br>
+      </p>
+
+    </div>
+    <!-- End Registration -->
+
+
+
+  </div>
+  </div>
+  <!-- End Main panel -->
+
+  </div>
+  </div>
     <!-- End Body -->
 
     <footer class="footer">
@@ -653,15 +601,32 @@ Her research at Microso2 Research was recognized by GitHub for its contribu8on t
         window.scrollTo(0, 0);
       });
 
+      $(document).ready(function() {
+        // Check if the URL has a hash part (which means it is referring to a section of the page)
+        if(window.location.hash) {
+            // Remove the "#" from the hash
+            var hash = window.location.hash.substring(1);
+            
+            // Check if an element with that ID exists
+            if(hash === "newfacultytalks") {
+              // Show the content for "Invited New Faculty Talks"
+              $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
+              $('#newfacultytalks').addClass('active in'); // Show the "Invited New Faculty Talks" content
+              window.history.pushState({}, '', "#newfacultytalks");
+              window.scrollTo(0, 0);
+            }
+        }
+      });
+
       $(document).ready(function(){
         // Toggle the submenu and show the content for "Invited New Faculty Talks"
-        $('#invitefaculty').click(function(e){
+        $('a[href="#facultySubmenu"]').click(function(e){
             e.preventDefault(); // Prevent default anchor behavior
             var submenu = $('#facultySubmenu');
     
             // Collapse or show the submenu
             if (submenu.hasClass('in')) {
-              //  submenu.collapse('hide');
+                submenu.collapse('hide');
             } else {
                 // Hide any other open submenus in the tracks menu
                 $('#tracksSubmenu .collapse.in').not(submenu).collapse('hide');
@@ -671,7 +636,7 @@ Her research at Microso2 Research was recognized by GitHub for its contribu8on t
             // Show the content for "Invited New Faculty Talks"
             $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
             $('#newfacultytalks').addClass('active in'); // Show the "Invited New Faculty Talks" content
-            window.history.pushState({}, '', $(this).attr('href'));
+            window.history.pushState({}, '', "#newfacultytalks");
             // Scroll to the "Invited New Faculty Talks" content if you want smooth scrolling
             /* $('html, body').animate({
                 scrollTop: $('#newfacultytalks').offset().top
@@ -689,9 +654,8 @@ Her research at Microso2 Research was recognized by GitHub for its contribu8on t
       });
         
     });
-    
-    </script>
-<!-- Add jQuery and Bootstrap JavaScript at the end for functionality -->
+  </script>
+  <!-- Add jQuery and Bootstrap JavaScript at the end for functionality -->
 
   </body>
 </html>
