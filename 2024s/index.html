@@ -129,18 +129,29 @@
 		                <li><a href="#panel" data-toggle="pill">Panel</a></li>
                     <li><a href="#tutorial" data-toggle="pill">Tutorial</a></li>
                    <!-- <li><a href="#studentResearchTalks" data-toggle="pill">Research Talks</a></li>     -->
-
+			
+              <li><a href="#Posters" data-toggle="pill"> Posters/Demos</a></li>
 
 
 			
 
 			
-              <!-- studentResearchTalks menu with dropdown for submenus -->
+              <!-- ResearchTalks menu with dropdown for submenus -->
               <li class="dropdown">
                 <a href="#studentResearchTalks" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">studentResearchTalks</a>
                 <ul class="collapse list-unstyled" id="studentResearchTalks">
                     <li><a href="#X" data-toggle="pill">X</a></li>
                     <li><a href="#Assi" data-toggle="pill"> Maram Assi</a></li>
+                    <li><a href="#Batoun" data-toggle="pill"> Mohamed Amine Batoun</a></li>
+                    <li><a href="#Baudry" data-toggle="pill"> Benoit Baudry</a></li>
+                    <li><a href="#Bhatia" data-toggle="pill"> Aaditya Bhatia</a></li>
+                    <li><a href="#Assi" data-toggle="pill"> Name</a></li>
+                    <li><a href="#Assi" data-toggle="pill"> Name</a></li>
+                    <li><a href="#Assi" data-toggle="pill"> Name</a></li>
+                    <li><a href="#Assi" data-toggle="pill"> Name</a></li>
+                    <li><a href="#Assi" data-toggle="pill"> Name</a></li>
+
+			
                 </ul>
               </li>
 
@@ -155,7 +166,6 @@
 
 
 			
-                    <li><a href="#Posters" data-toggle="pill"> Posters/Demos</a></li>
                 </ul>
               </li>
 
@@ -493,16 +503,7 @@ Moreover, the adoption and evaluation of LLMs for SE tasks still face many chall
             </div>
             <!-- End Research Talks -->
 
-            <!-- Begin X -->
-            <div id="X" class="tab-pane fade">
 
-		 <h5>Title</h5>
-             	 <h5><strong>Presenter:</strong> </h5> 
-		   <p><em><strong>Abstract:</strong></em> 
-			   
-		   </p>   
-            </div>
-            <!-- End X -->
 
 
 		  
@@ -511,7 +512,7 @@ Moreover, the adoption and evaluation of LLMs for SE tasks still face many chall
 
 
 	 <h5>LLMs to the Rescue! Empowering Developers with Large Language Models for Feature Improvement</h5>
-             <h5><strong>Presenter: Maram Assi</strong> </h5>
+             <h5><strong>Presenter:</strong> Maram Assi </h5>
 		   
 		   <p><em><strong>Abstract:</strong></em> 
 			The exponential growth of the mobile app market underscores the importance of constant innovation. User satisfaction is paramount, and developers rely on user reviews and industry trends to identify areas for improvement. However, the sheer volume of reviews poses challenges in manual analysis, necessitating automated approaches. Existing automated approaches either analyze only a target app’s reviews, neglecting valuable insights from competitors or fail to provide actionable feature enhancement suggestions. To address these gaps, we propose LLM-CURE (LLM-based Competitive User Review Analysis for Feature Enhancement), a novel approach powered by a large language model (LLM) to automatically generate suggestions for mobile app feature improvements by leveraging insights from the competitive landscape. LLM-CURE operates in two phases. First, it identifies and categorizes user complaints within reviews into high-level features using its LLM capabilities. Second, for each complaint, LLM-CURE analyzes highly rated features in competing apps and proposes potential improvements specific to the target application. We evaluate LLM-CURE on 70 popular Android apps. Our evaluation demonstrates that LLM-CURE outperforms baselines in assigning features to reviews and highlights its effectiveness in utilizing user feedback and competitive analysis to guide feature enhancement strategies.              
@@ -519,13 +520,46 @@ Moreover, the adoption and evaluation of LLMs for SE tasks still face many chall
 		    
             </div>
             <!-- End Assi -->
-
-
-
 		  
+            <!-- Begin Batoun -->
+            <div id="Batoun" class="tab-pane fade">
+		 <h5>How Much Logs Does My Source Code File Need? Learning to Predict the Density of Logs</h5>
+             	 <h5><strong>Presenter:</strong> Mohamed Amine Batoun </h5> 
+		   <p><em><strong>Abstract:</strong></em> 
+			A large body of research proposed machine learning-based solutions to suggest where to insert logging statements. However, before answering the question ``where to log?’’, practitioners first need to determine whether a file needs logging at the first place. To address this question, we characterize the log density (i.e., ratio of log lines over the total LOC) through an empirical study in seven open-source software projects. Then, we propose a deep learning based approach to predict the log density based on syntactic and semantic features of the source code. We also evaluate the consistency of our model over time and investigate the problem of concept drift. Our log density models achieve an average accuracy of 84%, which is consistent across different projects and over time. However, the performances can significantly drop when a model is trained on data from one time period and tested on datasets from different time periods.   
+		   </p>   
+            </div>
+            <!-- End Batoun -->
+
+            <!-- Begin Baudry -->
+            <div id="X" class="tab-pane fade">
+		 <h5>Automatic Specialization of Third-Party Java Dependencies</h5>
+             	 <h5><strong>Presenter:</strong> Benoit Baudry </h5> 
+		   <p><em><strong>Abstract:</strong></em> 
+			   Large-scale code reuse significantly reduces both development costs and time. However, the massive share of third-party code in software projects poses new challenges, especially in terms of maintenance and security. In this paper, we propose a novel technique to specialize dependencies of Java projects, based on their actual usage. Given a project and its dependencies, we systematically identify the subset of each dependency that is necessary to build the project, and we remove the rest. As a result of this process, we package each specialized dependency in a JAR file. Then, we generate specialized dependency trees where the original dependencies are replaced by the specialized versions. This allows building the project with significantly less third-party code than the original. As a result, the specialized dependencies become a first-class concept in the software supply chain, rather than a transient artifact in an optimizing compiler toolchain. We implement our technique in a tool called DepTrim , which we evaluate with 30 notable open-source Java projects. DepTrim specializes a total of 343 (86.6%) dependencies across these projects, and successfully rebuilds each project with a specialized dependency tree. Moreover, through this specialization, DepTrim removes a total of 57,444 (42.2%) classes from the dependencies, reducing the ratio of dependency classes to project classes from 8.7 × in the original projects to 5.0 × after specialization. These novel results indicate that dependency specialization significantly reduces the share of third-party code in Java projects.
+		   </p>   
+            </div>
+            <!-- End Baudry -->
+
+            <!-- Begin Bhatia -->
+            <div id="X" class="tab-pane fade">
+		 <h5>Data Quality Antipatterns for Software Analytics - A Case Study of Software Defect Prediction</h5>
+             	 <h5><strong>Presenter:</strong> Aaditya Bhatia </h5> 
+		   <p><em><strong>Abstract:</strong></em> 
+			   Data quality is crucial in the field of software analytics, especially for machine learning (ML) applications such as software defect prediction (SDP). Despite the extensive use of ML models in software engineering, studies have primarily focused on singular antipatterns, while a multitude of antipatterns exist in practice. This comprehensive setting is often ignored and remains out of focus. This study aims to develop a comprehensive taxonomy of data quality antipatterns specific to ML and evaluate their impact on the performance and interpretation of software analytics models. We identified eight ML-specific data quality antipatterns and 14 sub-types through a literature review. We conducted a series of experiments to determine the prevalence of data quality antipatterns in SDP data (RQ1), assess the impact of cleaning orders on model performance (RQ2), evaluate the effects of antipattern removal on model performance (RQ3), and examine the consistency of interpretation results from models built with different antipatterns (RQ4). Our taxonomy includes antipatterns such as Schema Violations, Data Miscoding, Inconsistent Representation, Data Distribution Antipatterns, Packaging Antipatterns, Label Antipatterns, and Correlation & Redundancy. In our case study of SDP, we found that the studied datasets contain several antipatterns, which often co-exist. The impact of learner variability on the model performance is higher than the impact of order of cleaning these antipatterns. However, in a setting where the other antipatterns have been cleaned out, some antipatterns, such as Tailed Distributions and Class Overlap, have a significant effect on certain performance metrics. Finally, models built from data with different antipatterns showed moderate consistency in interpretation results. This study provides empirical evidence on the critical role of data quality in ML for software analytics. Our findings indicate that while the order of data cleaning has a minor impact, practitioners should be vigilant in addressing specific antipatterns, especially when other antipatterns have already been cleaned. Researchers and practitioners should also consider the "data quality" aspect when relying on model interpretation results. Prioritizing the removal of key antipatterns should take precedence over the removal of all antipatterns to maintain the performance of ML models in software defect prediction.
+		   </p>   
+            </div>
+            <!-- End Bhatia -->
 		  
-
-
+            <!-- Begin X -->
+            <div id="X" class="tab-pane fade">
+		 <h5>Title</h5>
+             	 <h5><strong>Presenter:</strong>  </h5> 
+		   <p><em><strong>Abstract:</strong></em> 
+			   
+		   </p>   
+            </div>
+            <!-- End X -->
 
 		  
 
