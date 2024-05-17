@@ -145,6 +145,19 @@
                     <li><a href="#Batoun" data-toggle="pill"> Mohamed Amine Batoun</a></li>
                     <li><a href="#Baudry" data-toggle="pill"> Benoit Baudry</a></li>
                     <li><a href="#Bhatia" data-toggle="pill"> Aaditya Bhatia</a></li>
+                    <li><a href="#Ding" data-toggle="pill"> Zishuo Ding</a></li>
+                    <li><a href="#Veloso" data-toggle="pill"> Victor Guerra Veloso</a></li>
+                    <li><a href="#Hamdaqa" data-toggle="pill"> Mohammad Hamdaqa</a></li>
+                    <li><a href="#Islam" data-toggle="pill"> Mohayeminul Islam</a></li>
+                    <li><a href="#Kabir" data-toggle="pill"> Azmain Kabir</a></li>
+                    <li><a href="#Kim" data-toggle="pill"> Dong Jae Kim</a></li>
+                    <li><a href="#Lin" data-toggle="pill"> Feng Lin</a></li>
+                    <li><a href="#Lyu" data-toggle="pill"> Yingzhe Lyu</a></li>
+                    <li><a href="#NingMa" data-toggle="pill"> Ning Ma</a></li>
+                    <li><a href="#ZeyangMa" data-toggle="pill"> Zeyang Ma</a></li>
+                    <li><a href="#Menzies1" data-toggle="pill"> Tim Menzies Talk 1</a></li>
+                    <li><a href="#Menzies2" data-toggle="pill"> Tim Menzies Talk 2</a></li>
+                    <li><a href="#Menzies3" data-toggle="pill"> Tim Menzies Talk 3</a></li>
                     <li><a href="#Assi" data-toggle="pill"> Name</a></li>
                     <li><a href="#Assi" data-toggle="pill"> Name</a></li>
                     <li><a href="#Assi" data-toggle="pill"> Name</a></li>
@@ -513,7 +526,7 @@ Moreover, the adoption and evaluation of LLMs for SE tasks still face many chall
 
 	 <h5>LLMs to the Rescue! Empowering Developers with Large Language Models for Feature Improvement</h5>
              <h5><strong>Presenter:</strong> Maram Assi </h5>
-		   
+		<br>   
 		   <p><em><strong>Abstract:</strong></em> 
 			The exponential growth of the mobile app market underscores the importance of constant innovation. User satisfaction is paramount, and developers rely on user reviews and industry trends to identify areas for improvement. However, the sheer volume of reviews poses challenges in manual analysis, necessitating automated approaches. Existing automated approaches either analyze only a target app’s reviews, neglecting valuable insights from competitors or fail to provide actionable feature enhancement suggestions. To address these gaps, we propose LLM-CURE (LLM-based Competitive User Review Analysis for Feature Enhancement), a novel approach powered by a large language model (LLM) to automatically generate suggestions for mobile app feature improvements by leveraging insights from the competitive landscape. LLM-CURE operates in two phases. First, it identifies and categorizes user complaints within reviews into high-level features using its LLM capabilities. Second, for each complaint, LLM-CURE analyzes highly rated features in competing apps and proposes potential improvements specific to the target application. We evaluate LLM-CURE on 70 popular Android apps. Our evaluation demonstrates that LLM-CURE outperforms baselines in assigning features to reviews and highlights its effectiveness in utilizing user feedback and competitive analysis to guide feature enhancement strategies.              
 		   </p>
@@ -525,6 +538,7 @@ Moreover, the adoption and evaluation of LLMs for SE tasks still face many chall
             <div id="Batoun" class="tab-pane fade">
 		 <h5>How Much Logs Does My Source Code File Need? Learning to Predict the Density of Logs</h5>
              	 <h5><strong>Presenter:</strong> Mohamed Amine Batoun </h5> 
+		    <br>
 		   <p><em><strong>Abstract:</strong></em> 
 			A large body of research proposed machine learning-based solutions to suggest where to insert logging statements. However, before answering the question ``where to log?’’, practitioners first need to determine whether a file needs logging at the first place. To address this question, we characterize the log density (i.e., ratio of log lines over the total LOC) through an empirical study in seven open-source software projects. Then, we propose a deep learning based approach to predict the log density based on syntactic and semantic features of the source code. We also evaluate the consistency of our model over time and investigate the problem of concept drift. Our log density models achieve an average accuracy of 84%, which is consistent across different projects and over time. However, the performances can significantly drop when a model is trained on data from one time period and tested on datasets from different time periods.   
 		   </p>   
@@ -535,6 +549,7 @@ Moreover, the adoption and evaluation of LLMs for SE tasks still face many chall
             <div id="X" class="tab-pane fade">
 		 <h5>Automatic Specialization of Third-Party Java Dependencies</h5>
              	 <h5><strong>Presenter:</strong> Benoit Baudry </h5> 
+		    <br>
 		   <p><em><strong>Abstract:</strong></em> 
 			   Large-scale code reuse significantly reduces both development costs and time. However, the massive share of third-party code in software projects poses new challenges, especially in terms of maintenance and security. In this paper, we propose a novel technique to specialize dependencies of Java projects, based on their actual usage. Given a project and its dependencies, we systematically identify the subset of each dependency that is necessary to build the project, and we remove the rest. As a result of this process, we package each specialized dependency in a JAR file. Then, we generate specialized dependency trees where the original dependencies are replaced by the specialized versions. This allows building the project with significantly less third-party code than the original. As a result, the specialized dependencies become a first-class concept in the software supply chain, rather than a transient artifact in an optimizing compiler toolchain. We implement our technique in a tool called DepTrim , which we evaluate with 30 notable open-source Java projects. DepTrim specializes a total of 343 (86.6%) dependencies across these projects, and successfully rebuilds each project with a specialized dependency tree. Moreover, through this specialization, DepTrim removes a total of 57,444 (42.2%) classes from the dependencies, reducing the ratio of dependency classes to project classes from 8.7 × in the original projects to 5.0 × after specialization. These novel results indicate that dependency specialization significantly reduces the share of third-party code in Java projects.
 		   </p>   
@@ -545,24 +560,202 @@ Moreover, the adoption and evaluation of LLMs for SE tasks still face many chall
             <div id="X" class="tab-pane fade">
 		 <h5>Data Quality Antipatterns for Software Analytics - A Case Study of Software Defect Prediction</h5>
              	 <h5><strong>Presenter:</strong> Aaditya Bhatia </h5> 
+		    <br>
 		   <p><em><strong>Abstract:</strong></em> 
 			   Data quality is crucial in the field of software analytics, especially for machine learning (ML) applications such as software defect prediction (SDP). Despite the extensive use of ML models in software engineering, studies have primarily focused on singular antipatterns, while a multitude of antipatterns exist in practice. This comprehensive setting is often ignored and remains out of focus. This study aims to develop a comprehensive taxonomy of data quality antipatterns specific to ML and evaluate their impact on the performance and interpretation of software analytics models. We identified eight ML-specific data quality antipatterns and 14 sub-types through a literature review. We conducted a series of experiments to determine the prevalence of data quality antipatterns in SDP data (RQ1), assess the impact of cleaning orders on model performance (RQ2), evaluate the effects of antipattern removal on model performance (RQ3), and examine the consistency of interpretation results from models built with different antipatterns (RQ4). Our taxonomy includes antipatterns such as Schema Violations, Data Miscoding, Inconsistent Representation, Data Distribution Antipatterns, Packaging Antipatterns, Label Antipatterns, and Correlation & Redundancy. In our case study of SDP, we found that the studied datasets contain several antipatterns, which often co-exist. The impact of learner variability on the model performance is higher than the impact of order of cleaning these antipatterns. However, in a setting where the other antipatterns have been cleaned out, some antipatterns, such as Tailed Distributions and Class Overlap, have a significant effect on certain performance metrics. Finally, models built from data with different antipatterns showed moderate consistency in interpretation results. This study provides empirical evidence on the critical role of data quality in ML for software analytics. Our findings indicate that while the order of data cleaning has a minor impact, practitioners should be vigilant in addressing specific antipatterns, especially when other antipatterns have already been cleaned. Researchers and practitioners should also consider the "data quality" aspect when relying on model interpretation results. Prioritizing the removal of key antipatterns should take precedence over the removal of all antipatterns to maintain the performance of ML models in software defect prediction.
 		   </p>   
             </div>
             <!-- End Bhatia -->
 		  
-            <!-- Begin X -->
+            <!-- Begin Ding -->
+            <div id="X" class="tab-pane fade">
+		 <h5>Improving the Textual Information in Logging Statements</h5>
+             	 <h5><strong>Presenter:</strong> Zishuo Ding </h5> 
+		    <br>
+		   <p><em><strong>Abstract:</strong></em> 
+			   In this presentation, we will discuss our efforts to enhance the textual information in logging statements from two perspectives. Firstly, we will explore proactive methods for suggesting the generation of new logging texts. We propose automated deep learning-based approaches that generate logging texts by translating related source code into concise textual descriptions. Secondly, we will talk about retroactive analysis of existing logging texts. We present the first comprehensive study on the temporal relations between logging and its corresponding source code, which is subsequently utilized to successfully detect anti-patterns in existing logging statements.
+		   </p>   
+            </div>
+            <!-- End Ding -->
+		  
+            <!-- Begin Veloso -->
+            <div id="Veloso" class="tab-pane fade">
+		 <h5>A mixed-method in-depth study of test-specific refactorings</h5>
+             	 <h5><strong>Presenter:</strong> Victor Guerra Veloso </h5> 
+		    <br>
+		   <p><em><strong>Abstract:</strong></em> 
+			   Most studies investigating refactoring practices in test code either considered refactorings typically applied on production code, e.g., from Martin Fowler’s Refactoring book, or a narrow test-refactoring context, e.g., test-smells. 
+To fill this gap and consolidate an empirically validated comprehensive catalogue of test-specific refactorings, we employ a mixed-method approach combining different sources of information, including 
+existing test evolution datasets, answers to survey questions by contributors of popular open-source GitHub repositories, and StackOverflow test-refactoring-related questions and answers. 
+We present evidence that refactoring activities take place in specific test code components and address different quality aspects of tests, such as maintainability, reusability, extensibility, reliability, performance, and flakiness. 
+Our study paves the way for tool builders to add support for test features in static analysis and code generation tools. 
+Moreover, it establishes a catalogue of test-specific refactorings to aid practitioners in maintaining large test-code bases and researchers in conducting empirical studies on test evolution.
+		   </p>   
+            </div>
+            <!-- End Veloso -->
+		  
+ <!-- Begin Hamdaqa -->
+            <div id="Hamdaqa" class="tab-pane fade">
+		 <h5>Building Trust: A Journey from Conversation to Deployment and Evolution</h5>
+             	 <h5><strong>Presenter:</strong> Mohammad Hamdaqa </h5> 
+		    <br>
+		   <p><em><strong>Abstract:</strong></em> 
+			   A smart contract is a self-executing agreement, encoded in source code, and deployed on a blockchain, making it immutable in principle. Despite their potential to revolutionize digital transactions by ensuring trust through immutability, building smart contracts that we can trust presents several challenges.  First, developing smart contracts is complex even for professional developers - as they need to deal with the intricacies of agreement rules and the heterogeneity of the underlying blockchain platforms - yet contracts need to be accessible to non-technical contractual parties. Second, while immutability is what makes smart contracts trustworthy, it introduces difficulties in making post-deployment modifications, such as bug fixes or upgrades. This highlights the importance of implementing security measures to avoid vulnerabilities and stresses the critical role of a thorough auditing process before deployment. In this talk, I will walk you through some of our research efforts at the SAET Lab to address these challenges. Particularly, I will discuss the development of iContractML and iContractBot to enable non-technical users to interactively specify contract requirements and automatically generate smart contract codes. I will highlight our efforts to mine and classify Ethereum smart contract vulnerabilities and their fixes, and highlight some of the recent results studying upgradeability patterns and their impact. Lastly, I will showcase a context-driven prompting technique for co-auditing smart contracts using Large Language Models (LLMs) to boost vulnerability detection through a more efficient auditing process.
+		   </p>   
+            </div>
+            <!-- End Hamdaqa -->
+
+ <!-- Begin Islam -->
+            <div id="Islam" class="tab-pane fade">
+		 <h5>Characterizing Python Library Migrations</h5>
+             	 <h5><strong>Presenter:</strong> Mohayeminul Islam </h5> 
+		    <br>
+		   <p><em><strong>Abstract:</strong></em> 
+			   Developers often need to replace the used libraries with alternate libraries, a process known as library migration. Doing this manually can be tedious, time-consuming, and prone to errors. Automated migration techniques can help alleviate some of this burden. However, designing effective automated migration techniques requires understanding the types of code changes required during migration. This work contributes an empirical study that provides a holistic view of Python library migrations. We manually label the state-of-the-art migration data and derive a taxonomy for describing migration-related code changes, PyMigTax. Leveraging PyMigTax and our labeled data, we investigate various characteristics of Python library migrations. Our findings highlight various potential shortcomings of current library migration tools. Overall, our contributions provide the necessary knowledge and foundations for developing automated Python library migration techniques.
+		   </p>   
+            </div>
+            <!-- End Islam -->
+
+
+ <!-- Begin Kabir -->
+            <div id="Kabir" class="tab-pane fade">
+		 <h5>ZS4C: Zero-Shot Synthesis of Compilable Code for Incomplete Code Snippets using ChatGPT</h5>
+             	 <h5><strong>Presenter:</strong> Azmain Kabir </h5> 
+		    <br>
+		   <p><em><strong>Abstract:</strong></em> 
+			   Technical question and answering (Q&A) sites such as Stack Overflow have become an important source for software developers to seek knowledge. However, code snippets on Q&A sites are usually uncompilable and semantically incomplete for compilation due to unresolved types and missing dependent libraries, which raises the obstacle for users to reuse or analyze Q&A code snippets. Prior approaches either are not designed for synthesizing compilable code or suffer from a low compilation success rate. To address this problem, we propose ZS4C, a lightweight approach to perform zero-shot synthesis of compilable code from incomplete code snippets using Large Language Model (LLM). ZS4C operates in two stages. In the first stage, ZS4C utilizes an LLM, i.e., ChatGPT, to identify missing import statements for a given code snippet, leveraging our designed task-specific prompt template. In the second stage, ZS4C fixes compilation errors caused by incorrect import statements and syntax errors through collaborative work between ChatGPT and a compiler. We thoroughly evaluated ZS4C on a widely used benchmark called StatType-SO against the SOTA approach SnR. Compared with SnR, ZS4C improves the compilation rate from 63% to 87.6%, with a 39.3% improvement. On average, ZS4C can infer more accurate import statements than SnR, with an improvement of 6.6% in the F1.
+		   </p>   
+            </div>
+            <!-- End Kabir -->
+		  
+ <!-- Begin Kim -->
+            <div id="Kim" class="tab-pane fade">
+		 <h5>A First Look at the Inheritance-Induced Redundant Test Execution</h5>
+             	 <h5><strong>Presenter:</strong> Dong Jae Kim </h5> 
+		    <br>
+		   <p><em><strong>Abstract:</strong></em> 
+			Inheritance, a fundamental aspect of object-oriented design, has been leveraged to enhance code reuse and facilitate efficient software development. However, alongside its benefits, inheritance can introduce tight coupling and complex relationships between classes, posing challenges for software maintenance. Although there are many studies on inheritance in source code, there is limited study on the test code counterpart. In this paper, we take the first step by studying inheritance in test code, with a focus on redundant test executions caused by inherited test cases. We empirically study the prevalence of test inheritance and its characteristics. We also propose a hybrid approach that combines static and dynamic analysis to identify and locate inheritance-induced redundant test cases. Our findings reveal that (1) inheritance is widely utilized in the test code, (2) inheritance-induced redundant test executions are prevalent, accounting for 13% of all execution test cases, and (3) the redundancies slow down test execution by an average of 14%. Our study highlights the need for careful refactoring decisions to minimize redundant test cases and identifies the need for further research on test code quality   
+		   </p>   
+            </div>
+            <!-- End Kim -->
+
+
+ <!-- Begin Lin -->
+            <div id="Lin" class="tab-pane fade">
+		 <h5>When LLM-based Code Generation Meets the Software Development Process</h5>
+             	 <h5><strong>Presenter:</strong> Feng Lin </h5> 
+		    <br>
+		   <p><em><strong>Abstract:</strong></em> 
+			  Software process models are pivotal in fostering collaboration and communication within software teams. We introduce LCG, which leverages multiple LLM agents to emulate various software process models, namely LCGWaterfall, LCGTDD, and LCGScrum. Each model assigns LLM agents specific roles such as requirement engineer, architect, developer, tester, and scrum master, mirroring typical development activities and communication patterns. Utilizing GPT3.5 as the underlying LLM and baseline (GPT), we evaluate LCG across four code generation benchmarks: HumanEval, HumanEval-ET, MBPP, and MBPP-ET. Results indicate LCGScrum outperforms other models, achieving an average 15% improvement over GPT. Analysis reveals distinct impacts of development activities on generated code, with design and code reviews contributing to enhanced exception handling, while design, testing, and code reviews mitigate code smells. Furthermore, variations in Pass@1 are notable for different GPT3.5 model versions, highlighting the stability of LCG across model versions. This stability underscores the importance of adopting software process models . 
+		   </p>   
+            </div>
+            <!-- End Lin -->
+
+
+
+		  
+ <!-- Begin Lyu -->
+            <div id="Lyu" class="tab-pane fade">
+		 <h5>On the Model Update Strategies for Supervised Learning in AIOps Solutions</h5>
+             	 <h5><strong>Presenter:</strong> Yingzhe Lyu </h5> 
+		    <br>
+		   <p><em><strong>Abstract:</strong></em> 
+			   In this work, we performed a case study on three large-scale public operation data and empirically assessed five different types of model update strategies for supervised learning regarding their performance, updating cost, and stability. We observed that active model update strategies (e.g., periodical retraining, concept drift guided retraining, time-based model ensembles, and online learning) achieve better and more stable performance than a stationary model.
+		   </p>   
+            </div>
+            <!-- End Lyu -->
+
+ <!-- Begin Ning Ma -->
+            <div id="NingMa" class="tab-pane fade">
+		 <h5>A Method to Estimate the Execution Times of Quantum Circuits on Quantum Computers</h5>
+             	 <h5><strong>Presenter:</strong> Ning Ma </h5> 
+		    <br>
+		   <p><em><strong>Abstract:</strong></em> 
+			 Currently, there is a paucity of research on predicting the execution time of quantum circuits on quantum computers. The execution time estimates provided by the IBM Quantum Platform have large margins of error and do not satisfactorily meet the needs of researchers in the field of quantum computing. 
+We selected a dataset comprising over 1510 quantum circuits, initially predicting their execution times on simulators, which yielded promising results with an R-squared value nearing 95%. Subsequently, for the estimation of execution times on quantum computers, we conducted ten-fold cross-validation with an average R-squared value exceeding 90%. These results significantly surpass those provided by the IBM Quantum Platform. Our model has proven to be effective in accurately estimating execution times for quantum circuits on quantum computer.  
+		   </p>   
+            </div>
+            <!-- End Ning Ma -->
+		  
+ <!-- Begin Zeyang Ma -->
+            <div id="ZeyangMa" class="tab-pane fade">
+		 <h5>LLMParser: An Exploratory Study on Using Large Language Models for Log Parsing.</h5>
+             	 <h5><strong>Presenter:</strong> Zeyang Ma </h5> 
+		    <br>
+		   <p><em><strong>Abstract:</strong></em> 
+			   Logs are important in modern software development with runtime information. Log parsing is the first step in many log-based analyses, that involve extracting structured information from unstructured log data. Traditional log parsers face challenges in accurately parsing logs due to the diversity of log formats, which directly impacts the performance of downstream log-analysis tasks. In this paper, we explore the potential of using Large Language Models (LLMs) for log parsing and propose LLMParser, an LLM-based log parser based on generative LLMs and few-shot tuning. We leverage four LLMs, Flan-T5-small, Flan-T5-base, LLaMA-7B, and ChatGLM-6B in LLMParsers. Our evaluation of 16 open-source systems shows that LLMParser achieves statistically significantly higher parsing accuracy than state-of-the-art parsers (a 96% average parsing accuracy). We further conduct a comprehensive empirical analysis on the effect of training size, model size, and pre-training LLM on log parsing accuracy. We find that smaller LLMs may be more effective than more complex LLMs; for instance where Flan-T5-base achieves comparable results as LLaMA-7B with a shorter inference time. We also find that using LLMs pre-trained using logs from other systems does not always improve parsing accuracy. While using pre-trained Flan-T5-base shows an improvement in accuracy, pre-trained LLaMA results in a decrease (decrease by almost 55% in group accuracy). In short, our study provides empirical evidence for using LLMs for log parsing and highlights the limitations and future research direction of LLM-based log parsers.
+		   </p>   
+            </div>
+            <!-- End Zeyang Ma -->		  
+
+ <!-- Begin Menzies1 -->
+            <div id="Menzies1" class="tab-pane fade">
+		 <h5>Stats101 for software analytics</h5>
+             	 <h5><strong>Presenter:</strong> Tim Menzies </h5> 
+		    <br>
+		   <p><em><strong>Abstract:</strong></em> 
+			When does 42 == 44? Distributions. Central tendencies. Variations. Entropy. Standard deviation. Parametric and non-parametric stats. Effect size tests. Significance tests. Scott-Knot tests.  (Very) simple python scripts for statistical analysis. Examples of complex results presented very clearly.     
+		   </p>   
+            </div>
+            <!-- End Menzies1 -->
+		  
+ <!-- Begin Menzies2 -->
+            <div id="Menzies2" class="tab-pane fade">
+		 <h5>Lots of learning from a little local data. Why? How?</h5>
+             	 <h5><strong>Presenter:</strong> Tim Menzies </h5> 
+		    <br>
+		   <p><em><strong>Abstract:</strong></em> 
+			 Prior work has explored few-shot learning; i.e. using a few examples 
+to guide a large language model to perform some specific task. But not all SE
+domains have access to a relevant LLM. Hence, here, we test how useful is
+sequential model optimization for multi-objective optimization of SE tasks
+when learning from just a little local data (i.e. just labelling a few dozen, not
+hundreds, of examples).
+
+In case studies with 30 different multi-objective tasks (ranging from from
+high-level decisions about software processes to low-level decisions abut how
+to configure video encoding software) our LAB tool (the Lightweight Adaptive Balancer) could use Bayesian sequential model optimization to find large
+changes that improved default behavior of these systems, after just labelling
+30 examples. This result held even when that case study contained tens of
+thousands of unlabelled examples. This result is unique since when these case
+studies were explored previously, SE researchers needed thousands to millions
+of labelled examples.
+
+We hence conclude that multi-objective semi-supervised optimizers tools
+like LAB offer much promise for time-constrained review of software systems.  
+		   </p>   
+            </div>
+            <!-- End Menzies2 -->
+		  
+ <!-- Begin Menzies3 -->
+            <div id="Menzies3" class="tab-pane fade">
+		 <h5>BEWARE: some of the deep learning rhetoric is misleading</h5>
+             	 <h5><strong>Presenter:</strong> Tim Menzies </h5> 
+		    <br>
+		   <p><em><strong>Abstract:</strong></em> 
+			   When embracing new technology like LLMs, are we “throwing the baby out with the bath water”? What are we forgetting, from past research, that it is still relevant and useful? For example, I firmly believe that deep learning and generative AI methods such as ``chain of thought’ will dramatically change the nature of science (in general) and SE (in particular). But moving forward away from generative tasks to classification, regression, and optimization tasks, my experimental results strongly suggest that other non-neural methods can be just as effective, particularly when combined with hyperparameter optimization. This is an important point since the non-neural methods can yield the succinct symbolic models that humans need to review and understand a model.
+		   </p>   
+            </div>
+            <!-- End Menzies3 -->
+		  
+ <!-- Begin X -->
             <div id="X" class="tab-pane fade">
 		 <h5>Title</h5>
              	 <h5><strong>Presenter:</strong>  </h5> 
+		    <br>
 		   <p><em><strong>Abstract:</strong></em> 
 			   
 		   </p>   
             </div>
             <!-- End X -->
 
-		  
 
+
+
+
+
+
+		  
             <!-- Begin Posters -->
             <div id="Posters" class="tab-pane fade">
 
