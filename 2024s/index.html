@@ -129,12 +129,9 @@
 		                <li><a href="#panel" data-toggle="pill">Panel</a></li>
                     <li><a href="#tutorial" data-toggle="pill">Tutorial</a></li>
                    <!-- <li><a href="#studentResearchTalks" data-toggle="pill">Student Research Talks</a></li>     -->
-			<li><a href="#ResearchTalks" data-toggle="pill">Research Talks</a></li>
-
-
                       <li class="dropdown">
-                        <a href="#2posterSubmenu" id="2poster" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">2poster Invited New Faculty Talks</a>
-                        <ul class="collapse list-unstyled" id="2posterSubmenu">
+                        <a href="#ResearchTalksSubmenu" id="ResearchTalks" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Research Talks</a>
+                        <ul class="collapse list-unstyled" id="ResearchTalksSubmenu">
                     <li><a href="#Abukhalaf" data-toggle="pill"> Seif Abukhalaf</a></li>
                     <li><a href="#Assi" data-toggle="pill"> Maram Assi</a></li>
                     <li><a href="#Batoun" data-toggle="pill"> Mohamed Amine Batoun</a></li>
@@ -526,7 +523,7 @@ Moreover, the adoption and evaluation of LLMs for SE tasks still face many chall
             <!-- End Tutorial -->
 
             <!-- Begin Research Talks -->
-            <div id="new2poster" class="tab-pane fade">
+            <div id="newResearchTalks" class="tab-pane fade">
 
               <h3>Research Talks</h3>
 	  <!--		<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ366_pB6A18DVMnCGsMxfX1ugSLkK1L1fqJQSpItbQX-KlXvb6y2LJ0gSuix08a6L9JM1JBcgeb_Uu/pubhtml?gid=1395396095&amp;single=true&amp;widget=true&amp;headers=false" width="110%" height="650px"></iframe>  
@@ -1367,11 +1364,11 @@ Hence, this work aims to help code reviewers by predicting which files in a subm
             var hash = window.location.hash.substring(1);
             
             // Check if an element with that ID exists
-            if(hash === "new2poster") {
+            if(hash === "newResearchTalks") {
               // Show the content for "Invited New Faculty Talks"
               $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
-              $('#new2poster').addClass('active in'); // Show the "Invited New Faculty Talks" content
-              window.history.pushState({}, '', "#new2poster");
+              $('#newResearchTalks').addClass('active in'); // Show the "Invited New Faculty Talks" content
+              window.history.pushState({}, '', "#newResearchTalks");
               window.scrollTo(0, 0);
             }
         }
@@ -1379,9 +1376,9 @@ Hence, this work aims to help code reviewers by predicting which files in a subm
 
       $(document).ready(function(){
         // Toggle the submenu and show the content for "Invited New Faculty Talks"
-        $('a[href="#2posterSubmenu"]').click(function(e){
+        $('a[href="#ResearchTalksSubmenu"]').click(function(e){
             e.preventDefault(); // Prevent default anchor behavior
-            var submenu = $('#2posterSubmenu');
+            var submenu = $('#ResearchTalksSubmenu');
     
             // Collapse or show the submenu
             if (submenu.hasClass('in')) {
@@ -1394,15 +1391,15 @@ Hence, this work aims to help code reviewers by predicting which files in a subm
     
             // Show the content for "Invited New Faculty Talks"
             $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
-            $('#new2poster').addClass('active in'); // Show the "Invited New Faculty Talks" content
-            window.history.pushState({}, '', "#new2poster");
+            $('#newResearchTalks').addClass('active in'); // Show the "Invited New Faculty Talks" content
+            window.history.pushState({}, '', "#newResearchTalks");
             // Scroll to the "Invited New Faculty Talks" content if you want smooth scrolling
             /* $('html, body').animate({
-                scrollTop: $('#new2poster').offset().top
+                scrollTop: $('#newResearchTalks').offset().top
             }, 1000); */
         });
 
-        $('#2posterSubmenu a').click(function(e){
+        $('#ResearchTalksSubmenu a').click(function(e){
           e.preventDefault(); // Prevent default anchor behavior
           var target = $(this).attr('href');
 
