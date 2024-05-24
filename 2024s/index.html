@@ -132,8 +132,8 @@
 			<li><a href="#ResearchTalks" data-toggle="pill">Research Talks</a></li>
               <li><a href="#Posters" data-toggle="pill"> Posters/Demos</a></li>
                       <li class="dropdown">
-                        <a href="#poster2" id="poster2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">2poster2</a>
-                        <ul class="collapse list-unstyled" id="facultySubmenu">
+                        <a href="#2posterSubmenu" id="poster2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">2poster2</a>
+                        <ul class="collapse list-unstyled" id="2posterSubmenu">
                           <li><a href="#ahmad-abdellatif">Ahmad Abdellatif</a></li>
                           <li><a href="#anranchen" data-toggle="pill">An Ran Chen</a></li>
                           <li><a href="#chengniansun" data-toggle="pill">Chengnian Sun</a></li>
@@ -1024,7 +1024,32 @@ Hence, this work aims to help code reviewers by predicting which files in a subm
             }, 1000); */
         });
 
-        $('#facultySubmenu a').click(function(e){
+      $(document).ready(function(){
+        // Toggle the submenu and show the content for "2poster Invited New Faculty Talks"
+        $('a[href="#2posterSubmenu"]').click(function(e){
+            e.preventDefault(); // Prevent default anchor behavior
+            var submenu = $('#2posterSubmenu');
+    
+            // Collapse or show the submenu
+            if (submenu.hasClass('in')) {
+                submenu.collapse('hide');
+            } else {
+                // Hide any other open submenus in the tracks menu
+                $('#tracksSubmenu .collapse.in').not(submenu).collapse('hide');
+                submenu.collapse('show'); // Show the submenu
+            }
+    
+            // Show the content for "2poster Invited New Faculty Talks"
+            $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
+            $('#2poster').addClass('active in'); // Show the "2poster Invited New Faculty Talks" content
+            window.history.pushState({}, '', "#2poster");
+            // Scroll to the "2poster Invited New Faculty Talks" content if you want smooth scrolling
+            /* $('html, body').animate({
+                scrollTop: $('#2poster').offset().top
+            }, 1000); */
+        });
+	      
+        $('# a').click(function(e){
           e.preventDefault(); // Prevent default anchor behavior
           var target = $(this).attr('href');
 
