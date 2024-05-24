@@ -140,6 +140,16 @@
                         </ul>
                     </li>
 
+                      <li class="dropdown">
+                        <a href="#3posterSubmenu" id="3poster" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">3poster Invited New Faculty Talks</a>
+                        <ul class="collapse list-unstyled" id="3posterSubmenu">
+                          <li><a href="#2ahmad-abdellatif">2Ahmad Abdellatif</a></li>
+                          <li><a href="#2anranchen" data-toggle="pill">2An Ran Chen</a></li>
+                        </ul>
+                    </li>			
+
+
+			
 			
               <li><a href="#Posters" data-toggle="pill"> Posters/Demos</a></li>
 
@@ -776,6 +786,40 @@ Hence, this work aims to help code reviewers by predicting which files in a subm
       </div>
 
 
+
+           <div id="new3poster" class="tab-pane fade">
+
+              <h3>Invited New Faculty Talks</h3>
+
+
+              <div id="3ahmad-abdellatif">
+	  <h5>Towards More Effective Software Engineering Chatbots</h5>
+             <h5><a href="https://profiles.ucalgary.ca/ahmad-abdellatif">Ahmad Abdellatif</a> from University of Calgary </h5>
+		     <p><em><strong>Abstract:</strong></em> Software chatbots are used in many aspects of the software development process. These chatbots work alongside developers, providing assistance in various software development tasks, from answering development questions to running tests and controlling services. While there are numerous chatbots, and their capability of supporting software practitioners is encouraging, little is known about the development challenges and usage benefits of software engineering chatbots. 
+              </p>
+		   <p>In this talk, I will present our in-depth study to understand the most pressing and difficult challenges faced by chatbot practitioners in developing chatbots. I will present our chatbot, MSRBot, that answers software development and maintenance questions.
+			   </p>
+		   <p> Based on our studies, we have identified two critical challenges in chatbot development: selecting a Natural Language Understanding (NLU) platform for chatbot implementation and curating a high-quality dataset to train the NLU. To help developers create more efficient chatbots, we assess the performance of multiple widely used NLUs using representative software engineering tasks to guide chatbot developers in designing more efficient chatbots. Additionally, we propose approaches for augmenting software engineering chatbot datasets. Our work helps advance the state-of-the-art in the use of chatbots in software engineering.
+		   </p>
+		    <img src="./images/ahmad-abdellatif.jpeg" height="150px" align="left" style="margin: 0px 10px 0px 0px;"></img>
+		    <p><em><strong>Bio:</strong></em>Ahmad Abdellatif is an Assistant Professor in the Department of Electrical and Software Engineering at the University of Calgary. Before, he worked as a postdoctoral researcher at DASLab in the Department of Computer Science and Software Engineering at Concordia University. His research interests and expertise are in Software Engineering, with a special interest in Software Chatbots, Mining Software Repositories and Engineering AI-based Systems. His work has been published in top-ranked Software Engineering venues, such as IEEE Transactions on Software Engineering (TSE), the Empirical Software Engineering Journal (EMSE), the International Conference on Software Engineering (ICSE), and the International Conference on Mining Software Repositories (MSR). You can find more about him at: (<a href="https://aabdllatif.github.io/">https://aabdllatif.github.io/</a>)</p>
+		    <br>
+		   
+          </div>
+
+          <div id="3anranchen">
+	  <h5>Towards Providing Automated Debugging Support in the ERA of DevOps</h5>
+	     <h5><a href="https://anrchen.github.io">An Ran Chen</a> from University of Alberta </h5>
+		   <p><em><strong>Abstract:</strong></em> Continuous integration is a DevOps practice in which software changes are frequently and automatically built, tested, and deployed. The primary objectives of continuous integration are to identify and address bugs quickly, and to improve software quality. However, the complexity of modern software systems and the lack of debugging information can make it challenging to locate and understand the root causes of bugs. In my upcoming talk, I will share my research insights into the challenges of automated debugging in DevOps and how they contribute to my broader goal of improving software quality and reliability. I will discuss how my past research, with a particular focus on developing new debugging innovations to minimize development and maintenance costs, has contributed to the field of automated debugging. Additionally, I will present my vision for the future of automated debugging in DevOps. 
+              </p>
+		    <img src="./images/anranchen.jpg" height="150px" align="left" style="margin: 0px 10px 0px 0px;"></img>
+		    <p><em><strong>Bio:</strong></em>An Ran Chen is an Assistant Professor at the Electrical and Computer Engineering Department of University of Alberta. His research interests cover various software engineering topics, including automated debugging, software testing, mining software repositories, and DevOps practices. His work has been published in flagship journals and selected as the featured article for the TSE journal. He is also the co-chair of Testing and Tools track for IEEE International Conference on Software Testing, Verification and Validation (ICST) 2024. Prior to pursuing research, An Ran worked as a web and software developer at the Bank of Canada and McGill University. For more information, please visit his personal website at (<a href="https://anrchen.github.io/home/">https://anrchen.github.io/home/</a>).</p>
+		    <br>
+        
+      </div>
+      </div>
+
+		  
 		
 		  
             <!-- Begin Call -->
@@ -1093,6 +1137,63 @@ Hence, this work aims to help code reviewers by predicting which files in a subm
         
     });	    
 
+
+
+      $(document).ready(function() {
+        // Check if the URL has a hash part (which means it is referring to a section of the page)
+        if(window.location.hash) {
+            // Remove the "#" from the hash
+            var hash = window.location.hash.substring(1);
+            
+            // Check if an element with that ID exists
+            if(hash === "new3poster") {
+              // Show the content for "Invited New Faculty Talks"
+              $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
+              $('#new3poster').addClass('active in'); // Show the "Invited New Faculty Talks" content
+              window.history.pushState({}, '', "#new3poster");
+              window.scrollTo(0, 0);
+            }
+        }
+      });
+
+      $(document).ready(function(){
+        // Toggle the submenu and show the content for "Invited New Faculty Talks"
+        $('a[href="#3posterSubmenu"]').click(function(e){
+            e.preventDefault(); // Prevent default anchor behavior
+            var submenu = $('#3posterSubmenu');
+    
+            // Collapse or show the submenu
+            if (submenu.hasClass('in')) {
+                submenu.collapse('hide');
+            } else {
+                // Hide any other open submenus in the tracks menu
+                $('#tracksSubmenu .collapse.in').not(submenu).collapse('hide');
+                submenu.collapse('show'); // Show the submenu
+            }
+    
+            // Show the content for "Invited New Faculty Talks"
+            $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
+            $('#new3poster').addClass('active in'); // Show the "Invited New Faculty Talks" content
+            window.history.pushState({}, '', "#new3poster");
+            // Scroll to the "Invited New Faculty Talks" content if you want smooth scrolling
+            /* $('html, body').animate({
+                scrollTop: $('#new3poster').offset().top
+            }, 1000); */
+        });
+
+        $('#3posterSubmenu a').click(function(e){
+          e.preventDefault(); // Prevent default anchor behavior
+          var target = $(this).attr('href');
+
+          // Scroll to the specific faculty section
+          $('html, body').animate({
+              scrollTop: $(target).offset().top
+          }, 1000);
+      });
+        
+    });	    
+
+	    
 	    
   </script>
   <!-- Add jQuery and Bootstrap JavaScript at the end for functionality -->
