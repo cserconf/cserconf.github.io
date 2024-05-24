@@ -132,7 +132,7 @@
 			<li><a href="#ResearchTalks" data-toggle="pill">Research Talks</a></li>
               <li><a href="#Posters" data-toggle="pill"> Posters/Demos</a></li>
                       <li class="dropdown">
-                        <a href="#facultySubmenu" id="invitefaculty" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Invited New Faculty Talks</a>
+                        <a href="#facultySubmenu" id="X2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Invited New Faculty Talks</a>
                         <ul class="collapse list-unstyled" id="facultySubmenu">
                           <li><a href="#ahmad-abdellatif">Ahmad Abdellatif</a></li>
                           <li><a href="#anranchen" data-toggle="pill">An Ran Chen</a></li>
@@ -477,7 +477,7 @@ Moreover, the adoption and evaluation of LLMs for SE tasks still face many chall
 
 
             <!-- Begin New Faculty Talks -->
-           <div id="newfacultytalks" class="tab-pane fade">
+           <div id="X2" class="tab-pane fade">
 
               <h3>Invited New Faculty Talks</h3>
 
@@ -999,6 +999,23 @@ Hence, this work aims to help code reviewers by predicting which files in a subm
         }
       });
 
+      $(document).ready(function() {
+        // Check if the URL has a hash part (which means it is referring to a section of the page)
+        if(window.location.hash) {
+            // Remove the "#" from the hash
+            var hash = window.location.hash.substring(1);
+            
+            // Check if an element with that ID exists
+            if(hash === "X2") {
+              // Show the content for "Invited New Faculty Talks"
+              $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
+              $('#X2').addClass('active in'); // Show the "Invited New Faculty Talks" content
+              window.history.pushState({}, '', "#X2");
+              window.scrollTo(0, 0);
+            }
+        }
+      });	    
+	    
       $(document).ready(function(){
         // Toggle the submenu and show the content for "Invited New Faculty Talks"
         $('a[href="#facultySubmenu"]').click(function(e){
@@ -1024,6 +1041,32 @@ Hence, this work aims to help code reviewers by predicting which files in a subm
             }, 1000); */
         });
 
+      $(document).ready(function(){
+        // Toggle the submenu and show the content for "Invited New Faculty Talks"
+        $('a[href="#facultySubmenu"]').click(function(e){
+            e.preventDefault(); // Prevent default anchor behavior
+            var submenu = $('#facultySubmenu');
+    
+            // Collapse or show the submenu
+            if (submenu.hasClass('in')) {
+                submenu.collapse('hide');
+            } else {
+                // Hide any other open submenus in the tracks menu
+                $('#tracksSubmenu .collapse.in').not(submenu).collapse('hide');
+                submenu.collapse('show'); // Show the submenu
+            }
+    
+            // Show the content for "Invited New Faculty Talks"
+            $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
+            $('#X2').addClass('active in'); // Show the "Invited New Faculty Talks" content
+            window.history.pushState({}, '', "#X2");
+            // Scroll to the "Invited New Faculty Talks" content if you want smooth scrolling
+            /* $('html, body').animate({
+                scrollTop: $('#X2').offset().top
+            }, 1000); */
+        });
+
+	      
         $('#facultySubmenu a').click(function(e){
           e.preventDefault(); // Prevent default anchor behavior
           var target = $(this).attr('href');
