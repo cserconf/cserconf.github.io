@@ -160,8 +160,8 @@
                     </li>
 
                       <li class="dropdown">
-                        <a href="#3posterSubmenu" id="3poster" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">3poster Invited New Faculty Talks</a>
-                        <ul class="collapse list-unstyled" id="3posterSubmenu">
+                        <a href="#PostersSubmenu" id="Posters/Demos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">3poster Invited New Faculty Talks</a>
+                        <ul class="collapse list-unstyled" id="PostersSubmenu">
                     <li><a href="#AbukhalafP" data-toggle="pill"> Seif Abukhalaf</a></li>
                     <li><a href="#Ahasanuzzaman" data-toggle="pill"> Md Ahasanuzzaman</a></li>
                     <li><a href="#Ahmed" data-toggle="pill"> Faiz Ahmed</a></li>
@@ -205,10 +205,6 @@
 
 
 			
-			
-			
-              <li><a href="#Posters" data-toggle="pill"> Posters/Demos</a></li>
-
               <!-- <li><a data-toggle="no-pill" href="#acceptedPapers">Accepted Papers</a></li> --> 
 	
 			
@@ -809,7 +805,7 @@ Hence, this work aims to help code reviewers by predicting which files in a subm
             <!-- End Posters -->
 
 		  
-           <div id="new3poster" class="tab-pane fade">
+           <div id="newPoster" class="tab-pane fade">
 
               <h3>Invited New Faculty Talks</h3>
 
@@ -1142,11 +1138,11 @@ Hence, this work aims to help code reviewers by predicting which files in a subm
             var hash = window.location.hash.substring(1);
             
             // Check if an element with that ID exists
-            if(hash === "new3poster") {
+            if(hash === "newPoster") {
               // Show the content for "Invited New Faculty Talks"
               $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
-              $('#new3poster').addClass('active in'); // Show the "Invited New Faculty Talks" content
-              window.history.pushState({}, '', "#new3poster");
+              $('#newPoster').addClass('active in'); // Show the "Invited New Faculty Talks" content
+              window.history.pushState({}, '', "#newPoster");
               window.scrollTo(0, 0);
             }
         }
@@ -1154,9 +1150,9 @@ Hence, this work aims to help code reviewers by predicting which files in a subm
 
       $(document).ready(function(){
         // Toggle the submenu and show the content for "Invited New Faculty Talks"
-        $('a[href="#3posterSubmenu"]').click(function(e){
+        $('a[href="#PostersSubmenu"]').click(function(e){
             e.preventDefault(); // Prevent default anchor behavior
-            var submenu = $('#3posterSubmenu');
+            var submenu = $('#PostersSubmenu');
     
             // Collapse or show the submenu
             if (submenu.hasClass('in')) {
@@ -1169,15 +1165,15 @@ Hence, this work aims to help code reviewers by predicting which files in a subm
     
             // Show the content for "Invited New Faculty Talks"
             $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
-            $('#new3poster').addClass('active in'); // Show the "Invited New Faculty Talks" content
-            window.history.pushState({}, '', "#new3poster");
+            $('#newPoster').addClass('active in'); // Show the "Invited New Faculty Talks" content
+            window.history.pushState({}, '', "#newPoster");
             // Scroll to the "Invited New Faculty Talks" content if you want smooth scrolling
             /* $('html, body').animate({
-                scrollTop: $('#new3poster').offset().top
+                scrollTop: $('#newPoster').offset().top
             }, 1000); */
         });
 
-        $('#3posterSubmenu a').click(function(e){
+        $('#PostersSubmenu a').click(function(e){
           e.preventDefault(); // Prevent default anchor behavior
           var target = $(this).attr('href');
 
