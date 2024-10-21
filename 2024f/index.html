@@ -68,6 +68,16 @@
               <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
               <!-- <li><a data-toggle="no-pill" href="#acceptedPapers">Accepted Papers</a></li> --> 
               <li><a data-toggle="pill" href="#theprogram">Program</a></li>
+
+
+              <!-- Tracks menu with dropdown for submenus -->
+              <li class="dropdown">
+                <a href="#tracksSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Tracks</a>
+                <ul class="collapse list-unstyled" id="tracksSubmenu">
+                    <li><a href="#keynotes" data-toggle="pill">Keynotes</a></li>
+                </ul>
+              </li>
+			
               <li><a data-toggle="pill" href="#call">Call for Submissions</a></li>
               <li><a data-toggle="pill" href="#orgcom">Organizing Committee</a></li>
               <li><a data-toggle="pill" href="#steercom">Steering Committee</a></li>
@@ -142,85 +152,35 @@
             </div>
             <!--- End Home -->
 
+
+            <!-- Begin Keynotes -->
+            <div id="keynotes" class="tab-pane fade">
+              <h4>Keynotes</h4>
+              <h5>Beyond Accuracy: Engineering Reliable Machine Learning Systems</h5>
+              <h5>Keynote by <a href="https://www.concordia.ca/faculty/jinqiu-yang.html/">Dr. Jinqiu Yang</a> (Concordia University) </h5>
+              <p><em><strong>Abstract:</strong></em>  As machine learning (ML) models become deeply embedded in life-critical applications such as autonomous driving, healthcare, and cybersecurity, success can no longer be defined by accuracy metrics alone. The real-world deployment of these ML systems presents complex engineering challenges, where robustness and fairness are critical to the safe deployment of these life-critical systems.
+              </p>
+              <p><em><strong>Outline:</strong></em>  In this keynote, she will illustrate these challenges and present their solutions to ensure the engineering of reliable ML systems. First, she will introduce the robustness challenges of autonomous driving systems (ADS), and discuss their recent works on evaluating and improving the robustness of ADS. Next, she will discuss their recent work of evaluating the robustness of AI4SE applications, including automated program repair where ML models including LLMs are increasingly used to automatically fix bugs. Last, the keynote will showcase the challenges of achieving fair ML systems. She will discuss approaches for detecting and mitigating biases in large language models for SE, which emphasize the importance of building ML software systems that not only perform well but also follow principles of fairness, transparency and accountability.
+              </p>
+		          <img src="./images/JinqiuYang.jpg" height=150px align="left" style="margin: 0px 10px 0px 0px;"/>
+              <p><em><strong>Bio:</strong></em> Dr. Jinqiu Yang is an Associate Professor at the Gina Cody School of Engineering and Computer Science, Concordia University, in Montreal, Canada. Her research focuses on the intersection of Software Engineering and Artificial Intelligence, particularly in SE4AI and AI4SE. She leads the O-RISA lab, working on safe and robust Large Language Model (LLM) code generation and improving the reliability of complex AI systems, such as Autonomous Vehicles. Dr. Yang has collaborated extensively with industry leaders like Google, IBM, and Ericsson and has secured over $2 million in external research funding. She is recognized for her leadership in the academic community, serving on program committees for flagship conferences such as ICSE and ASE, and as an associate editor for top journals like EMSE. She received the ACM Distinguished Paper Award at MSR 2018 and continues to push the boundaries of AI and software engineering through her work.
+              </p>		    
+
+
+              
+            </div>
+            <!-- End Keynotes -->
+
+
             <!-- Begin Accepted Papers -->
             <div id="theprogram" class="tab-pane fade">
 
               <h3>CSER Fall 2024 Detailed Program</h3>
               <p>To be annonunced...</p>
               <!-- <iframe src="https://docs.google.com/spreadsheets/d/1wdlYYlsTY6Qm6S9R9aA5-RbhxYBsKUmhgYor6qyPhzY/preview" width="90%" height="500px"></iframe> -->
-
-
             </div>
-            <!-- End Accepted Papers -->
 
-            <!-- Begin ProgramProgram 
 
-             <div id="theprogram" class="tab-pane fade">
-                <div class="panel-group">
-                    <div class="panel panel-info">
-                        <div class="panel-heading">Program (notional!)</div>
-                        <div class="panel-body">
-                            <ul class="list-group">
-                              <li class="list-group-item">8:30 - 9:00 <h5>Registration and Breakfast</h5></li>
-                                <li class="list-group-item">9:00 - 9:15  <h5>Conference Opening</h5></li>
-                                <li class="list-group-item">9:15 - 10:15 <h5>Keynote by Ahmed Hassan</h5>
-                                  <small><p><i>Session Chair: Neil Ernst</i></p></small>
-                                </li>
-                                <li class="list-group-item">10:15 - 10:45 <h5>Coffee Break</h5></li>
-                                <li class="list-group-item">10:45 - 11:30<h5>New Faculty Talks</h5>
-                                    <small>
-                                        <p><i>Session Chair: Yan Liu</i></p>
-                                        <table class="table table-striped">
-                                            <tbody>
-                                              <tr>
-                                                <td class="col-md-6">new faculty</td>
-                                                <td class="col-md-6">Title </td>
-                                            </tr>
-                                            <tr>
-                                                <td>new faculty</td>
-                                                <td>cool title</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </small>
-                            </li>
-                            <li class="list-group-item">12:00 - 14:00 <h5>Lunch and Posters</h5></li>
-                            <li class="list-group-item">13:30 - 15:00 <h5>Session 2: Short talks</h5>
-                                <small>
-                                    <p><i>Session Chair: TBD</i></p>
-                                    <table class="table table-striped">
-                                        <tbody>
-                                          <tr>
-                                            <td class="col-md-6">name</td>
-                                            <td class="col-md-6">title </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </small>
-                        </li>
-                        <li class="list-group-item">15:00 - 15:30 <h5>Coffee Break</h5></li>
-                        <li class="list-group-item">15:30 - 17:30 <h5>Session 3: More talks</h5>
-                            <small>
-                                <p><i>Session Chair: Hausi</i></p>
-                                <table class="table table-striped">
-                                    <tbody>
-                                      <tr>
-                                        <td class="col-md-6">name</td>
-                                        <td class="col-md-6">title</td>
-                                    </tr>
-                
-                                </tbody>
-                            </table>
-                        </small>
-                    </li>
-                    <li class="list-group-item">17:30<h5>Closing</h5></li>
-                    <li class="list-group-item">17:45 - 19:30 <h5>Reception and Posters</h5></li>
-                </ul>
-            </div>      
-          </div>
-        </div>
-      </div>-->
-        
 
             <!-- Begin Call -->
             <div id="call" class="tab-pane fade">
