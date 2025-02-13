@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CSER 2025 Spring</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="css/site.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118032083-1"></script> -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      // gtag('config', 'UA-118032083-1');
+    </script>
+
+    <script>
+      $(document).ready(function(){
+          // When a link in the sidebar is clicked
+          $('#sidebar a').on('click', function(e){
+              var target = $(this).attr('href');
+
+              // If it's the Tracks button or one of its submenus
+              if (target === '#tracksSubmenu' ) {
+                  e.preventDefault(); // Prevent the default anchor behavior
+
+                  // If it's the Tracks button itself, show the Tracks content
+                  if (target === '#tracksSubmenu') {
+                      $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
+                      $('#tracks').addClass('active in'); // Show Tracks content
+                  } else {
+                      // Otherwise, handle submenu navigation here
+                      // For example, navigate to a section or trigger showing another tab's content
+                  }
+
+                  // Adjust the URL if needed, without affecting the page view
+                  window.history.pushState({}, '', $(this).attr('href'));
+              }
+          });
+      });
+    </script>
+
+    <!-- Add Bootstrap CSS for styling and collapse functionality -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   
+  </head>
+
+  <body>
+
+    <!-- Begin Header -->
+    <div class="page-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <br/>
+            <img class="img-responsive" src="images/logo_SER.gif" alt="CSER">
+          </div>
+
+          <div class="col-md-10">
+            <h1>Consortium for Software Engineering Research<br /> 2025 Spring Meeting</h1>
+            <h3>Date TBD - Location TBD</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Begin Body -->
+    <div class="container">
+      <div class="row">
+
+        <!-- Begin Left panel -->
+        <div class="col-md-3">
+
+          <!-- Begin Menu -->
+          <div class="well">
+            <!-- Enable links to subpages by removing the "no-" prefix. -->
+            <ul class="nav nav-stacked nav-pills" id="sidebar">
+
+              <li><a data-toggle="pill" href="#home">Home</a></li>
+              <li><a data-toggle="pill" href="#theprogram">Program</a></li>
+
+              <!-- Tracks menu with dropdown for submenus -->
+              <li class="dropdown">
+                <a href="#tracksSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Tracks</a>
+                <ul class="collapse list-unstyled" id="tracksSubmenu">
+                    <li><a href="#keynotes" data-toggle="pill">Keynotes</a></li>
+                    <li class="dropdown">
+                        <a href="#facultySubmenu" id="invitefaculty" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Invited New Faculty Talks</a>
+                        <ul class="collapse list-unstyled" id="facultySubmenu">
+                          <li><a href="#faculty1">Faculty 1</a></li>
+                          <li><a href="#faculty2">Faculty 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#panel" data-toggle="pill">Panel</a></li>
+                    <li><a href="#tutorial" data-toggle="pill">Tutorial</a></li>
+                    <li class="dropdown">
+                        <a href="#ResearchTalksSubmenu" id="ResearchTalks" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Research Talks</a>
+                        <ul class="collapse list-unstyled" id="ResearchTalksSubmenu">
+                            <li><a href="#research1">Research 1</a></li>
+                            <li><a href="#research2">Research 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#PostersSubmenu" id="Posters/Demos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Posters/Demos</a>
+                        <ul class="collapse list-unstyled" id="PostersSubmenu">
+                            <li><a href="#poster1">Poster 1</a></li>
+                            <li><a href="#poster2">Poster 2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+              </li>
+
+              <li><a data-toggle="pill" href="#call">Submissions</a></li>
+              <li><a data-toggle="pill" href="#orgcom">Organizing Committee</a></li>
+              <li><a data-toggle="pill" href="#steercom">Steering Committee</a></li>
+              <li><a data-toggle="pill" href="#venue">Venue</a></li>
+              <li><a data-toggle="pill" href="#registration">Registration</a></li>
+              <li><a data-toggle="pill" href="#Supporters">Supporters</a></li>
+              <li><a href="http://www.cser.ca/" target="_blank">Conference series</a></li>
+            </ul>
+          </div>
+          <!-- End Menu -->
+
+        </div>
+        <!-- End Left panel -->
+
+        <!-- Begin Main panel -->
+        <div class="col-md-9">
+          <div class="tab-content">
+
+            <!--- Begin Home -->
+            <div id="home" class="tab-pane fade in active">
+
+              <h3>Welcome to CSER'25 Spring!</h3>
+
+              <p>
+                CSER 2025 Spring will be held on [Location TBD] on [Date TBD].
+              </p>
+
+              <h4>Aim</h4>
+              <p>
+                CSER brings together (primarily) Canadian-based software engineering researchers, including faculty, graduate students, industry participants, and any others who are interested.
+              </p>
+
+              <h4>Important Dates</h4>
+
+              <table class="table table-hover table-condensed w-75">
+                <thead>
+                  <tr>
+                    <th scope="col">&nbsp;</th>
+                    <th scope="col">Deadline</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Proposal submission</td>
+                    <td>Date TBD, 2025</td>
+                  </tr>
+                  <tr>
+                    <td>Acceptance announcement</td>
+                    <td>Date TBD, 2025</td>
+                  </tr>
+                  <tr>
+                    <td>Early Registration</td>
+                    <td>Date TBD, 2025</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+            <!--- End Home -->
+
+            <!-- Begin Keynotes -->
+            <div id="keynotes" class="tab-pane fade">
+              <h4>Keynotes</h4>
+              <p>Keynote details will be announced soon.</p>
+            </div>
+            <!-- End Keynotes -->
+
+            <!-- Begin Program -->
+            <div id="theprogram" class="tab-pane fade">
+              <h3>CSER Spring 2025 Program</h3>
+              <p>Program details will be announced soon.</p>
+            </div>
+            <!-- End Program -->
+
+            <!-- Begin New Faculty Talks -->
+            <div id="newfacultytalks" class="tab-pane fade">
+              <h3>Invited New Faculty Talks</h3>
+              <p>Details of invited new faculty talks will be announced soon.</p>
+            </div>
+            <!-- End New Faculty Talks -->
+
+            <!-- Begin Panel -->
+            <div id="panel" class="tab-pane fade">
+              <h3>Panel</h3>
+              <p>Panel details will be announced soon.</p>
+            </div>
+            <!-- End Panel -->
+
+            <!-- Begin Tutorial -->
+            <div id="tutorial" class="tab-pane fade">
+              <h3>Tutorial</h3>
+              <p>Tutorial details will be announced soon.</p>
+            </div>
+            <!-- End Tutorial -->
+
+            <!-- Begin Research Talks -->
+            <div id="newResearchTalks" class="tab-pane fade">
+              <h3>Research Talks</h3>
+              <p>Research talk details will be announced soon.</p>
+            </div>
+            <!-- End Research Talks -->
+
+            <!-- Begin Posters -->
+            <div id="newPoster" class="tab-pane fade">
+              <h3>Posters/Demos</h3>
+              <p>Poster and demo details will be announced soon.</p>
+            </div>
+            <!-- End Posters -->
+
+            <!-- Begin Call -->
+            <div id="call" class="tab-pane fade">
+              <h3>Call for Submissions</h3>
+              <p>Submission details will be announced soon.</p>
+            </div>
+            <!-- End Call -->
+
+            <!-- Begin Organizing Committee -->
+            <div id="orgcom" class="tab-pane fade">
+              <h5>Program Co-Chairs</h5>
+              <ul>
+                <li>Chair 1, Affiliation</li>
+                <li>Chair 2, Affiliation</li>
+              </ul>
+
+              <h5>Poster session chair</h5>
+              <ul>
+                <li>Chair, Affiliation</li>
+              </ul>
+
+              <h5>Web chair</h5>
+              <ul>
+                <li>Chair, Affiliation</li>
+              </ul>
+
+              <h5>Local arrangement chair</h5>
+              <ul>
+                <li>Chair, Affiliation</li>
+              </ul>
+
+              <h5>Publicity chair</h5>
+              <ul>
+                <li>Chair, Affiliation</li>
+              </ul>
+            </div>
+            <!-- End Organizing Committees -->
+
+            <!-- Begin Steering Committee -->
+            <div id="steercom" class="tab-pane fade">
+              <h4>CSER Steering Committee</h4>
+              <ul>
+                <li>Member 1, Affiliation</li>
+                <li>Member 2, Affiliation</li>
+                <li>Member 3, Affiliation</li>
+              </ul>
+            </div>
+            <!-- End Steering Committee -->
+
+            <!-- Begin Venue -->
+            <div id="venue" class="tab-pane fade">
+              <h4>Venue</h4>
+              <p>Venue details will be announced soon.</p>
+            </div>
+            <!-- End Venue -->
+
+            <!-- Begin Registration -->
+            <div id="registration" class="tab-pane fade">
+              <h3>Registration</h3>
+              <p>Registration details will be announced soon.</p>
+            </div>
+            <!-- End Registration -->
+
+            <!-- Begin Supporters -->
+            <div id="Supporters" class="tab-pane fade">
+              <h5>Supporters</h5>
+              <p>Supporter details will be announced soon.</p>
+            </div>
+            <!-- End Supporters -->
+
+          </div>
+        </div>
+        <!-- End Main panel -->
+
+      </div>
+    </div>
+    <!-- End Body -->
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">&copy; CSER 2025, this site builds on an excellent foundation by <a href="http://damevski.github.io">Kosta Damevski</a>.</p>
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+      $(function() {
+        var hash = window.location.hash;
+        hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+        window.scrollTo(0, 0);
+      });
+
+      $(document).ready(function() {
+        $('a').click(function(event) {
+          var hash = $(this).attr('href');
+          if (hash.startsWith('#')) {
+            window.location.hash = hash;
+          }
+        });
+      });
+
+      $(window).bind('hashchange', function(event) {
+        var hash = window.location.hash;
+        hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+        window.scrollTo(0, 0);
+      });
+
+      $(document).ready(function() {
+        // Check if the URL has a hash part (which means it is referring to a section of the page)
+        if(window.location.hash) {
+            // Remove the "#" from the hash
+            var hash = window.location.hash.substring(1);
+            
+            // Check if an element with that ID exists
+            if(hash === "newfacultytalks") {
+              // Show the content for "Invited New Faculty Talks"
+              $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
+              $('#newfacultytalks').addClass('active in'); // Show the "Invited New Faculty Talks" content
+              window.history.pushState({}, '', "#newfacultytalks");
+              window.scrollTo(0, 0);
+            }
+        }
+      });
+
+      $(document).ready(function(){
+        // Toggle the submenu and show the content for "Invited New Faculty Talks"
+        $('a[href="#facultySubmenu"]').click(function(e){
+            e.preventDefault(); // Prevent default anchor behavior
+            var submenu = $('#facultySubmenu');
+    
+            // Collapse or show the submenu
+            if (submenu.hasClass('in')) {
+                submenu.collapse('hide');
+            } else {
+                // Hide any other open submenus in the tracks menu
+                $('#tracksSubmenu .collapse.in').not(submenu).collapse('hide');
+                submenu.collapse('show'); // Show the submenu
+            }
+    
+            // Show the content for "Invited New Faculty Talks"
+            $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
+            $('#newfacultytalks').addClass('active in'); // Show the "Invited New Faculty Talks" content
+            window.history.pushState({}, '', "#newfacultytalks");
+        });
+
+        $('#facultySubmenu a').click(function(e){
+          e.preventDefault(); // Prevent default anchor behavior
+          var target = $(this).attr('href');
+
+          // Scroll to the specific faculty section
+          $('html, body').animate({
+              scrollTop: $(target).offset().top
+          }, 1000);
+      });
+        
+    });
+
+      $(document).ready(function() {
+        // Check if the URL has a hash part (which means it is referring to a section of the page)
+        if(window.location.hash) {
+            // Remove the "#" from the hash
+            var hash = window.location.hash.substring(1);
+            
+            // Check if an element with that ID exists
+            if(hash === "newResearchTalks") {
+              // Show the content for "Invited New Faculty Talks"
+              $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
+              $('#newResearchTalks').addClass('active in'); // Show the "Invited New Faculty Talks" content
+              window.history.pushState({}, '', "#newResearchTalks");
+              window.scrollTo(0, 0);
+            }
+        }
+      });
+
+      $(document).ready(function(){
+        // Toggle the submenu and show the content for "Invited New Faculty Talks"
+        $('a[href="#ResearchTalksSubmenu"]').click(function(e){
+            e.preventDefault(); // Prevent default anchor behavior
+            var submenu = $('#ResearchTalksSubmenu');
+    
+            // Collapse or show the submenu
+            if (submenu.hasClass('in')) {
+                submenu.collapse('hide');
+            } else {
+                // Hide any other open submenus in the tracks menu
+                $('#tracksSubmenu .collapse.in').not(submenu).collapse('hide');
+                submenu.collapse('show'); // Show the submenu
+            }
+            // Show the content for "Invited New Faculty Talks"
+            $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
+            $('#newPoster').addClass('active in'); // Show the "Invited New Faculty Talks" content
+            window.history.pushState({}, '', "#newPoster");
+            // Scroll to the "Invited New Faculty Talks" content if you want smooth scrolling
+            /* $('html, body').animate({
+                scrollTop: $('#newPoster').offset().top
+            }, 1000); */
+        });
+
+        $('#PostersSubmenu a').click(function(e){
+          e.preventDefault(); // Prevent default anchor behavior
+          var target = $(this).attr('href');
+
+          // Scroll to the specific faculty section
+          $('html, body').animate({
+              scrollTop: $(target).offset().top
+          }, 1000);
+      });
+        
+    });	    
+
+	    
+	    
+  </script>
+  <!-- Add jQuery and Bootstrap JavaScript at the end for functionality -->
+
+  </body>
+</html>
+
+  
