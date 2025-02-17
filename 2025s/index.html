@@ -7,17 +7,19 @@
 
     <title>CSER 2025 Spring</title>
 
+    <!-- Bootstrap CSS (single instance for consistency) -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
           crossorigin="anonymous">
     <link rel="stylesheet" href="css/site.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- jQuery (only one version is now included) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <!-- Bootstrap JavaScript (single instance for consistency) -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -59,10 +61,6 @@
           });
       });
     </script>
-
-    <!-- Add Bootstrap CSS for styling and collapse functionality -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-   
   </head>
 
   <body>
@@ -98,11 +96,11 @@
             <ul class="nav nav-stacked nav-pills" id="sidebar">
 
               <li><a href="index.html">Home</a></li>
-              <li><a data-toggle="pill" href="#theprogram">Program</a></li>
+              <!-- <li><a data-toggle="pill" href="#theprogram">Program</a></li> -->
 
               <!-- Tracks menu with dropdown for submenus -->
               <li class="dropdown">
-                <a href="#tracksSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Tracks</a>
+                <!-- <a href="#tracksSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Tracks</a> -->
                 <ul class="collapse list-unstyled" id="tracksSubmenu">
                     <li><a href="#keynotes" data-toggle="pill">Keynotes</a></li>
                     <li class="dropdown">
@@ -131,7 +129,7 @@
                 </ul>
               </li>
 
-              <li><a data-toggle="pill" href="#call">Submissions</a></li>
+              <li><a data-toggle="pill" href="#call">Call for Submissions</a></li>
               <li><a data-toggle="pill" href="#orgcom">Organizing Committee</a></li>
               <li><a data-toggle="pill" href="#steercom">Steering Committee</a></li>
               <li><a data-toggle="pill" href="#venue">Venue</a></li>
@@ -239,12 +237,60 @@
             </div>
             <!-- End Posters -->
 
-            <!-- Begin Call -->
-            <div id="call" class="tab-pane fade">
-              <h3>Call for Submissions</h3>
-              <p>Submission details will be announced soon.</p>
-            </div>
-            <!-- End Call -->
+          <!-- Begin Call -->
+          <div id="call" class="tab-pane fade">
+            <h3>Call for New Faculty Talks – Submit Your Details</h3>
+            <p>Dear CSER Community,</p>
+            
+            <p>We are excited to announce that the new version of CSER is on the horizon! For CSER 2025 Spring, we are soliciting proposals for our “New Faculty Talks” series. In this series, newly hired faculty members will introduce themselves, share their research, and engage with the community. Each talk will last 20 minutes, followed by a brief Q&A session. Please note that all talks will be held in-person at Dalhousie University.</p>
+            
+            <p>This is an excellent opportunity to present your work to a broader audience and foster academic collaboration. For further details on the event and registration, please visit the <a href="https://www.dal.ca/">Dalhousie University website</a>.</p>
+            
+            <p>If you are a newly hired faculty member, please submit your details including:</p>
+            <ul>
+              <li>Your name</li>
+              <li>Your institution</li>
+              <li>Email contact information</li>
+              <li>A tentative title for your talk</li>
+            </ul>
+            
+            <p>Please complete the <a href="https://forms.gle/yourFacultyProposalForm2025" target="_blank">Faculty Talk Proposal Form</a> by <strong>Friday, April 25, 2025</strong>. After the submission deadline, we will follow up with further details regarding the schedule and presentation format.</p>
+            
+            <p>If you know of any newly hired faculty members who might be interested, please forward this invitation to them or contact us directly.</p>
+            
+            <p>We look forward to your participation!</p>
+            
+            <p>Best regards,</p>
+            <p>Tushar Sharma (General Chair)<br>
+              Dalhousie University</p>
+            
+            <hr>
+            
+            <h3>Call for New Student Presentation/Poster</h3>
+            <p>Dear CSER Community,</p>
+            
+            <p>We also invite students to showcase their research at CSER 2025 Spring. You may choose to deliver a 10–15 minute presentation or submit a poster/demo. This is a fantastic opportunity to gain presentation experience and connect with the software engineering research community.</p>
+            
+            <p>For your submission, please include:</p>
+            <ul>
+              <li>Your name</li>
+              <li>Research interests and areas of expertise</li>
+              <li>A brief bio (up to 200 words)</li>
+              <li>Your preference: presentation or poster/demo</li>
+              <li>An optional title and abstract for your submission</li>
+            </ul>
+            
+            <p>Please submit your proposal using the <a href="https://forms.gle/yourStudentProposalForm2025" target="_blank">Student Presentation/Poster Proposal Form</a> by <strong>Friday, April 25, 2025</strong>. We will provide the final schedule and additional presentation details after the submission deadline.</p>
+            
+            <p>Faculty members, please encourage your students to participate!</p>
+            
+            <p>We look forward to your innovative submissions!</p>
+            
+            <p>Best regards,</p>
+            <p>Tushar Sharma (General Chair)<br>
+              Dalhousie University</p>
+          </div>
+          <!-- End Call -->
 
             <!-- Begin Organizing Committee -->
             <div id="orgcom" class="tab-pane fade">
@@ -440,7 +486,6 @@
       });
         
     });	    
-
 	    
 	    
   </script>
@@ -448,5 +493,3 @@
 
   </body>
 </html>
-
-  
