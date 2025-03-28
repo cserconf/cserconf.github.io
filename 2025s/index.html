@@ -76,7 +76,7 @@
 
           <div class="col-md-10">
             <h1>Consortium for Software Engineering Research<br /> 2025 Spring Meeting</h1>
-            <h3>May 29-30 - Dalhousie University</h3>
+            <h3>May 29-30, Dalhousie University</h3>
           </div>
         </div>
       </div>
@@ -191,13 +191,13 @@
         <!-- Begin Keynotes -->
         <div id="keynotes" class="tab-pane fade">
           <h4>Keynote Speakers for CSER 2025</h4>
-          
+
           <!-- Keynote Speaker: Foutse Khomh -->
           <div class="keynote-speaker" style="display: flex; gap: 15px; margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px;">
             <div class="speaker-image" style="flex: 0 0 auto;">
-              <img 
-                src="images/foutse.png" 
-                alt="Foutse Khomh" 
+              <img
+                src="images/foutse.png"
+                alt="Foutse Khomh"
                 style="max-width: 150px; border-radius: 5px;"
               />
             </div>
@@ -212,13 +212,13 @@
               </p>
             </div>
           </div>
-          
+
           <!-- Keynote Speaker: Olga Baysal -->
           <div class="keynote-speaker" style="display: flex; gap: 15px; margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px;">
             <div class="speaker-image" style="flex: 0 0 auto;">
-              <img 
-                src="images/Olga.jpg" 
-                alt="Olga Baysal" 
+              <img
+                src="images/Olga.jpg"
+                alt="Olga Baysal"
                 style="max-width: 150px; border-radius: 5px;"
               />
             </div>
@@ -284,11 +284,11 @@
           <div id="call" class="tab-pane fade">
             <h3>Call for New Faculty Talks – Submit Your Details</h3>
             <p>Dear CSER Community,</p>
-            
+
             <p>We are excited to announce that the new version of CSER is on the horizon! For CSER 2025 Spring, we are soliciting proposals for our “New Faculty Talks” series. In this series, newly hired faculty members will introduce themselves, share their research, and engage with the community. Each talk will last 20 minutes, followed by a brief Q&A session. Please note that all talks will be held in-person at Dalhousie University.</p>
-            
+
             <p>This is an excellent opportunity to present your work to a broader audience and foster academic collaboration. For further details on the event and registration, please visit the <a href="https://www.dal.ca/">Dalhousie University website</a>.</p>
-            
+
             <p>If you are a newly hired faculty member, please submit your details including:</p>
             <ul>
               <li>Your name</li>
@@ -296,21 +296,21 @@
               <li>Email contact information</li>
               <li>A tentative title for your talk</li>
             </ul>
-            
+
             <p>Please complete the <a href="https://forms.gle/YPL15gHvidhNZdZp6" target="_blank">Faculty Talk Proposal Form</a> by <strong>Friday, April 25, 2025</strong>. After the submission deadline, we will follow up with further details regarding the schedule and presentation format.</p>
-            
+
             <p>If you know of any newly hired faculty members who might be interested, please forward this invitation to them or contact us directly.</p>
-            
+
             <p>We look forward to your participation!</p>
-            
-            
+
+
             <hr>
-            
+
             <h3>Call for New Student Presentation/Poster</h3>
             <p>Dear CSER Community,</p>
-            
+
             <p>We also invite students to showcase their research at CSER 2025 Spring. You may choose to deliver a 10–15 minute presentation or submit a poster/demo. This is a fantastic opportunity to gain presentation experience and connect with the software engineering research community.</p>
-            
+
             <p>For your submission, please include:</p>
             <ul>
               <li>Your name</li>
@@ -320,11 +320,11 @@
               <li>Title of the talk/poster</li>
               <li>A 250 words abstract for the talk/poster</li>
             </ul>
-            
+
             <p>Please submit your proposal using the <a href="https://forms.gle/QNLXXPenMP4oo2Nk6" target="_blank">Student Presentation/Poster Proposal Form</a> by <strong>Friday, April 25, 2025</strong>. We will provide the final schedule and additional presentation details after the submission deadline.</p>
-            
+
             <p>Faculty members, please encourage your students to participate!</p>
-            
+
             <p>We look forward to your innovative submissions!</p>
           </div>
           <!-- End Call -->
@@ -336,7 +336,7 @@
               <ul>
                 <li><a href="https://www.tusharma.in/">Tushar Sharma</a>, Dalhousie University</li>
               </ul>
-              
+
               <h4>Program Co-Chairs</h4>
               <ul>
                 <li><a href="https://paulralph.name/"> Paul Ralph</a>, Dalhousie University</li>
@@ -346,7 +346,7 @@
               <h4>Web & Publicity chair</h4>
               <ul>
                 <li><a href="https://github.com/SigmaJahan">Sigma Jahan</a>, Dalhousie University</li>
-              </ul>          
+              </ul>
             </div>
             <!-- End Organizing Committees -->
 
@@ -427,7 +427,7 @@
         if(window.location.hash) {
             // Remove the "#" from the hash
             var hash = window.location.hash.substring(1);
-            
+
             // Check if an element with that ID exists
             if(hash === "newfacultytalks") {
               // Show the content for "Invited New Faculty Talks"
@@ -444,7 +444,7 @@
         $('a[href="#facultySubmenu"]').click(function(e){
             e.preventDefault(); // Prevent default anchor behavior
             var submenu = $('#facultySubmenu');
-    
+
             // Collapse or show the submenu
             if (submenu.hasClass('in')) {
                 submenu.collapse('hide');
@@ -453,7 +453,7 @@
                 $('#tracksSubmenu .collapse.in').not(submenu).collapse('hide');
                 submenu.collapse('show'); // Show the submenu
             }
-    
+
             // Show the content for "Invited New Faculty Talks"
             $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
             $('#newfacultytalks').addClass('active in'); // Show the "Invited New Faculty Talks" content
@@ -469,7 +469,7 @@
               scrollTop: $(target).offset().top
           }, 1000);
       });
-        
+
     });
 
       $(document).ready(function() {
@@ -477,7 +477,7 @@
         if(window.location.hash) {
             // Remove the "#" from the hash
             var hash = window.location.hash.substring(1);
-            
+
             // Check if an element with that ID exists
             if(hash === "newResearchTalks") {
               // Show the content for "Invited New Faculty Talks"
@@ -494,7 +494,7 @@
         $('a[href="#ResearchTalksSubmenu"]').click(function(e){
             e.preventDefault(); // Prevent default anchor behavior
             var submenu = $('#ResearchTalksSubmenu');
-    
+
             // Collapse or show the submenu
             if (submenu.hasClass('in')) {
                 submenu.collapse('hide');
@@ -522,10 +522,10 @@
               scrollTop: $(target).offset().top
           }, 1000);
       });
-        
-    });	    
-	    
-	    
+
+    });
+
+
   </script>
   <!-- Add jQuery and Bootstrap JavaScript at the end for functionality -->
 
