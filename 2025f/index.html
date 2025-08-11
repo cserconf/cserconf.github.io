@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CSER 2025 Spring</title>
+
+    <!-- Bootstrap CSS (single instance for consistency) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="css/site.css">
+
+    <!-- jQuery (only one version is now included) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Bootstrap JavaScript (single instance for consistency) -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118032083-1"></script> -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      // gtag('config', 'UA-118032083-1');
+    </script>
+
+    <script>
+      $(document).ready(function(){
+          // When a link in the sidebar is clicked
+          $('#sidebar a').on('click', function(e){
+              var target = $(this).attr('href');
+
+              // If it's the Tracks button or one of its submenus
+              if (target === '#tracksSubmenu' ) {
+                  e.preventDefault(); // Prevent the default anchor behavior
+
+                  // If it's the Tracks button itself, show the Tracks content
+                  if (target === '#tracksSubmenu') {
+                      $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
+                      $('#tracks').addClass('active in'); // Show Tracks content
+                  } else {
+                      // Otherwise, handle submenu navigation here
+                      // For example, navigate to a section or trigger showing another tab's content
+                  }
+
+                  // Adjust the URL if needed, without affecting the page view
+                  window.history.pushState({}, '', $(this).attr('href'));
+              }
+          });
+      });
+    </script>
+  </head>
+
+  <body>
+
+    <!-- Begin Header -->
+    <div class="page-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <br/>
+            <img class="img-responsive" src="images/logo_SER.gif" alt="CSER">
+          </div>
+
+          <div class="col-md-10">
+            <h1>Consortium for Software Engineering Research<br /> 2025 Spring Meeting</h1>
+            <h3>May 29-30, Dalhousie University</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Begin Body -->
+    <div class="container">
+      <div class="row">
+
+        <!-- Begin Left panel -->
+        <div class="col-md-3">
+
+          <!-- Begin Menu -->
+          <div class="well">
+            <!-- Enable links to subpages by removing the "no-" prefix. -->
+            <ul class="nav nav-stacked nav-pills" id="sidebar">
+
+              <li><a href="index.html">Home</a></li>
+              <!-- <li><a data-toggle="pill" href="#theprogram">Program</a></li> -->
+
+              <!-- Tracks menu with dropdown for submenus -->
+              <li class="dropdown">
+                <!-- <a href="#tracksSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Tracks</a> -->
+                <ul class="collapse list-unstyled" id="tracksSubmenu">
+                    <li><a href="#keynotes" data-toggle="pill">Keynotes</a></li>
+                    <li class="dropdown">
+                        <a href="#facultySubmenu" id="invitefaculty" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Invited New Faculty Talks</a>
+                        <ul class="collapse list-unstyled" id="facultySubmenu">
+                          <li><a href="#faculty1">Faculty 1</a></li>
+                          <li><a href="#faculty2">Faculty 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#panel" data-toggle="pill">Panel</a></li>
+                    <li><a href="#tutorial" data-toggle="pill">Tutorial</a></li>
+                    <li class="dropdown">
+                        <a href="#ResearchTalksSubmenu" id="ResearchTalks" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Research Talks</a>
+                        <ul class="collapse list-unstyled" id="ResearchTalksSubmenu">
+                            <li><a href="#research1">Research 1</a></li>
+                            <li><a href="#research2">Research 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#PostersSubmenu" id="Posters/Demos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Posters/Demos</a>
+                        <ul class="collapse list-unstyled" id="PostersSubmenu">
+                            <li><a href="#poster1">Poster 1</a></li>
+                            <li><a href="#poster2">Poster 2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+              </li>
+              <li><a data-toggle="pill" href="#keynotes">Keynotes</a></li>
+              <li><a data-toggle="pill" href="#theprogram">Program</a></li>
+              <li><a data-toggle="pill" href="#call">Call for Submissions</a></li>
+              <li><a data-toggle="pill" href="#orgcom">Organizing Committee</a></li>
+              <li><a data-toggle="pill" href="#steercom">Steering Committee</a></li>
+              <li><a data-toggle="pill" href="#venue">Venue</a></li>
+              <li><a data-toggle="pill" href="#registration">Registration</a></li>
+              <li><a data-toggle="pill" href="#Supporters">Supporters</a></li>
+              <li><a href="http://www.cser.ca/" target="_blank">Conference series</a></li>
+            </ul>
+          </div>
+          <!-- End Menu -->
+
+        </div>
+        <!-- End Left panel -->
+
+        <!-- Begin Main panel -->
+        <div class="col-md-9">
+          <div class="tab-content">
+
+            <!--- Begin Home -->
+            <div id="home" class="tab-pane fade in active">
+
+              <h3>Welcome to CSER'25 Spring!</h3>
+
+              <p>
+                CSER 2025 Spring will be held at <a href="https://www.dal.ca/">Dalhousie University</a> on <strong>May 29-30, 2025</strong>.
+              </p>
+
+              <h4>Aim</h4>
+              <p>
+                CSER brings together (primarily) Canadian-based software engineering researchers, including faculty, graduate students, industry participants, and any others who are interested.
+              </p>
+
+              <h4>Important Dates</h4>
+              <table class="table table-hover table-condensed w-75">
+                <thead>
+                  <tr>
+                    <th scope="col">&nbsp;</th>
+                    <th scope="col">Deadline</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Proposal submission</td>
+                    <td>Monday, May 05, 2025</td>
+                  </tr>
+                  <tr>
+                    <td>Acceptance announcement</td>
+                    <td>Friday, May 09, 2025</td>
+                  </tr>
+                  <tr>
+                    <td>Early Registration</td>
+                    <td>Monday, May 12, 2025</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+            <!--- End Home -->
+
+          <!-- Begin Keynotes -->         
+          <div id="keynotes" class="tab-pane fade">
+            <h4>Keynotes & Invited Talks</h4>
+            <!-- Keynote Speaker: Foutse Khomh -->
+            <div class="keynote-speaker" style="display: flex; gap: 15px; margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px;">
+              <div class="speaker-image" style="flex: 0 0 auto;">
+                <img
+                  src="images/foutse.png"
+                  alt="Foutse Khomh"
+                  style="max-width: 150px; border-radius: 5px;"
+                />
+              </div>
+              <div class="speaker-info">
+                <h5 style="font-size: 1.25em;">Foutse Khomh</h5>
+                <p style="font-weight: bold; font-size: 1.1em;">Towards Reliable Machine Learning Models for Code</p>
+                <p>
+                  Large Language Models (LLMs) trained on code are increasingly being integrated into software engineering workflows, supporting tasks such as code synthesis, bug fixing, and refactoring. While their empirical performance is often remarkable, several foundational questions remain insufficiently addressed: What do these models learn? How do they reason about source code? Under what circumstances do they fail, and why.
+                </p>
+                <p>
+                  This talk presents findings from a series of empirical investigations that seek to address these questions. First, I will examine how LLMs complement the capabilities of human developers and highlight recurring patterns of bugs and inefficiencies in their generated outputs. Second, I will discuss a systematic evaluation of behavioral regressions across model updates, focusing on logical correctness, code quality, and runtime performance.
+                </p>
+                <p>
+                  Finally, I will introduce PrismBench, a dynamic, multi-agent benchmarking framework designed to rigorously assess and characterize the failure modes of LLMs on code generation tasks. Collectively, these studies aim to advance our understanding of LLM behavior in software engineering contexts and inform the development of more robust and trustworthy AI-assisted programming tools.
+                </p>
+                <p>
+                  <strong>Bio:</strong> Foutse Khomh is a Full Professor of Software Engineering at Polytechnique Montréal, a Canada Research Chair Tier 1 on Trustworthy Intelligent Software Systems, a Canada CIFAR AI Chair on Trustworthy Machine Learning Software Systems, an NSERC Arthur B. McDonald Fellow, an Honoris Genius Prize Laureate, and an FRQ-IVADO Research Chair on Software Quality Assurance for Machine Learning Applications. He received a Ph.D. in Software Engineering from the University of Montreal in 2011, with the Award of Excellence. He also received a CS-Can/Info-Can Outstanding Young Computer Science Researcher Prize for 2019, the Excellence in Research and Innovation Award of Polytechnique Montréal, and the prestigious IEEE CS TCSE New Directions Award in 2025. His work has received four ten-year Most Influential Paper (MIP) Awards, eight Best/Distinguished Paper Awards at major conferences, and two Best Journal Paper of the Year Awards. He initiated and co-organized the Software Engineering for Machine Learning Applications (SEMLA) symposium and the RELENG (Release Engineering) workshop series. He also co-organized the FM+SE Summit series (https://fmse.io/), a platform where leading industrial and academic experts discuss and reflect on the challenges associated with the adoption of foundation and large models in software engineering. He is co-founder of the NSERC CREATE SE4AI: A Training Program on the Development, Deployment, and Servicing of Artificial Intelligence-based Software Systems and one of the Principal Investigators of the DEpendable Explainable Learning (DEEL) project. He is also a co-founder of Quebec's initiative on Trustworthy AI (Confiance IA Quebec) and Scientific co-director of the Institut de Valorisation des Données (IVADO). He is on the editorial board of multiple international software engineering journals (e.g., TOSEM, IEEE Software, EMSE, SQJ, JSEP) and is a Senior Member of IEEE.
+                </p>
+                <p>
+                  <strong>Website:</strong>
+                  <a href="https://www.khomh.net/" target="_blank" rel="noopener">Personal Website</a>
+                </p>
+              </div>
+            </div>
+            <!-- Keynote Speaker: Olga Baysal -->
+            <div class="keynote-speaker" style="display: flex; gap: 15px; margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px;">
+              <div class="speaker-image" style="flex: 0 0 auto;">
+                <img
+                  src="images/Baysal_photo.png"
+                  alt="Olga Baysal"
+                  style="max-width: 150px; border-radius: 5px;"
+                />
+              </div>
+              <div class="speaker-info">
+                <h5 style="font-size: 1.25em;">Olga Baysal</h5>
+                <p style="font-weight: bold; font-size: 1.1em;">Reimagining Code Review in the Age of AI</p>
+                <p>
+                  Large Language Models (LLMs) are reshaping the way software developers approach everyday tasks — and code review is no exception. In this keynote, I will reflect on the evolution of code review practices in open source software (OSS) development, highlighting the strengths and limitations of traditional approaches. I will also share my view of how AI-powered code review assistants are opening up new opportunities for automation, collaboration, and quality assurance.
+                </p>
+                <p>
+                  <strong>Bio:</strong>  Dr. Olga Baysal is an Associate Professor at the School of Computer Science and Director of the Institute for Data Science, Carleton University. Baysal received her MMath and PhD degrees in Computer Science from the University of Waterloo and completed a short NSERC Postdoctoral Fellowship at the University of Toronto. Her research focuses on applying AI, ML, and NLP techniques to tackle software engineering problems and providing ways to synthesize knowledge from the development artifacts such as reported issues, source code, community contributions and discussions, etc. Much of Baysal's work focuses on understanding how software engineers create, use, and maintain software systems. She applies empirical software engineering techniques to study software development processes and leverages software analytics to support practitioners' decision making.
+                </p>
+                <p>
+                  <strong>Website:</strong>
+                  <a href="https://olgabaysal.com/" target="_blank" rel="noopener">Personal Website</a>
+                </p>
+              </div>
+            </div>
+            <!-- Distinguished Invited Talk: Paul Ralph -->
+            <div class="keynote-speaker" style="display: flex; gap: 15px; margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px;">
+              <div class="speaker-image" style="flex: 0 0 auto;">
+                <img
+                  src="images/Paul.jpg"
+                  alt="Paul Ralph"
+                  style="max-width: 150px; border-radius: 5px;"
+                />
+              </div>
+              <div class="speaker-info">
+                <h5 style="font-size: 1.25em;">Paul Ralph <span style="font-size: 0.85em; font-weight: normal; color: #346c91;">(Distinguished Invited Talk)</span></h5>
+                <p style="font-weight: bold; font-size: 1.1em;">The Surprising Implications of Realism for Software Engineering and Related Fields</p>
+                <p>
+                  Many of the practical, methodological challenges faced in social and applied sciences are rooted in outdated philosophical assumptions. Understanding newer philosophical approaches, especially critical realism, can help us solve many fundamental challenges associated with positivism, falsifications, interpretivism, and postmodernism. Realism is a family of philosophical approaches emphasizing that: (1) a real world exists independently of our perceptions of it; (2) the real world is filled with objects that have the power to cause changes in each other, whether or not humans can or do observe these changes; (3) observation is intrinsically problematic. In this talk, Dr. Ralph will give an overview of critical realism and explore its practical implications for software engineering research, including the importance of selecting better dependent variables, designing better measurement strategies, and basing research on theory.
+                <p>
+                  <strong>Bio:</strong> Dr. Paul Ralph, PhD (British Columbia), B.Sc. / B.Comm (Memorial), is an award-winning scientist, author, consultant, and Professor of Software Engineering at Dalhousie University. His cutting-edge research at the intersection of software engineering, human-computer interaction, and project management explores the relationship between software teams’ social dynamics and success. It has been used by many leading technology companies including Adobe, Amazon, AT&T, Canon, Bea Systems, IBM, Google, HP, Microsoft, Netflix, PayPal, Samsung, Salesforce, VMWare, Yahoo!, and Walmart. He has published more than 80 peer-reviewed articles in premier venues including IEEE Transactions on Software Engineering and the ACM/IEEE International Conference on Software Engineering. Dr. Ralph is editor-in-chief of the SIGSOFT Empirical Standards for Software Engineering Research, the comprehensive evidence standards for software engineering research.
+                </p>
+                <p>
+                  <strong>Website:</strong>
+                  <a href="https://paulralph.name/" target="_blank" rel="noopener">Personal Website</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- End Keynotes -->
+
+
+<!-- Begin Program -->
+
+ <div id="theprogram" class="tab-pane fade">
+  <h3>CSER 2025 (Spring) Program</h3>
+
+  <div class="mb-4">
+    <div class="cser-day-header">Day 1: May 29, 2025</div>
+    <table class="table table-bordered table-sm align-middle" style="background: #f8f9fa;">
+      <tbody>
+        <tr>
+          <td class="fw-bold" style="width: 130px;">09:00 - 09:30</td>
+          <td class="cser-session-main">
+            <b>Opening &amp; Logistics (Welcome from GC &amp; PCs)</b><br>
+            <small>Chairs: Tushar Sharma, Paul Ralph, & Masud Rahman</small>
+          </td>
+        </tr>
+        <tr>
+          <td>09:30 - 10:30</td>
+          <td class="cser-session-keynote">
+            <b>Keynote 1: Foutse Khomh</b> <span class="text-muted">(Chairs: Tushar Sharma / Masud Rahman)</span><br>
+            <i>Towards Reliable Machine Learning Models for Code</i>
+          </td>
+        </tr>
+        <tr>
+          <td>10:30 - 11:00</td>
+          <td class="cser-session-break">
+            <b>Coffee Break / Poster Session</b>
+          </td>
+        </tr>
+        <tr>
+          <td>11:00 - 12:30</td>
+          <td class="cser-session-main">
+            <b>Energy &amp; Sustainability (4 x 18 minutes)</b> <span class="text-muted">(Chairs: Paul Ralph / Masud Rahman)</span>
+            <ul class="mb-0">
+              <li>
+                Energy Smells: Defining and Identifying Patterns Leading to Overuse of Energy in Your Code<br>
+                <small><strong>Presenter:</strong> Mohammadjavad Mehditabar</small>
+              </li>
+              <li>
+                Enhancing Energy-Awareness in Deep Learning through Fine-Grained Energy Measurement<br>
+                <small><strong>Presenter:</strong> Saurabhsingh Rajput</small>
+              </li>
+              <li>
+                Understanding Software Professionals' Turnover<br>
+                <small><strong>Presenter:</strong> Miikka Kuutila</small>
+              </li>
+              <li>
+                Understanding the Relationship Between Code Smells and Refactoring: An Empirical Perspective<br>
+                <small><strong>Presenter:</strong> Gautam Shetty</small>
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>12:30 - 14:00</td>
+          <td class="cser-session-break">
+            <b>Lunch Break</b>
+          </td>
+        </tr>
+        <tr>
+          <td>14:00 - 15:00</td>
+          <td class="cser-session-keynote">
+            <b>Distinguished Invited Talk: Paul Ralph</b> <span class="text-muted">(Chair: Masud Rahman)</span><br>
+            <i>The Surprising Implications of Realism for Software Engineering and Related Fields</i>
+          </td>
+        </tr>
+        <tr>
+          <td>15:00 - 15:30</td>
+          <td class="cser-session-break">
+            <b>Coffee Break / Poster Session</b>
+          </td>
+        </tr>
+        <tr>
+          <td>15:30 - 17:00</td>
+          <td class="cser-session-main">
+            <b>Sustainability &amp; Measurement (3 x 18 minutes)</b> <span class="text-muted">(Chair: Olga Baysal)</span>
+            <ul class="mb-0">
+              <li>
+                Evaluating Social Sustainability Interventions in Software Engineering: A Randomized Controlled Factorial Experiment<br>
+                <small><strong>Presenter:</strong> Bimpe Ayoola</small>
+              </li>
+              <li>
+                Ignorance is Green: An Adaptive Language-Agnostic Pruning Method for Greener Language Models for Code<br>
+                <small><strong>Presenter:</strong> Mootez Saad</small>
+              </li>
+              <li>
+                Assessing the Construct Validity of Object-Oriented, Class-Level Code Quality Metrics<br>
+                <small><strong>Presenter:</strong> Hera Arif</small>
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>19:00 - 21:30</td>
+          <td class="cser-session-dinner">
+            <b>CSER 2025 Dinner</b><br>
+            <small>Location: Gahan House Nova Centre, 5239 Sackville Street, Halifax, NS B3J3Y3</small>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mb-4">
+    <div class="cser-day-header">Day 2: May 30, 2025</div>
+    <table class="table table-bordered table-sm align-middle" style="background: #f8f9fa;">
+      <tbody>
+        <tr>
+          <td class="fw-bold" style="width: 130px;">09:00 - 09:30</td>
+          <td class="cser-session-main">
+            <b>Logistics</b><br>
+            <small>Chairs: Tushar Sharma, Paul Ralph, & Masud Rahman</small>
+          </td>
+        </tr>
+        <tr>
+          <td>09:30 - 10:30</td>
+          <td class="cser-session-keynote">
+            <b>Keynote 2: Olga Baysal</b> <span class="text-muted">(Chairs: Paul Ralph / Masud Rahman)</span><br>
+            <i>Reimagining Code Review in the Age of AI</i>
+          </td>
+        </tr>
+        <tr>
+          <td>10:30 - 11:00</td>
+          <td class="cser-session-break">
+            <b>Coffee Break / Poster Session</b>
+          </td>
+        </tr>
+        <tr>
+          <td>11:00 - 12:30</td>
+          <td class="cser-session-main">
+            <b>Software Bugs &amp; Debugging (4 x 18 minutes)</b> <span class="text-muted">(Chair: Foutse Khomh)</span>
+            <ul class="mb-0">
+              <li>
+                Improved Detection and Diagnosis of Faults in Deep Neural Networks Using Hierarchical and Explainable Classification<br>
+                <small><strong>Presenter:</strong> Sigma Jahan</small>
+              </li>
+              <li>
+                Towards Enhancing IR-based Bug Localization Leveraging Texts and Multimedia from Bug Reports<br>
+                <small><strong>Presenter:</strong> Shamima Yeasmin</small>
+              </li>
+              <li>
+                Improved IR-based Bug Localization with Intelligent Relevance Feedback<br>
+                <small><strong>Presenter:</strong> Asif Samir</small>
+              </li>
+              <li>
+                Towards enhancing the reproducibility of deep learning bugs: an empirical study<br>
+                <small><strong>Presenter:</strong> Mehil Bimal Shah</small>
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>12:30 - 14:00</td>
+          <td class="cser-session-break">
+            <b>Lunch Break</b>
+          </td>
+        </tr>
+        <tr>
+          <td>14:00 - 15:15</td>
+          <td class="cser-session-main">
+            <b>LLM, Domain &amp; Ethics (3 x 18 minutes)</b> <span class="text-muted">(Chairs: Masud Rahman / Tushar Sharma)</span>
+            <ul class="mb-0">
+              <li>
+                Domain-Driven and Consistent Integration of Large Language Models<br>
+                <small><strong>Presenter:</strong> Boqi Chen</small>
+              </li>
+              <li>
+                Understanding the Impact of Domain Term Explanation on Duplicate Bug Report Detection<br>
+                <small><strong>Presenter:</strong> Usmi Mukherjee</small>
+              </li>
+              <li>
+                Leveraging LLMs for Ethical Monitoring in AI Software Development<br>
+                <small><strong>Presenter:</strong> Sri Lakshmi Vadlamani</small>
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>15:15 - 15:45</td>
+          <td class="cser-session-break">
+            <b>Coffee Break</b>
+          </td>
+        </tr>
+        <tr>
+          <td>15:45 - 16:45</td>
+          <td class="cser-session-main">
+            <b>Fishbowl Session</b> <span class="text-muted">(Chairs: Tushar Sharma / Paul Ralph)</span>
+          </td>
+        </tr>
+        <tr>
+          <td>17:00 - 17:30</td>
+          <td class="cser-session-main">
+            <b>Award Ceremony &amp; Closing</b><br>
+            <small>Chairs: Tushar Sharma, Paul Ralph, & Masud Rahman</small>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+            <!-- End Program -->
+<!-- Begin Keynotes -->         
+<div id="keynotes" class="tab-pane fade">
+  <h4>Keynotes & Invited Talks</h4>
+  <!-- Keynote Speaker: Foutse Khomh -->
+  <div class="keynote-speaker" style="display: flex; gap: 15px; margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px;">
+    <div class="speaker-image" style="flex: 0 0 auto;">
+      <img
+        src="images/foutse.png"
+        alt="Foutse Khomh"
+        style="max-width: 150px; border-radius: 5px;"
+      />
+    </div>
+    <div class="speaker-info">
+      <h5 style="font-size: 1.25em;">Foutse Khomh</h5>
+      <p style="font-weight: bold; font-size: 1.1em;">Towards Reliable Machine Learning Models for Code</p>
+      <p>
+        Large Language Models (LLMs) trained on code are increasingly being integrated into software engineering workflows, supporting tasks such as code synthesis, bug fixing, and refactoring. While their empirical performance is often remarkable, several foundational questions remain insufficiently addressed: What do these models learn? How do they reason about source code? Under what circumstances do they fail, and why.
+      </p>
+      <p>
+        This talk presents findings from a series of empirical investigations that seek to address these questions. First, I will examine how LLMs complement the capabilities of human developers and highlight recurring patterns of bugs and inefficiencies in their generated outputs. Second, I will discuss a systematic evaluation of behavioral regressions across model updates, focusing on logical correctness, code quality, and runtime performance.
+      </p>
+      <p>
+        Finally, I will introduce PrismBench, a dynamic, multi-agent benchmarking framework designed to rigorously assess and characterize the failure modes of LLMs on code generation tasks. Collectively, these studies aim to advance our understanding of LLM behavior in software engineering contexts and inform the development of more robust and trustworthy AI-assisted programming tools.
+      </p>
+      <p>
+        <strong>Bio:</strong> Foutse Khomh is a Full Professor of Software Engineering at Polytechnique Montréal, a Canada Research Chair Tier 1 on Trustworthy Intelligent Software Systems, a Canada CIFAR AI Chair on Trustworthy Machine Learning Software Systems, an NSERC Arthur B. McDonald Fellow, an Honoris Genius Prize Laureate, and an FRQ-IVADO Research Chair on Software Quality Assurance for Machine Learning Applications. He received a Ph.D. in Software Engineering from the University of Montreal in 2011, with the Award of Excellence. He also received a CS-Can/Info-Can Outstanding Young Computer Science Researcher Prize for 2019, the Excellence in Research and Innovation Award of Polytechnique Montréal, and the prestigious IEEE CS TCSE New Directions Award in 2025. His work has received four ten-year Most Influential Paper (MIP) Awards, eight Best/Distinguished Paper Awards at major conferences, and two Best Journal Paper of the Year Awards. He initiated and co-organized the Software Engineering for Machine Learning Applications (SEMLA) symposium and the RELENG (Release Engineering) workshop series. He also co-organized the FM+SE Summit series (https://fmse.io/), a platform where leading industrial and academic experts discuss and reflect on the challenges associated with the adoption of foundation and large models in software engineering. He is co-founder of the NSERC CREATE SE4AI: A Training Program on the Development, Deployment, and Servicing of Artificial Intelligence-based Software Systems and one of the Principal Investigators of the DEpendable Explainable Learning (DEEL) project. He is also a co-founder of Quebec's initiative on Trustworthy AI (Confiance IA Quebec) and Scientific co-director of the Institut de Valorisation des Données (IVADO). He is on the editorial board of multiple international software engineering journals (e.g., TOSEM, IEEE Software, EMSE, SQJ, JSEP) and is a Senior Member of IEEE.
+      </p>
+      <p>
+        <strong>Website:</strong>
+        <a href="https://www.khomh.net/" target="_blank" rel="noopener">Personal Website</a>
+      </p>
+    </div>
+  </div>
+  <!-- Keynote Speaker: Olga Baysal -->
+  <div class="keynote-speaker" style="display: flex; gap: 15px; margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px;">
+    <div class="speaker-image" style="flex: 0 0 auto;">
+      <img
+        src="images/Baysal_photo.png"
+        alt="Olga Baysal"
+        style="max-width: 150px; border-radius: 5px;"
+      />
+    </div>
+    <div class="speaker-info">
+      <h5 style="font-size: 1.25em;">Olga Baysal</h5>
+      <p style="font-weight: bold; font-size: 1.1em;">Reimagining Code Review in the Age of AI</p>
+      <p>
+        Large Language Models (LLMs) are reshaping the way software developers approach everyday tasks — and code review is no exception. In this keynote, I will reflect on the evolution of code review practices in open source software (OSS) development, highlighting the strengths and limitations of traditional approaches. I will also share my view of how AI-powered code review assistants are opening up new opportunities for automation, collaboration, and quality assurance.
+      </p>
+      <p>
+        <strong>Bio:</strong>  Dr. Olga Baysal is an Associate Professor at the School of Computer Science and Director of the Institute for Data Science, Carleton University. Baysal received her MMath and PhD degrees in Computer Science from the University of Waterloo and completed a short NSERC Postdoctoral Fellowship at the University of Toronto. Her research focuses on applying AI, ML, and NLP techniques to tackle software engineering problems and providing ways to synthesize knowledge from the development artifacts such as reported issues, source code, community contributions and discussions, etc. Much of Baysal's work focuses on understanding how software engineers create, use, and maintain software systems. She applies empirical software engineering techniques to study software development processes and leverages software analytics to support practitioners' decision making.
+      </p>
+      <p>
+        <strong>Website:</strong>
+        <a href="https://olgabaysal.com/" target="_blank" rel="noopener">Personal Website</a>
+      </p>
+    </div>
+  </div>
+  <!-- Distinguished Invited Talk: Paul Ralph -->
+  <div class="keynote-speaker" style="display: flex; gap: 15px; margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px;">
+    <div class="speaker-image" style="flex: 0 0 auto;">
+      <img
+        src="images/Paul.jpg"
+        alt="Paul Ralph"
+        style="max-width: 150px; border-radius: 5px;"
+      />
+    </div>
+    <div class="speaker-info">
+      <h5 style="font-size: 1.25em;">Paul Ralph 
+      </h5>
+      <p style="font-weight: bold; font-size: 1.1em;">The Surprising Implications of Realism for Software Engineering and Related Fields</p>
+      <p>
+        Many of the practical, methodological challenges faced in social and applied sciences are rooted in outdated philosophical assumptions. Understanding newer philosophical approaches, especially critical realism, can help us solve many fundamental challenges associated with positivism, falsifications, interpretivism, and postmodernism. Realism is a family of philosophical approaches emphasizing that: (1) a real world exists independently of our perceptions of it; (2) the real world is filled with objects that have the power to cause changes in each other, whether or not humans can or do observe these changes; (3) observation is intrinsically problematic. In this talk, Dr. Ralph will give an overview of critical realism and explore its practical implications for software engineering research, including the importance of selecting better dependent variables, designing better measurement strategies, and basing research on theory.
+      </p>
+      <p>
+        <strong>Bio:</strong> Dr. Paul Ralph, PhD (British Columbia), B.Sc. / B.Comm (Memorial), is an award-winning scientist, author, consultant, and Professor of Software Engineering at Dalhousie University. His cutting-edge research at the intersection of software engineering, human-computer interaction, and project management explores the relationship between software teams’ social dynamics and success. It has been used by many leading technology companies including Adobe, Amazon, AT&T, Canon, Bea Systems, IBM, Google, HP, Microsoft, Netflix, PayPal, Samsung, Salesforce, VMWare, Yahoo!, and Walmart. He has published more than 80 peer-reviewed articles in premier venues including IEEE Transactions on Software Engineering and the ACM/IEEE International Conference on Software Engineering. Dr. Ralph is editor-in-chief of the SIGSOFT Empirical Standards for Software Engineering Research, the comprehensive evidence standards for software engineering research.
+      </p>
+      <p>
+        <strong>Website:</strong>
+        <a href="https://paulralph.name/" target="_blank" rel="noopener">Personal Website</a>
+      </p>
+    </div>
+  </div>
+</div>
+<!-- End Keynotes -->
+
+
+
+
+        <!-- Begin Program -->
+        <div id="theprogram" class="tab-pane fade">
+          <h3>CSER Spring 2025 Program</h3>
+          <div class="mb-4">
+            <div class="cser-day-header">Day 1: May 29, 2025</div>
+            <table class="table table-bordered table-sm align-middle" style="background: #f8f9fa;">
+              <tbody>
+                <tr>
+                  <td class="fw-bold" style="width: 130px;">09:00 - 09:30</td>
+                  <td class="cser-session-main">
+                    <b>Opening &amp; Logistics</b><br>
+                    <small>Chairs: Tushar Sharma, Paul Ralph, & Masud Rahman</small>
+                  </td>
+                </tr>
+                <tr>
+                  <td>09:30 - 10:30</td>
+                  <td class="cser-session-keynote">
+                    <b>Keynote 1: Foutse Khomh</b> <span class="text-muted">(Chairs: Tushar Sharma / Masud Rahman)</span><br>
+                    <i>Towards Reliable Machine Learning Models for Code</i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>10:30 - 11:00</td>
+                  <td class="cser-session-break">
+                    <b>Coffee Break / Poster Session</b>
+                  </td>
+                </tr>
+                <tr>
+                  <td>11:00 - 12:30</td>
+                  <td class="cser-session-main">
+                    <b>Energy &amp; Sustainability (5 x 18 minutes)</b> <span class="text-muted">(Chairs: Paul Ralph / Masud Rahman)</span>
+                    <ul class="mb-0">
+                      <li>Energy Smells: Defining and Identifying Patterns Leading to Overuse of Energy in Your Code</li>
+                      <li>Enhancing Energy-Awareness in Deep Learning through Fine-Grained Energy Measurement</li>
+                      <li>Understanding Software Professionals' Turnover</li>
+                      <li>Understanding the Relationship Between Code Smells and Refactoring: An Empirical Perspective</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>12:30 - 14:00</td>
+                  <td class="cser-session-break">
+                    <b>Lunch Break</b>
+                  </td>
+                </tr>
+                <tr>
+                  <td>14:00 - 15:00</td>
+                  <td class="cser-session-keynote">
+                    <b>Distinguished Invited Talk: Paul Ralph</b> <span class="text-muted">(Chair: Masud Rahman)</span><br>
+                    <i>The Surprising Implications of Realism for Software Engineering and Related Fields</i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>15:00 - 15:30</td>
+                  <td class="cser-session-break">
+                    <b>Coffee Break / Poster Session</b>
+                  </td>
+                </tr>
+                <tr>
+                  <td>15:30 - 17:00</td>
+                  <td class="cser-session-main">
+                    <b>Sustainability, Security, &amp; Measurement (4 x 18 minutes)</b> <span class="text-muted">(Chair: Olga Baysal)</span>
+                    <ul class="mb-0">
+                      <li>Evaluating Social Sustainability Interventions in Software Engineering: A Randomized Controlled Factorial Experiment</li>
+                      <li>Ignorance is Green: An Adaptive Language-Agnostic Pruning Method for Greener Language Models for Code</li>
+                      <li>Assessing the Construct Validity of Object-Oriented, Class-Level Code Quality Metrics</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>19:00 - 21:30</td>
+                  <td class="cser-session-dinner">
+                    <b>CSER 2025 Banquet Dinner</b> 
+                    <small>Location: Gahan House Nova Centre, 5239 Sackville Street, Halifax, NS B3J3Y3</small><br>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="mb-4">
+            <div class="cser-day-header">Day 2: May 30, 2025</div>
+            <table class="table table-bordered table-sm align-middle" style="background: #f8f9fa;">
+              <tbody>
+                <tr>
+                  <td class="fw-bold" style="width: 130px;">09:00 - 09:30</td>
+                  <td class="cser-session-main">
+                    <b>Logistics</b><br>
+                    <small>Chairs: Tushar Sharma, Paul Ralph, & Masud Rahman</small>
+                  </td>
+                </tr>
+                <tr>
+                  <td>09:30 - 10:30</td>
+                  <td class="cser-session-keynote">
+                    <b>Keynote 2: Olga Baysal</b> <span class="text-muted">(Chairs: Paul Ralph / Masud Rahman)</span><br>
+                    <i>Reimagining Code Review in the Age of AI</i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>10:30 - 11:00</td>
+                  <td class="cser-session-break">
+                    <b>Coffee Break / Poster Session</b>
+                  </td>
+                </tr>
+                <tr>
+                  <td>11:00 - 12:30</td>
+                  <td class="cser-session-main">
+                    <b>Software Bugs &amp; Code Smells (5 x 18 minutes)</b> <span class="text-muted">(Chair: Tushar Sharma)</span>
+                    <ul class="mb-0">
+                      <li>Improved Detection and Diagnosis of Faults in Deep Neural Networks Using Hierarchical and Explainable Classification</li>
+                      <li>Towards Enhancing IR-based Bug Localization Leveraging Texts and Multimedia from Bug Reports</li>
+                      <li>Improved IR-based Bug Localization with Intelligent Relevance Feedback</li>
+                      <li>Towards enhancing the reproducibility of deep learning bugs: an empirical study</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>12:30 - 14:00</td>
+                  <td class="cser-session-break">
+                    <b>Lunch Break</b>
+                  </td>
+                </tr>
+                <tr>
+                  <td>14:00 - 15:30</td>
+                  <td class="cser-session-main">
+                    <b>AI Agent &amp; LLM (4 x 18 minutes)</b> <span class="text-muted">(Chairs: Masud Rahman / Tushar Sharma)</span>
+                    <ul class="mb-0">
+                      <li>Domain-Driven and Consistent Integration of Large Language Models</li>
+                      <li>Understanding the Impact of Domain Term Explanation on Duplicate Bug Report Detection</li>
+                      <li>Leveraging LLMs for Ethical Monitoring in AI Software Development</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>15:30 - 16:00</td>
+                  <td class="cser-session-break">
+                    <b>Coffee Break / Poster Session</b>
+                  </td>
+                </tr>
+                <tr>
+                  <td>16:00 - 17:00</td>
+                  <td class="cser-session-main">
+                    <b>Fishbowl Session</b> <span class="text-muted">(Chairs: Tushar Sharma / Paul Ralph)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>17:00 - 17:30</td>
+                  <td class="cser-session-main">
+                    <b>Award Ceremony &amp; Closing</b><br>
+                    <small>Chairs: Tushar Sharma, Paul Ralph, & Masud Rahman</small>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- End Program -->
+
+
+
+
+            <!-- Begin New Faculty Talks -->
+            <div id="newfacultytalks" class="tab-pane fade">
+              <h3>Invited New Faculty Talks</h3>
+              <p>Details of invited new faculty talks will be announced soon.</p>
+            </div>
+            <!-- End New Faculty Talks -->
+
+            <!-- Begin Panel -->
+            <div id="panel" class="tab-pane fade">
+              <h3>Panel</h3>
+              <p>Panel details will be announced soon.</p>
+            </div>
+            <!-- End Panel -->
+
+            <!-- Begin Tutorial -->
+            <div id="tutorial" class="tab-pane fade">
+              <h3>Tutorial</h3>
+              <p>Tutorial details will be announced soon.</p>
+            </div>
+            <!-- End Tutorial -->
+
+            <!-- Begin Research Talks -->
+            <div id="newResearchTalks" class="tab-pane fade">
+              <h3>Research Talks</h3>
+              <p>Research talk details will be announced soon.</p>
+            </div>
+            <!-- End Research Talks -->
+
+            <!-- Begin Posters -->
+            <div id="newPoster" class="tab-pane fade">
+              <h3>Posters/Demos</h3>
+              <p>Poster and demo details will be announced soon.</p>
+            </div>
+            <!-- End Posters -->
+
+          <!-- Begin Call -->
+          <div id="call" class="tab-pane fade">
+            <h3>Call for New Faculty Talks – Submit Your Details</h3>
+            <p>Dear CSER Community,</p>
+
+            <p>We are excited to announce that the new version of CSER is on the horizon! For CSER 2025 Spring, we are soliciting proposals for our “New Faculty Talks” series. In this series, newly hired faculty members will introduce themselves, share their research, and engage with the community. Each talk will last 20 minutes, followed by a brief Q&A session. Please note that all talks will be held in-person at Dalhousie University.</p>
+
+            <p>This is an excellent opportunity to present your work to a broader audience and foster academic collaboration. For further details on the event and registration, please visit the <a href="https://www.dal.ca/">Dalhousie University website</a>.</p>
+
+            <p>If you are a newly hired faculty member, please submit your details including:</p>
+            <ul>
+              <li>Your name</li>
+              <li>Your institution</li>
+              <li>Email contact information</li>
+              <li>A tentative title for your talk</li>
+            </ul>
+
+            <p>Please complete the <a href="https://forms.gle/YPL15gHvidhNZdZp6" target="_blank">Faculty Talk Proposal Form</a> by <strong>Monday, May 05, 2025</strong>. After the submission deadline, we will follow up with further details regarding the schedule and presentation format.</p>
+
+            <p>If you know of any newly hired faculty members who might be interested, please forward this invitation to them or contact us directly.</p>
+
+            <p>We look forward to your participation!</p>
+
+
+            <hr>
+
+            <h3>Call for New Student Presentation/Poster</h3>
+            <p>Dear CSER Community,</p>
+
+            <p>We also invite students to showcase their research at CSER 2025 Spring. You may choose to deliver a 10–15 minute presentation or submit a poster/demo. This is a fantastic opportunity to gain presentation experience and connect with the software engineering research community.</p>
+
+            <p>For your submission, please include:</p>
+            <ul>
+              <li>Your name</li>
+              <li>Name of your research supervisor </li>
+              <li>Institution, Program, Year of Study</li>
+              <li>Email contact information</li>
+              <li>Title of the talk/poster</li>
+              <li>A 250 words abstract for the talk/poster</li>
+            </ul>
+
+            <p>Please submit your proposal using the <a href="https://forms.gle/QNLXXPenMP4oo2Nk6" target="_blank">Student Presentation/Poster Proposal Form</a> by <strong>Monday, May 05, 2025</strong>. We will provide the final schedule and additional presentation details after the submission deadline.</p>
+
+            <p>Faculty members, please encourage your students to participate!</p>
+
+            <p>We look forward to your innovative submissions!</p>
+          </div>
+          <!-- End Call -->
+
+            <!-- Begin Organizing Committee -->
+            <div id="orgcom" class="tab-pane fade">
+              <h3>Organizing Committee</h3>
+              <h4>General Chair</h4>
+              <ul>
+                <li><a href="https://www.tusharma.in/">Tushar Sharma</a>, Dalhousie University</li>
+              </ul>
+
+              <h4>Program Co-Chairs</h4>
+              <ul>
+                <li><a href="https://paulralph.name/"> Paul Ralph</a>, Dalhousie University</li>
+                <li><a href="https://web.cs.dal.ca/~masud/">Masud Rahman</a>, Dalhousie University</li>
+              </ul>
+
+              <h4>Web & Publicity Chair</h4>
+              <ul>
+                <li><a href="https://github.com/SigmaJahan">Sigma Jahan</a>, Dalhousie University</li>
+              </ul>
+
+              <h4>Student Volunteers</h4>
+              <ul>
+                <li><a href="https://paulralph.name/lab/">Arazoo Hoseyni</a>, Dalhousie University</li>
+                <li><a href="https://www.saurabhsinghrajput.com/">Saurabhsingh Rajput</a>, Dalhousie University</li>
+                <li><a href="https://mehilshah.github.io/">Mehil Shah</a>, Dalhousie University</li>
+              </ul>
+
+            </div>
+            <!-- End Organizing Committees -->
+
+            <!-- Begin Steering Committee -->
+            <div id="steercom" class="tab-pane fade">
+              <h3>CSER Steering Committee</h3>
+              <ul>
+                <li><a href="http://marinlitoiu.info.yorku.ca">Marin Litoiu</a>, York</li>
+                <li><a href="http://individual.utoronto.ca/klyons/">Kelly Lyons</a>, Toronto</li>
+                <li><a href="http://webhome.cs.uvic.ca/~hausi/">Hausi Müller</a>, Victoria</li>
+                </ul>
+            </div>
+            <!-- End Steering Committee -->
+
+          <!-- Begin Venue -->
+          <div id="venue" class="tab-pane fade">
+            <h3>Venue</h3>
+            <h4>Dalhousie University</h4>
+            <ul>
+              <li>
+                Room #1009, Kenneth C. Rowe Management Building,<br>
+                6100 University Ave, Halifax, NS B3H 4R2
+              </li>
+            </ul>
+            <div style="margin: 20px 0;">
+              <iframe
+                src="https://www.google.com/maps?q=Kenneth+C.+Rowe+Management+Building,+6100+University+Ave,+Halifax,+NS+B3H+4R2&output=embed"
+                width="100%"
+                height="350"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+          <!-- End Venue -->
+
+
+          <!-- Begin Registration -->
+          <div id="registration" class="tab-pane fade">
+            <h3>Registration</h3>
+            <p>You can follow the link below to register your ticket.<br/>
+            <a href="https://registration.dal.ca/CSER2025" target="_blank">Registration link</a></p>
+
+            <table class="table table-bordered table-hover table-condensed">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Early Bird (By May 12th)</th>
+                  <th>Regular (After May 12th)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Students</td>
+                  <td>$230 (plus taxes)</td>
+                  <td>$270 (plus taxes)</td>
+                </tr>
+                <tr>
+                  <td>Non-students</td>
+                  <td>$260 (plus taxes)</td>
+                  <td>$270 (plus taxes)</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p><strong>Cancellation Policy:</strong><br/>
+            - A $100 cancellation fee applies.<br/>
+            - Last date for cancellation: <strong>May 25, 2025</strong>.<br/>
+            - Registration transfer to another participant (same category) allowed until <strong>May 25, 2025</strong>.</p>
+            <p><strong>Note:</strong><br/>
+            - Registration cost includes lunch for two days, coffee breaks, and a dinner at the heart of Halifax downtown..<br/>
+          </div>
+          <!-- End Registration -->
+
+          <!-- Begin Supporters -->
+          <div id="Supporters" class="tab-pane fade">
+            <h3>Supporters</h3>
+            <div class="supporter">
+                <img src="images/FCS.png" alt="Dalhousie University Faculty of Computer Science" style="width:200px;">
+          </div>
+          <!-- End Supporters -->
+
+          </div>
+        </div>
+        <!-- End Main panel -->
+
+      </div>
+    </div>
+    <!-- End Body -->
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">&copy; CSER 2025, this site builds on an excellent foundation by <a href="http://damevski.github.io">Kosta Damevski</a>.</p>
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+      $(function() {
+        var hash = window.location.hash;
+        hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+        window.scrollTo(0, 0);
+      });
+
+      $(document).ready(function() {
+        $('a').click(function(event) {
+          var hash = $(this).attr('href');
+          if (hash.startsWith('#')) {
+            window.location.hash = hash;
+          }
+        });
+      });
+
+      $(window).bind('hashchange', function(event) {
+        var hash = window.location.hash;
+        hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+        window.scrollTo(0, 0);
+      });
+
+      $(document).ready(function() {
+        // Check if the URL has a hash part (which means it is referring to a section of the page)
+        if(window.location.hash) {
+            // Remove the "#" from the hash
+            var hash = window.location.hash.substring(1);
+
+            // Check if an element with that ID exists
+            if(hash === "newfacultytalks") {
+              // Show the content for "Invited New Faculty Talks"
+              $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
+              $('#newfacultytalks').addClass('active in'); // Show the "Invited New Faculty Talks" content
+              window.history.pushState({}, '', "#newfacultytalks");
+              window.scrollTo(0, 0);
+            }
+        }
+      });
+
+      $(document).ready(function(){
+        // Toggle the submenu and show the content for "Invited New Faculty Talks"
+        $('a[href="#facultySubmenu"]').click(function(e){
+            e.preventDefault(); // Prevent default anchor behavior
+            var submenu = $('#facultySubmenu');
+
+            // Collapse or show the submenu
+            if (submenu.hasClass('in')) {
+                submenu.collapse('hide');
+            } else {
+                // Hide any other open submenus in the tracks menu
+                $('#tracksSubmenu .collapse.in').not(submenu).collapse('hide');
+                submenu.collapse('show'); // Show the submenu
+            }
+
+            // Show the content for "Invited New Faculty Talks"
+            $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
+            $('#newfacultytalks').addClass('active in'); // Show the "Invited New Faculty Talks" content
+            window.history.pushState({}, '', "#newfacultytalks");
+        });
+
+        $('#facultySubmenu a').click(function(e){
+          e.preventDefault(); // Prevent default anchor behavior
+          var target = $(this).attr('href');
+
+          // Scroll to the specific faculty section
+          $('html, body').animate({
+              scrollTop: $(target).offset().top
+          }, 1000);
+      });
+
+    });
+
+      $(document).ready(function() {
+        // Check if the URL has a hash part (which means it is referring to a section of the page)
+        if(window.location.hash) {
+            // Remove the "#" from the hash
+            var hash = window.location.hash.substring(1);
+
+            // Check if an element with that ID exists
+            if(hash === "newResearchTalks") {
+              // Show the content for "Invited New Faculty Talks"
+              $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
+              $('#newResearchTalks').addClass('active in'); // Show the "Invited New Faculty Talks" content
+              window.history.pushState({}, '', "#newResearchTalks");
+              window.scrollTo(0, 0);
+            }
+        }
+      });
+
+      $(document).ready(function(){
+        // Toggle the submenu and show the content for "Invited New Faculty Talks"
+        $('a[href="#ResearchTalksSubmenu"]').click(function(e){
+            e.preventDefault(); // Prevent default anchor behavior
+            var submenu = $('#ResearchTalksSubmenu');
+
+            // Collapse or show the submenu
+            if (submenu.hasClass('in')) {
+                submenu.collapse('hide');
+            } else {
+                // Hide any other open submenus in the tracks menu
+                $('#tracksSubmenu .collapse.in').not(submenu).collapse('hide');
+                submenu.collapse('show'); // Show the submenu
+            }
+            // Show the content for "Invited New Faculty Talks"
+            $('.tab-content .tab-pane').removeClass('active in'); // Hide other content
+            $('#newPoster').addClass('active in'); // Show the "Invited New Faculty Talks" content
+            window.history.pushState({}, '', "#newPoster");
+            // Scroll to the "Invited New Faculty Talks" content if you want smooth scrolling
+            /* $('html, body').animate({
+                scrollTop: $('#newPoster').offset().top
+            }, 1000); */
+        });
+
+        $('#PostersSubmenu a').click(function(e){
+          e.preventDefault(); // Prevent default anchor behavior
+          var target = $(this).attr('href');
+
+          // Scroll to the specific faculty section
+          $('html, body').animate({
+              scrollTop: $(target).offset().top
+          }, 1000);
+      });
+
+    });
+
+
+  </script>
+  <!-- Add jQuery and Bootstrap JavaScript at the end for functionality -->
+
+  </body>
+</html>
