@@ -54,3 +54,149 @@ li > ul[aria-expanded="true"] {
   margin: 4px 0 0 0;
   padding-left: 18px;
 }
+#theprogram .program-talk-link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+#talks .talk-card,
+#keynote-weiyi-shang {
+  scroll-margin-top: 20px;
+}
+#talks .talk-card:focus,
+#keynote-weiyi-shang:focus {
+  outline: 2px solid #4f8ccb;
+  outline-offset: 4px;
+}
+
+/* Accepted talks: contained portraits and readable, responsive speaker cards. */
+#talks .talks-heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0;
+}
+#talks .talks-heading h3 {
+  margin: 0;
+  color: #23445e;
+}
+#talks .talks-count {
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: #eaf3fa;
+  color: #31658b;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+#talks .talk-list {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+#talks .talk-card {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 24px;
+  padding: 26px;
+  border: 1px solid #dce6ee;
+  border-top: 3px solid #6d9fc2;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f5f9fc 0, #fff 55%);
+  box-shadow: 0 3px 12px rgba(34, 68, 94, 0.05);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+#talks .talk-portrait {
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 12px;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(34, 68, 94, 0.12);
+}
+#talks .talk-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e4eff7;
+  color: #34678b;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+#talks .talk-chip {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  border: 1px solid #bddfcf;
+  border-radius: 999px;
+  background: #eaf6ef;
+  color: #276448;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+#talks .talk-title {
+  margin: 0 0 14px;
+  color: #23445e;
+  font-size: 20px;
+  line-height: 1.4;
+  overflow-wrap: break-word;
+}
+#talks .talk-speaker {
+  margin-bottom: 18px;
+  color: #263d50;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+#talks .talk-affiliation {
+  display: block;
+  color: #607181;
+  font-size: 14px;
+  font-weight: 400;
+}
+#talks .talk-bio {
+  padding-top: 16px;
+  border-top: 1px solid #e5ecf1;
+}
+#talks .talk-bio h5 {
+  margin: 0 0 8px;
+  color: #536c7e;
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#talks .talk-bio p {
+  margin: 0;
+  color: #455461;
+  line-height: 1.75;
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  #talks .talk-card:hover {
+    transform: translateY(-2px);
+    border-color: #a9c7dd;
+    box-shadow: 0 8px 22px rgba(34, 68, 94, 0.1);
+  }
+}
+@media (max-width: 600px) {
+  #talks .talk-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+    padding: 20px;
+  }
+  #talks .talk-portrait {
+    width: 88px;
+    height: 88px;
+  }
+  #talks .talk-title {
+    font-size: 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #talks .talk-card {
+    transition: none;
+  }
+}

@@ -69,6 +69,8 @@
               <!-- <li><a data-toggle="no-pill" href="#acceptedPapers">Accepted Papers</a></li> --> 
               <li><a data-toggle="pill" href="#keynotes">Keynote</a></li>
               <li><a data-toggle="pill" href="#theprogram">Program</a></li>
+              <li><a data-toggle="pill" href="#talks">Accepted Talks</a></li>
+              <li><a data-toggle="pill" href="#posters">Accepted Posters</a></li>
               <li><a data-toggle="pill" href="#call">Call for Submissions</a></li>
               <li><a data-toggle="pill" href="#orgcom">Organizing Committee</a></li>
               <li><a data-toggle="pill" href="#steercom">Steering Committee</a></li>
@@ -141,7 +143,7 @@
             <!-- Begin Keynote -->
             <div id="keynotes" class="tab-pane fade">
               <h4>Keynote @ CSER</h4>
-              <div class="keynote-speaker" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px;">
+              <div id="keynote-weiyi-shang" tabindex="-1" class="keynote-speaker" style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px;">
                 <div class="speaker-image" style="flex: 0 0 auto;">
                   <img src="images/weiyi-shang.png" alt="Weiyi Shang" style="width: 150px; max-width: 100%; height: auto; border-radius: 5px;" />
                 </div>
@@ -160,15 +162,171 @@
             </div>
             <!-- End Keynote -->
 
-            <!-- Begin Accepted Papers
-            <div id="theprogram" class="tab-pane fade">
+            <!-- Begin Accepted Papers -->
+            <div id="talks" class="tab-pane fade">
+              <div class="talks-heading">
+                <h3>Accepted Research Talks</h3>
+              </div>
+              <div class="talk-list">
+                <article id="talk-amber-horvath" tabindex="-1" class="talk-card" aria-labelledby="talk-title-1">
+                  <img class="talk-portrait" src="./images/amber-horvath.png" alt="Amber Horvath" loading="lazy" width="112" height="112">
+                  <div class="talk-content">
+                    <span class="talk-chip">New faculty talk</span>
+                    <h4 id="talk-title-1" class="talk-title">Programmable Support for Code Comprehension During LLM-Assisted Programming</h4>
+                    <p class="talk-speaker">Amber Horvath<span class="talk-affiliation">University of Victoria</span></p>
+                    <div class="talk-bio">
+                      <h5>About the speaker</h5>
+                      <p>Amber Horvath is an assistant professor of Software Engineering in the Computer Science Department at the University of Victoria. She works at the intersection of human-computer interaction (HCI), software engineering, and artificial intelligence in order to design and deploy intelligent human-centered developer tooling for assisting in the software engineering process, with a focus on tools for understanding code. Amber has previously worked at MIT CSAIL, Carnegie Mellon University’s Human-Computer Interaction Institute, Google, and Oregon State University. Her research has been published at premiere venues in HCI (CHI, UIST, and CSCW) and software engineering (ICSE), with award winning publications at CHI and CSCW.</p>
+                    </div>
+                  </div>
+                </article>
+                <article id="talk-an-ran-chen" tabindex="-1" class="talk-card" aria-labelledby="talk-title-2">
+                  <img class="talk-portrait" src="./images/anran-chen.jpeg" alt="An Ran Chen" loading="lazy" width="112" height="112">
+                  <div class="talk-content">
+                    <h4 id="talk-title-2" class="talk-title">From Signals to Fixes: Intelligent Software Debugging in the Age of LLMs</h4>
+                    <p class="talk-speaker">An Ran Chen<span class="talk-affiliation">University of Alberta</span></p>
+                    <div class="talk-bio">
+                      <h5>About the speaker</h5>
+                      <p>An Ran Chen is an Assistant Professor in the Department of Electrical and Computer Engineering at the University of Alberta. His research focuses on software engineering, particularly automated debugging and testing, program analysis, AIOps, and the application of large language models to software engineering. He leads the SODA (Software Debugging and Analysis) Nexus Lab, where his group develops intelligent techniques to improve software reliability, debugging, and maintenance.</p>
+                    </div>
+                  </div>
+                </article>
+                <article id="talk-aren-a-babikian" tabindex="-1" class="talk-card" aria-labelledby="talk-title-3">
+                  <img class="talk-portrait" src="./images/arena-babikian.jpg" alt="Aren A. Babikian" loading="lazy" width="112" height="112">
+                  <div class="talk-content">
+                    <span class="talk-chip">New faculty talk</span>
+                    <h4 id="talk-title-3" class="talk-title">Assuring the Safety of AI-Based Systems: From Requirements to Evidence</h4>
+                    <p class="talk-speaker">Aren A. Babikian<span class="talk-affiliation">McGill University</span></p>
+                    <div class="talk-bio">
+                      <h5>About the speaker</h5>
+                      <p>Aren A. Babikian is an Assistant Professor in the Department of Electrical and Computer Engineering at McGill University. He received his PhD in Software Engineering from McGill University and was a postdoctoral fellow in the Department of Computer Science at the University of Toronto. His research focuses on the safety assurance of AI-enabled cyber-physical systems (CPSs), integrating formal methods with AI-based approaches, alongside techniques from model-driven engineering, requirements engineering, and testing. His work has been published in software engineering and related conferences (incl. FSE, RE, MODELS) and journals (incl. TSE, EMSE, SOSYM).</p>
+                    </div>
+                  </div>
+                </article>
+                <article id="talk-boqi-chen" tabindex="-1" class="talk-card" aria-labelledby="talk-title-4">
+                  <img class="talk-portrait" src="./images/boqi-chen.png" alt="Boqi Chen" loading="lazy" width="112" height="112">
+                  <div class="talk-content">
+                    <span class="talk-chip">New faculty talk</span>
+                    <h4 id="talk-title-4" class="talk-title">Modeling the Behavior and Organization of AI Agents for Software Engineering</h4>
+                    <p class="talk-speaker">Boqi Chen<span class="talk-affiliation">University of Ottawa</span></p>
+                    <div class="talk-bio">
+                      <h5>About the speaker</h5>
+                      <p>Boqi Chen is an Assistant Professor in the School of Electrical Engineering and Computer Science (EECS) at the University of Ottawa. He received his PhD from McGill University. His research lies at the intersection of software engineering (SE) and artificial intelligence (AI), with a focus on the reliable and robust integration of AI components, including large language models (LLMs) and multi-agent systems, into SE processes. He approaches this through formal, model-driven, and neuro-symbolic methods, with an emphasis on model-based validation and principled agentic workflow design. He has served as a reviewer for many conferences and journals, including AAAI, ASE, TSE, TOSEM, and EMSE.</p>
+                    </div>
+                  </div>
+                </article>
+                <article id="talk-chia-yi-su" tabindex="-1" class="talk-card" aria-labelledby="talk-title-5">
+                  <img class="talk-portrait" src="./images/Chia-Yi.jpg" alt="Chia-Yi Su" loading="lazy" width="112" height="112">
+                  <div class="talk-content">
+                    <h4 id="talk-title-5" class="talk-title">Human-Guided Language Models for Source Code Summarization</h4>
+                    <p class="talk-speaker">Chia-Yi Su<span class="talk-affiliation">York University</span></p>
+                    <div class="talk-bio">
+                      <h5>About the speaker</h5>
+                      <p>Chia-Yi Su is a postdoctoral fellow working with Maleknaz Nayebi in Lassonde School of Engineering at York University. He completed his Ph.D. in Computer Science and Engineering at University of Notre Dame, advised by Collin McMillan in Automatic Program Comprehension Lab. His dissertation lies in the intersection of artificial intelligence with the applications to software engineering (AI4SE) and cognitive science. His current research combines requirement engineering and compliance to develop explainable AI agents with the applications in the healthcare domain.</p>
+                    </div>
+                  </div>
+                </article>
+                <article id="talk-federico-mora" tabindex="-1" class="talk-card" aria-labelledby="talk-title-6">
+                  <img class="talk-portrait" src="./images/federico.jpg" alt="Federico Mora" loading="lazy" width="112" height="112">
+                  <div class="talk-content">
+                    <span class="talk-chip">New faculty talk</span>
+                    <h4 id="talk-title-6" class="talk-title">Cloud-Specific Automated Reasoning</h4>
+                    <p class="talk-speaker">Federico Mora<span class="talk-affiliation">University of Waterloo</span></p>
+                    <div class="talk-bio">
+                      <h5>About the speaker</h5>
+                      <p>Federico Mora is an Assistant Professor in the David R. Cheriton School of Computer Science at the University of Waterloo and a Faculty Affiliate at the Vector Institute. His primary research area is formal methods. Federico is the recipient of a Qualcomm Innovation Fellowship and UC Berkeley’s David J. Sakrison Memorial Prize.</p>
+                    </div>
+                  </div>
+                </article>
+                <article id="talk-ratnadira-widyasari" tabindex="-1" class="talk-card" aria-labelledby="talk-title-7">
+                  <img class="talk-portrait" src="./images/widyasari-ratnadira.png" alt="Ratnadira Widyasari" loading="lazy" width="112" height="112">
+                  <div class="talk-content">
+                    <span class="talk-chip">New faculty talk</span>
+                    <h4 id="talk-title-7" class="talk-title">When AI Looks Right but Isn’t: Toward Trustworthy AI for Software Quality Assurance</h4>
+                    <p class="talk-speaker">Ratnadira Widyasari<span class="talk-affiliation">University of Victoria</span></p>
+                    <div class="talk-bio">
+                      <h5>About the speaker</h5>
+                      <p>Ratnadira Widyasari is an Assistant Professor in the Department of Computer Science at the University of Victoria. Her research focuses on advancing software quality assurance through automation and explainability. She is particularly interested in exploring how artificial intelligence and large language models can be used to build more reliable, transparent, and effective software engineering tools. Her research has been published in leading software engineering venues, including conferences such as ICSE and FSE, and journals such as TSE, TOSEM, and EMSE.</p>
+                    </div>
+                  </div>
+                </article>
+                <article id="talk-xinrui-zhang" tabindex="-1" class="talk-card" aria-labelledby="talk-title-8">
+                  <img class="talk-portrait" src="./images/xinrui-zhang.jpeg" alt="Xinrui Zhang" loading="lazy" width="112" height="112">
+                  <div class="talk-content">
+                    <span class="talk-chip">New faculty talk</span>
+                    <h4 id="talk-title-8" class="talk-title">Privacy-Preserving Collaboration for Secure Software Engineering</h4>
+                    <p class="talk-speaker">Xinrui Zhang<span class="talk-affiliation">Lakehead University</span></p>
+                    <div class="talk-bio">
+                      <h5>About the speaker</h5>
+                      <p>Xinrui Zhang is a tenure-track Assistant Professor in the Department of Computer Science at Lakehead University. Before joining Lakehead, she was a Postdoctoral Associate at the School of Computing, Queen’s University. She received her Ph.D. in Electrical and Computer Engineering from Carleton University. Her research lies at the intersection of software engineering, cybersecurity, and privacy-enhancing technologies, with work published in venues such as Empirical Software Engineering, the Journal of Systems and Software, and IEEE Transactions on Cloud Computing. She received a Best Paper Award at FCN 2024 and was supported by an Ericsson Fellowship during her doctoral studies.</p>
+                    </div>
+                  </div>
+                </article>
+                <article id="talk-xudong-sun" tabindex="-1" class="talk-card" aria-labelledby="talk-title-9">
+                  <img class="talk-portrait" src="./images/xudong-sun.jpeg" alt="Xudong Sun" loading="lazy" width="112" height="112">
+                  <div class="talk-content">
+                    <span class="talk-chip">New faculty talk</span>
+                    <h4 id="talk-title-9" class="talk-title">Improving Reliability of Cloud Infrastructure Systems: From Testing to Verification</h4>
+                    <p class="talk-speaker">Xudong Sun<span class="talk-affiliation">University of Toronto</span></p>
+                    <div class="talk-bio">
+                      <h5>About the speaker</h5>
+                      <p>Xudong Sun is an assistant professor at the department of Electrical and Computer Engineering in the University of Toronto. Xudong's research focuses on system reliability and formal verification. Xudong obtained his PhD from the University of Illinois Urbana-Champaign.</p>
+                    </div>
+                  </div>
+                </article>
+                <article id="talk-zohreh-sharafi" tabindex="-1" class="talk-card" aria-labelledby="talk-title-10">
+                  <img class="talk-portrait" src="./images/zohreh-sharafi.jpg" alt="Zohreh Sharafi" loading="lazy" width="112" height="112">
+                  <div class="talk-content">
+                    <h4 id="talk-title-10" class="talk-title">Creativity in Programming: From code and gaze to adaptive human–AI collaboration</h4>
+                    <p class="talk-speaker">Zohreh Sharafi<span class="talk-affiliation">Polytechnique Montreal</span></p>
+                    <div class="talk-bio">
+                      <h5>About the speaker</h5>
+                      <p>Zohreh Sharafi is an Assistant Professor of Software Engineering in the Department of Computer and Software Engineering (GIGL) at Polytechnique Montréal and an IVADO Professor. Her research focuses on the human aspects of software engineering, with particular attention to developers’ problem-solving strategies, creativity in software development, and trust in AI-supported tools and processes. She investigates how developers think creatively, generate solutions, and navigate complex design challenges, with the goal of designing tools and practices that foster more creative and effective software development. She is also interested in how human factors such as gender, experience, and cognitive processes shape software development practices. Her research is supported by NSERC, FRQ, IVADO, and Polytechnique Montréal.
+                Prior to joining Polytechnique Montréal, she was a Senior Research Fellow at the University of Michigan, Ann Arbor, and an NSERC Postdoctoral Fellowship recipient. She also brings industry experience from the finance technology sector. She holds a Ph.D. in Computer Engineering from Polytechnique Montréal.</p>
+                    </div>
+                  </div>
+                </article>
+                <article id="talk-alexandru-ianta" tabindex="-1" class="talk-card" aria-labelledby="talk-title-11">
+                  <img class="talk-portrait" src="./images/Alexandru-Ianta.jpeg" alt="Alexandru Ianta" loading="lazy" width="112" height="112">
+                  <div class="talk-content">
+                    <h4 id="talk-title-11" class="talk-title">Token Efficient Task Execution via Application Behavior Modeling for Web Agents</h4>
+                    <p class="talk-speaker">Alexandru Ianta<span class="talk-affiliation">University of Alberta</span></p>
+                    <div class="talk-bio">
+                      <h5>About the speaker</h5>
+                      <p>Alex is a PhD student under the supervision of Dr. Eleni Stroulia at the University of Alberta. His work focuses on techniques for improving the efficiency of agents executing web tasks. He is interested in getting to learn more about transformer models at a lower-level, exploring concept activation vectors, steering, and other interpretability techniques that could be leveraged by harnesses and/or external models to improve the safety or efficiency of agents. Outside of research he enjoys running, and is training to complete a marathon next year. He is always interested in learning about other's research, and finding opportunities for collaboration on future work.</p>
+                    </div>
+                  </div>
+                </article>
+                <article id="talk-ali-sayedsalehi" tabindex="-1" class="talk-card" aria-labelledby="talk-title-12">
+                  <img class="talk-portrait" src="./images/Ali-Sayedsalehi.jpeg" alt="Ali Sayedsalehi" loading="lazy" width="112" height="112">
+                  <div class="talk-content">
+                    <h4 id="talk-title-12" class="talk-title">Making CI Smarter: Lessons Learned from Performance Testing at Mozilla</h4>
+                    <p class="talk-speaker">Ali Sayedsalehi<span class="talk-affiliation">Concordia University</span></p>
+                    <div class="talk-bio">
+                      <h5>About the speaker</h5>
+                      <p>Ali Sayedsalehi is a final-year PhD candidate in Computer Science and Software Engineering at Concordia University, where he works with Dr. Peter C. Rigby. His research focuses on software testing, continuous integration, performance engineering, and the use of machine learning to improve software development workflows. He has also worked with Mozilla on performance testing and CI optimization, including risk-aware testing, test scheduling, and performance regression analysis. His work aims to bridge empirical software engineering research with practical tools and systems that can be applied in large-scale development environments.</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
 
-              <h3>CSER 2026 Fall Program</h3>
-              <p>More information about the program will be available later.</p>
+            </div>
 
+            <div id="posters" class="tab-pane fade">
+              <h3>Accepted Posters</h3>
+              <ul>
+                <li>Suzhen Zhong (Queen's University) &ndash; Human-AI Synergy in Agentic Code Review</li>
+                <li>Kalvin Eng (University of Alberta) &ndash; VISTA: Querying Bug Reports, Commits, and Tests for LLM-Assisted Video Game Quality Assurance</li>
+                <li>Al Muqshith Mohamed Shifan (Ontario Tech University) &ndash; Evolved Neural Agents as Tireless Playtesters</li>
+                <li>Dewni Pabasara Deraniyagala (University of New Brunswick) &ndash; Beyond Prompting: Fine-Tuning and Retrieval for Backlog Technical Debt Detection with LLMs</li>
+                <li>Kevin Christopher Chua (Ontario Tech University) &ndash; Trait Activation Steering: Keeping Small Model NPCs In Character</li>
+                <li>Hanzheng (Hozier) Dai (University of Alberta) &ndash; Understanding Bugs in Game Compatibility Layers</li>
+                <li>Haonan Zhang (University of Waterloo) &ndash; On the Brittleness of Web UI Testing: A Pragmatic Perspective</li>
+                <li>Yuyang Wang (University of Alberta) &ndash; Benchmarking API Migration in Real-world Repositories</li>
+              </ul>
 
-            </div>-->
-            <!-- End Accepted Papers -->
+            </div>
+              <!-- End Accepted Papers -->
 
             <!-- Begin Program -->
             <div id="theprogram" class="tab-pane fade">
@@ -193,7 +351,7 @@
                     <td>09:10 - 10:00</td>
                     <td class="cser-session-keynote">
                       <b>Keynote: Weiyi Shang</b><br>
-                      <i>Messy in Practice: The Overlooked Challenges of Log Preprocessing</i>
+                      <a class="program-talk-link" href="#keynote-weiyi-shang"><i>Messy in Practice: The Overlooked Challenges of Log Preprocessing</i></a>
                     </td>
                   </tr>
                   <tr>
@@ -207,10 +365,10 @@
                     <td class="cser-session-main">
                       <b>Session 1</b>
                       <ul class="mb-0">
-                        <li>10:20 &ndash; New Faculty Talk: Xudong Sun (University of Toronto) &mdash; <i>Improving Reliability of Cloud Infrastructure Systems: From Testing to Verification</i></li>
-                        <li>10:45 &ndash; New Faculty Talk: Xinrui Zhang (Lakehead University) &mdash; <i>Privacy-Preserving Collaboration for Secure Software Engineering</i></li>
-                        <li>11:10 &ndash; New Faculty Talk: Aren A. Babikian (McGill University) &mdash; <i>Assuring the Safety of AI-Based Systems: From Requirements to Evidence</i></li>
-                        <li>11:35 &ndash; New Faculty Talk: Boqi Chen (University of Ottawa) &mdash; <i>Modeling the Behavior and Organization of AI Agents for Software Engineering</i></li>
+                        <li>10:20 &ndash; New Faculty Talk: Xudong Sun (University of Toronto) &mdash; <a class="program-talk-link" href="#talk-xudong-sun"><i>Improving Reliability of Cloud Infrastructure Systems: From Testing to Verification</i></a></li>
+                        <li>10:45 &ndash; New Faculty Talk: Xinrui Zhang (Lakehead University) &mdash; <a class="program-talk-link" href="#talk-xinrui-zhang"><i>Privacy-Preserving Collaboration for Secure Software Engineering</i></a></li>
+                        <li>11:10 &ndash; New Faculty Talk: Aren A. Babikian (McGill University) &mdash; <a class="program-talk-link" href="#talk-aren-a-babikian"><i>Assuring the Safety of AI-Based Systems: From Requirements to Evidence</i></a></li>
+                        <li>11:35 &ndash; New Faculty Talk: Boqi Chen (University of Ottawa) &mdash; <a class="program-talk-link" href="#talk-boqi-chen"><i>Modeling the Behavior and Organization of AI Agents for Software Engineering</i></a></li>
                       </ul>
                     </td>
                   </tr>
@@ -225,10 +383,10 @@
                     <td class="cser-session-main">
                       <b>Session 2</b>
                       <ul class="mb-0">
-                        <li>13:00 &ndash; Student Talk: Alexandru Ianta (University of Alberta) &mdash; <i>Token Efficient Task Execution via Application Behavior Modeling for Web Agents</i></li>
-                        <li>13:10 &ndash; New Faculty Talk: Zohreh Sharafi (Polytechnique Montreal) &mdash; <i>Creativity in Programming: From code and gaze to adaptive human–AI collaboration</i></li>
-                        <li>13:35 &ndash; New Faculty Talk: Amber Horvath (University of Victoria) &mdash; <i>Programmable Support for Code Comprehension During LLM-Assisted Programming</i></li>
-                        <li>14:00 &ndash; Postdoc Talk: Chia-Yi Su (York University) &mdash; <i>Human-Guided Language Models for Source Code Summarization</i></li>
+                        <li>13:00 &ndash; Student Talk: Alexandru Ianta (University of Alberta) &mdash; <a class="program-talk-link" href="#talk-alexandru-ianta"><i>Token Efficient Task Execution via Application Behavior Modeling for Web Agents</i></a></li>
+                        <li>13:10 &ndash; New Faculty Talk: Zohreh Sharafi (Polytechnique Montreal) &mdash; <a class="program-talk-link" href="#talk-zohreh-sharafi"><i>Creativity in Programming: From code and gaze to adaptive human–AI collaboration</i></a></li>
+                        <li>13:35 &ndash; New Faculty Talk: Amber Horvath (University of Victoria) &mdash; <a class="program-talk-link" href="#talk-amber-horvath"><i>Programmable Support for Code Comprehension During LLM-Assisted Programming</i></a></li>
+                        <li>14:00 &ndash; Postdoc Talk: Chia-Yi Su (York University) &mdash; <a class="program-talk-link" href="#talk-chia-yi-su"><i>Human-Guided Language Models for Source Code Summarization</i></a></li>
                       </ul>
                     </td>
                   </tr>
@@ -243,10 +401,10 @@
                     <td class="cser-session-main">
                       <b>Session 3</b>
                       <ul class="mb-0">
-                        <li>15:00 &ndash; Student Talk: Ali Sayedsalehi (Concordia University) &mdash; <i>Making CI Smarter: Lessons Learned from Performance Testing at Mozilla</i></li>
-                        <li>15:10 &ndash; New Faculty Talk: Federico Mora (University of Waterloo) &mdash; <i>Cloud-Specific Automated Reasoning</i></li>
-                        <li>15:35 &ndash; New Faculty Talk: Ratnadira Widyasari (University of Victoria) &mdash; <i>When AI Looks Right but Isn’t: Toward Trustworthy AI for Software Quality Assurance</i></li>
-                        <li>16:00 &ndash; Faculty Talk: An Ran Chen (University of Alberta) &mdash; <i>From Signals to Fixes: Intelligent Software Debugging in the Age of LLMs</i></li>
+                        <li>15:00 &ndash; Student Talk: Ali Sayedsalehi (Concordia University) &mdash; <a class="program-talk-link" href="#talk-ali-sayedsalehi"><i>Making CI Smarter: Lessons Learned from Performance Testing at Mozilla</i></a></li>
+                        <li>15:10 &ndash; New Faculty Talk: Federico Mora (University of Waterloo) &mdash; <a class="program-talk-link" href="#talk-federico-mora"><i>Cloud-Specific Automated Reasoning</i></a></li>
+                        <li>15:35 &ndash; New Faculty Talk: Ratnadira Widyasari (University of Victoria) &mdash; <a class="program-talk-link" href="#talk-ratnadira-widyasari"><i>When AI Looks Right but Isn’t: Toward Trustworthy AI for Software Quality Assurance</i></a></li>
+                        <li>16:00 &ndash; Faculty Talk: An Ran Chen (University of Alberta) &mdash; <a class="program-talk-link" href="#talk-an-ran-chen"><i>From Signals to Fixes: Intelligent Software Debugging in the Age of LLMs</i></a></li>
                       </ul>
                     </td>
                   </tr>
@@ -413,24 +571,52 @@
 
     <script type="text/javascript">
       $(function() {
-        var hash = window.location.hash;
-        hash && $('ul.nav a[href="' + hash + '"]').tab('show');
-        window.scrollTo(0, 0);
-      });
+        function showDestination() {
+          var id;
+          try {
+            id = decodeURIComponent(window.location.hash.slice(1));
+          } catch (error) {
+            return;
+          }
+          var target = document.getElementById(id || 'home');
+          if (!target) return;
+          var pane = $(target).closest('.tab-pane');
+          if (!pane.length) return;
+          var nav = $('#sidebar a').filter(function() {
+            return this.getAttribute('href') === '#' + pane.attr('id');
+          });
+          if (!nav.length) return;
 
-      $(document).ready(function() {
-        $('a').click(function(event) {
-          var hash = $(this).attr('href');
-          if (hash.startsWith('#')) {
+          function scrollToDestination() {
+            if (target === pane[0]) {
+              window.scrollTo(0, 0);
+            } else {
+              target.focus({ preventScroll: true });
+              target.scrollIntoView({ block: 'start' });
+            }
+          }
+
+          $('#sidebar a').off('shown.bs.tab.destination');
+          if (pane.hasClass('active')) {
+            scrollToDestination();
+          } else {
+            nav.one('shown.bs.tab.destination', scrollToDestination);
+            nav.tab('show');
+          }
+        }
+
+        $('#sidebar a[data-toggle="pill"], .program-talk-link').on('click', function(event) {
+          event.preventDefault();
+          event.stopPropagation();
+          var hash = this.getAttribute('href');
+          if (window.location.hash === hash) {
+            showDestination();
+          } else {
             window.location.hash = hash;
           }
         });
-      });
-
-      $(window).bind('hashchange', function(event) {
-        var hash = window.location.hash;
-        hash && $('ul.nav a[href="' + hash + '"]').tab('show');
-        window.scrollTo(0, 0);
+        $(window).on('hashchange', showDestination);
+        showDestination();
       });
     </script>
 
